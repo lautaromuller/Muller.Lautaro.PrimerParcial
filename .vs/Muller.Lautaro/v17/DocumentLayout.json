@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|c:\\users\\usuario\\source\\repos\\muller.lautaro\\entidades\\ave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\ave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\entidades\\pinguino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\pinguino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\entidades\\colibri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\colibri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\entidades\\halcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\halcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ave.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\Entidades\\Ave.cs",
+              "RelativeDocumentMoniker": "Entidades\\Ave.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\Entidades\\Ave.cs",
+              "RelativeToolTip": "Entidades\\Ave.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwCAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T21:02:10.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pinguino.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\Entidades\\Pinguino.cs",
+              "RelativeDocumentMoniker": "Entidades\\Pinguino.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\Entidades\\Pinguino.cs",
+              "RelativeToolTip": "Entidades\\Pinguino.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwB4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T21:03:25.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Halcon.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\Entidades\\Halcon.cs",
+              "RelativeDocumentMoniker": "Entidades\\Halcon.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\Entidades\\Halcon.cs",
+              "RelativeToolTip": "Entidades\\Halcon.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T21:03:12.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Colibri.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\Entidades\\Colibri.cs",
+              "RelativeDocumentMoniker": "Entidades\\Colibri.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\source\\repos\\Muller.Lautaro\\Entidades\\Colibri.cs",
+              "RelativeToolTip": "Entidades\\Colibri.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T21:03:02.747Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
