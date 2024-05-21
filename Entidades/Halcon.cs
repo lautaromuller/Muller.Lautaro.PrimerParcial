@@ -6,26 +6,57 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Halcon : Ave
+    public class Halcon : Ave
     {
-        public int largoAlas;
-        public string colorPlumaje;
+        public double envergadura;
+        public string rangoDeCaza;
 
-        public Halcon(bool puedeVolar, string habitat, string sexo) : base(puedeVolar, habitat, sexo) { }
-
-        public Halcon(bool puedeVolar, string habitat, string sexo, int largoAlas) : this(puedeVolar, habitat, sexo)
+        public Halcon(string nombre, Habitat habitat, int edad) 
+            :base(nombre, habitat, edad)
         {
-            this.largoAlas = largoAlas;
+
         }
 
-        public Halcon(bool puedeVolar, string habitat, string sexo, int largoAlas, string colorPlumaje) : this(puedeVolar, habitat, sexo, largoAlas)
+        public Halcon(string nombre, Habitat habitat, int edad, double envergadura)
+            :this(nombre, habitat, edad)
         {
-            this.colorPlumaje = colorPlumaje;
+            this.envergadura = envergadura;
         }
 
-        public override void Cazar()
+        public Halcon(string nombre, Habitat habitat, int edad, double envergadura, string rangoDeCaza)
+            : this(nombre, habitat, edad,envergadura)
         {
-            Console.WriteLine("El Halcón a cazo una paloma");
+            this.rangoDeCaza = rangoDeCaza;
+        }
+
+        public override void Volar()
+        {
+            Console.WriteLine($"{this.nombre} está volando con una envergadura de {this.envergadura} metros.");
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} \nEnvergadura: {this.envergadura} \nRango de Caza: {this.rangoDeCaza}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Halcon)
+            {
+                Halcon ave = (Halcon)obj;
+                return base.Equals(obj) && this.envergadura == ave.envergadura && this.rangoDeCaza == ave.rangoDeCaza;
+            }
+            return false;
+        }
+
+        public static bool operator ==(Halcon h1, Halcon h2)
+        {
+            return h1.Equals(h2);
+        }
+
+        public static bool operator !=(Halcon h1, Halcon h2)
+        {
+            return !(h1 == h2);
         }
     }
 }

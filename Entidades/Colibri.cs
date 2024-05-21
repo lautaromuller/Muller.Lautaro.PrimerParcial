@@ -6,27 +6,58 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public enum Flores { Salvia, Girasol, Alamo, Heliconias, Geranios, Hibisco }
-    internal class Colibri : Ave
+    
+    public class Colibri : Ave
     {
-        public Flores florPreferida;
-        public bool haceMigracion;
+        public double velocidadVuelo;
+        public string colorPlumas;
 
-        public Colibri(bool puedeVolar, string habitat, string sexo) : base(puedeVolar, habitat, sexo) { }
-
-        public Colibri(bool puedeVolar, string habitat, string sexo, Flores florPreferida) : this(puedeVolar, habitat, sexo) 
-        {
-            this.florPreferida = florPreferida;
-        }
-
-        public Colibri(bool puedeVolar, string habitat, string sexo, Flores florPreferida, bool haceMigracion) : this(puedeVolar, habitat, sexo, florPreferida) 
+        public Colibri(string nombre, Habitat habitat, int edad) 
+            :base(nombre, habitat, edad) 
         { 
-            this.haceMigracion = haceMigracion;
+
         }
 
-        public override void Cazar()
+        public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas) 
+            :this(nombre, habitat, edad)
         {
-            Console.WriteLine("El Colibrí a cazado una araña");
+            this.colorPlumas = colorPlumas;
+        }
+
+        public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas, double velocidadVuelo)
+            : this(nombre, habitat, edad, colorPlumas)
+        {
+            this.velocidadVuelo = velocidadVuelo;
+        }
+
+        public override void Volar()
+        {
+            Console.WriteLine($"{this.nombre} vuela a {this.velocidadVuelo} km/h.");
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} \nVelocidad de Vuelo: {this.velocidadVuelo} \nColor de Plumas: {this.colorPlumas}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Colibri)
+            {
+                Colibri ave = (Colibri)obj;
+                return base.Equals(ave) && this.nombre == ave.nombre && this.edad == ave.edad && this.habitat == ave.habitat;
+            }
+            return false;
+        }
+
+        public static bool operator ==(Colibri c1, Colibri c2)
+        {
+            return c1.Equals(c2);
+        }
+
+        public static bool operator !=(Colibri c1, Colibri c2)
+        {
+            return !(c1 == c2);
         }
     }
 }

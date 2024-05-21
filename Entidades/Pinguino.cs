@@ -6,31 +6,57 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-
-    internal class Pinguino : Ave
+    public class Pinguino : Ave
     {
-        public string tipo;
-        public bool leGustaElFrio;
-        public bool viveEnManada;
+        public double peso;
+        public string especie;
 
-        public Pinguino(bool puedeVolar, string habitat, string sexo, string tipo) : base(puedeVolar, habitat, sexo)
+        public Pinguino(string nombre, Habitat habitat, int edad) 
+            :base(nombre, habitat, edad)
         {
-            this.tipo = tipo;
+
         }
 
-        public Pinguino(bool puedeVolar, string habitat, string sexo, string tipo, bool leGustaElFrio) : this(puedeVolar, habitat, sexo, tipo)
+        public Pinguino(string nombre, Habitat habitat, int edad, double peso)
+            :this(nombre, habitat, edad)
         {
-            this.leGustaElFrio = leGustaElFrio;
+            this.peso = peso;
         }
 
-        public Pinguino(bool puedeVolar, string habitat, string sexo, string tipo, bool leGustaElFrio, bool viveEnManada) : this(puedeVolar, habitat, sexo, tipo, leGustaElFrio)
+        public Pinguino(string nombre, Habitat habitat, int edad, double peso, string especie)
+            :this(nombre, habitat, edad, peso)
         {
-            this.viveEnManada = viveEnManada;
+            this.especie = especie;
         }
 
-        public override void Cazar()
+        public override void Volar()
         {
-            Console.WriteLine("El Pingüino a cazado un pez");
+            Console.WriteLine($"{this.nombre} no puede volar.");
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} \nPeso: {this.peso} \nEspecie: {this.especie}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Pinguino)
+            {
+                Pinguino ave = (Pinguino)obj;
+                return base.Equals(ave) && this.nombre == ave.nombre && this.edad == ave.edad && this.habitat == ave.habitat;
+            }
+            return false;
+        }
+
+        public static bool operator ==(Pinguino p1, Pinguino p2)
+        {
+            return p1.Equals(p2);
+        }
+
+        public static bool operator !=(Pinguino p1, Pinguino p2)
+        {
+            return !(p1 == p2);
         }
     }
 }
