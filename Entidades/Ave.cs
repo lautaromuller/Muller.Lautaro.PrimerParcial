@@ -33,6 +33,11 @@ namespace Entidades
             Console.WriteLine($"{this.nombre} esta comiendo.");
         }
 
+        public virtual void Alimentarse(string comida)
+        {
+            Console.WriteLine($"{this.nombre} esta comiendo un {comida}.");
+        }
+
         public override string ToString()
         {
             return $"{this.nombre} \nEdad: {this.edad} \nHábitat: {this.habitat}";

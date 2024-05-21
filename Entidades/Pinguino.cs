@@ -34,6 +34,16 @@ namespace Entidades
             Console.WriteLine($"{this.nombre} no puede volar.");
         }
 
+        public void Jugar()
+        {
+            Console.WriteLine($"{this.nombre} está jugando.");
+        }
+
+        public void Jugar(string nombre)
+        {
+            Console.WriteLine($"{this.nombre} y {nombre} están jugando.");
+        }
+
         public override string ToString()
         {
             return $"{base.ToString()} \nPeso: {this.peso} \nEspecie: {this.especie}";
