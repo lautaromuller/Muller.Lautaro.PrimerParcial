@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro\\formularios\\formhalcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro\\formularios\\formcolibri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcolibri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\formularios\\formhalcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formhalcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro\\formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\muller.lautaro\\entidades\\halcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\halcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro\\formularios\\formpinguino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formpinguino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,32 +29,6 @@
           "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormHalcon.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormHalcon.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormHalcon.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormHalcon.cs",
-              "RelativeToolTip": "Formularios\\FormHalcon.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAC4AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T17:59:43.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Halcon.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Entidades\\Halcon.cs",
-              "RelativeDocumentMoniker": "Entidades\\Halcon.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Entidades\\Halcon.cs",
-              "RelativeToolTip": "Entidades\\Halcon.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T17:55:37.145Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
@@ -64,15 +38,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormCRUD.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormCRUD.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormCRUD.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormCRUD.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\FormCRUD.cs [Dise\u00F1o]",
+              "DocumentIndex": 3,
+              "Title": "FormPinguino.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormPinguino.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormPinguino.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormPinguino.cs",
+              "RelativeToolTip": "Formularios\\FormPinguino.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T17:37:03.119Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-21T18:08:50.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormHalcon.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormHalcon.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormHalcon.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormHalcon.cs",
+              "RelativeToolTip": "Formularios\\FormHalcon.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:59:43.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormColibri.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormColibri.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormColibri.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormColibri.cs",
+              "RelativeToolTip": "Formularios\\FormColibri.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwB4AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:07:28.478Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -82,7 +83,7 @@
               "RelativeDocumentMoniker": "Formularios\\FormCRUD.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro\\Formularios\\FormCRUD.cs",
               "RelativeToolTip": "Formularios\\FormCRUD.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAawC0AAAAsAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAwFcAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T17:17:49.313Z",
               "EditorCaption": ""

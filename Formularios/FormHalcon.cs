@@ -17,6 +17,18 @@ namespace Formularios
         public FormHalcon()
         {
             InitializeComponent();
+            this.cbHabitat.DataSource = Enum.GetValues(typeof(Habitat));
+        }
+
+        public FormHalcon(Halcon halcon)
+            :this()
+        {
+            txtNombre.Text = halcon.nombre;
+            cbHabitat.SelectedItem = halcon.habitat;
+            txtEdad.Text = halcon.edad.ToString();
+            txtEnvergadura.Text = halcon.envergadura.ToString();
+            txtRangoCaza.Text = halcon.rangoDeCaza;
+            Halcon = halcon;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

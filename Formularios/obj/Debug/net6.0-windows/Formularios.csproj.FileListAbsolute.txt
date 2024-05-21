@@ -21,3 +21,5 @@ C:\Users\USUARIO\Desktop\Muller.Lautaro\Formularios\bin\Debug\net6.0-windows\Ent
 C:\Users\USUARIO\Desktop\Muller.Lautaro\Formularios\obj\Debug\net6.0-windows\Formularios.csproj.AssemblyReference.cache
 C:\Users\USUARIO\Desktop\Muller.Lautaro\Formularios\obj\Debug\net6.0-windows\Formularios.FormPinguino.resources
 C:\Users\USUARIO\Desktop\Muller.Lautaro\Formularios\obj\Debug\net6.0-windows\Formular.9034CDC0.Up2Date
+C:\Users\USUARIO\Desktop\Muller.Lautaro\Formularios\obj\Debug\net6.0-windows\Formularios.FormColibri.resources
+C:\Users\USUARIO\Desktop\Muller.Lautaro\Formularios\obj\Debug\net6.0-windows\Formularios.FormHalcon.resources

@@ -20,6 +20,17 @@ namespace Formularios
             this.cbHabitat.DataSource = Enum.GetValues(typeof(Habitat));
         }
 
+        public FormPinguino(Pinguino pinguino)
+            :this()
+        {
+            txtNombre.Text = pinguino.nombre;
+            cbHabitat.SelectedItem = pinguino.habitat;
+            txtEdad.Text = pinguino.edad.ToString();
+            txtPeso.Text = pinguino.peso.ToString();
+            txtEspecie.Text = pinguino.especie;
+            Pinguino = pinguino;
+        }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             try

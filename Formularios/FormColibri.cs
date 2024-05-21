@@ -17,6 +17,18 @@ namespace Formularios
         public FormColibri()
         {
             InitializeComponent();
+            this.cbHabitat.DataSource = Enum.GetValues(typeof(Habitat));
+        }
+
+        public FormColibri(Colibri colibri)
+            : this()
+        {
+            txtNombre.Text = colibri.nombre;
+            cbHabitat.SelectedItem = colibri.habitat;
+            txtEdad.Text = colibri.edad.ToString();
+            txtColorPlumas.Text = colibri.colorPlumas.ToString();
+            txtVelocidadVuelo.Text = colibri.velocidadVuelo.ToString();
+            Colibri = colibri;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
