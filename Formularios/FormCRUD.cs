@@ -13,30 +13,38 @@ namespace Formularios
 {
     public partial class FormCRUD : Form
     {
-        private List<Ave> aves;
         public FormCRUD()
         {
             InitializeComponent();
-            this.aves = new List<Ave>();
         }
 
-        private void Actualizarvisor()
+        private void btnPinguino_Click(object sender, EventArgs e)
         {
-            this.listBox1.Items.Clear();
-            foreach (var item in aves)
+            FormPinguino form = new FormPinguino();
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                this.listBox1.Items.Add(item.ToString());
+                Pinguino pinguino = form.Pinguino;
+                this.listBox1.Items.Add(pinguino);
             }
         }
 
-        private void btnAgregarPinguino_Click(object sender, EventArgs e)
+        private void btnColibri_Click(object sender, EventArgs e)
         {
-            FormPinguino form = new FormPinguino();
-
-            if(form.ShowDialog() == DialogResult.OK)
+            FormColibri form = new FormColibri();
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                this.aves.Add(form.pinguino);
-                Actualizarvisor();
+                Colibri colibri = form.Colibri;
+                this.listBox1.Items.Add(colibri);
+            }
+        }
+
+        private void btnHalcon_Click(object sender, EventArgs e)
+        {
+            FormHalcon form = new FormHalcon();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                Halcon halcon = form.Halcon;
+                this.listBox1.Items.Add(halcon);
             }
         }
     }

@@ -37,32 +37,32 @@
             // 
             // btnIngresar
             // 
-            btnIngresar.Location = new Point(134, 168);
+            btnIngresar.Location = new Point(123, 89);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(226, 28);
-            btnIngresar.TabIndex = 0;
+            btnIngresar.Size = new Size(135, 28);
+            btnIngresar.TabIndex = 2;
             btnIngresar.Text = "Ingresar";
             btnIngresar.UseVisualStyleBackColor = true;
             btnIngresar.Click += btnIngresar_Click;
             // 
             // txtContrasena
             // 
-            txtContrasena.Location = new Point(133, 121);
+            txtContrasena.Location = new Point(98, 48);
             txtContrasena.Name = "txtContrasena";
-            txtContrasena.Size = new Size(213, 23);
+            txtContrasena.Size = new Size(160, 23);
             txtContrasena.TabIndex = 1;
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(137, 72);
+            txtCorreo.Location = new Point(98, 19);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(205, 23);
-            txtCorreo.TabIndex = 2;
+            txtCorreo.Size = new Size(160, 23);
+            txtCorreo.TabIndex = 0;
             // 
             // lblCorreo
             // 
             lblCorreo.AutoSize = true;
-            lblCorreo.Location = new Point(87, 28);
+            lblCorreo.Location = new Point(20, 22);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(43, 15);
             lblCorreo.TabIndex = 3;
@@ -71,7 +71,7 @@
             // lblContrasena
             // 
             lblContrasena.AutoSize = true;
-            lblContrasena.Location = new Point(76, 103);
+            lblContrasena.Location = new Point(20, 51);
             lblContrasena.Name = "lblContrasena";
             lblContrasena.Size = new Size(67, 15);
             lblContrasena.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(574, 246);
+            ClientSize = new Size(272, 129);
             Controls.Add(lblContrasena);
             Controls.Add(lblCorreo);
             Controls.Add(txtCorreo);

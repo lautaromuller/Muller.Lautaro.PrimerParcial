@@ -11,13 +11,12 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
-    public partial class FormPinguino : Form
+    public partial class FormColibri : Form
     {
-        public Pinguino Pinguino { get; set; }
-        public FormPinguino()
+        public Colibri Colibri { get; set; }
+        public FormColibri()
         {
             InitializeComponent();
-            this.cbHabitat.DataSource = Enum.GetValues(typeof(Habitat));
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -27,10 +26,10 @@ namespace Formularios
                 string nombre = this.txtNombre.Text;
                 Habitat habitat = (Habitat)this.cbHabitat.SelectedItem;
                 int edad = int.Parse(this.txtEdad.Text);
-                double peso = double.Parse(this.txtPeso.Text);
-                string especie = this.txtEspecie.Text;
+                string colorPlumas = this.txtColorPlumas.Text;
+                double velocidadVuelo = double.Parse(this.txtVelocidadVuelo.Text);
 
-                Pinguino = new Pinguino(nombre, habitat, edad, peso, especie);
+                Colibri = new Colibri(nombre, habitat, edad, colorPlumas, velocidadVuelo);
 
                 this.DialogResult = DialogResult.OK;
 
