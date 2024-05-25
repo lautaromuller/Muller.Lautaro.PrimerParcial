@@ -42,14 +42,14 @@
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(12, 12);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(241, 199);
+            listBox1.Size = new Size(403, 259);
             listBox1.TabIndex = 0;
             // 
             // btnPinguino
             // 
-            btnPinguino.Location = new Point(275, 12);
+            btnPinguino.Location = new Point(421, 12);
             btnPinguino.Name = "btnPinguino";
-            btnPinguino.Size = new Size(176, 34);
+            btnPinguino.Size = new Size(170, 47);
             btnPinguino.TabIndex = 1;
             btnPinguino.Text = "Agregar Pinguino";
             btnPinguino.UseVisualStyleBackColor = true;
@@ -57,9 +57,9 @@
             // 
             // btnColibri
             // 
-            btnColibri.Location = new Point(275, 52);
+            btnColibri.Location = new Point(421, 65);
             btnColibri.Name = "btnColibri";
-            btnColibri.Size = new Size(176, 34);
+            btnColibri.Size = new Size(170, 47);
             btnColibri.TabIndex = 2;
             btnColibri.Text = "Agregar Colibrí";
             btnColibri.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@
             // 
             // btnHalcon
             // 
-            btnHalcon.Location = new Point(275, 92);
+            btnHalcon.Location = new Point(421, 118);
             btnHalcon.Name = "btnHalcon";
-            btnHalcon.Size = new Size(176, 34);
+            btnHalcon.Size = new Size(170, 47);
             btnHalcon.TabIndex = 3;
             btnHalcon.Text = "Agregar Halcón";
             btnHalcon.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(275, 132);
+            btnModificar.Location = new Point(421, 171);
             btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(176, 34);
+            btnModificar.Size = new Size(170, 47);
             btnModificar.TabIndex = 4;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
@@ -87,18 +87,19 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(275, 172);
+            btnEliminar.Location = new Point(421, 224);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(176, 34);
+            btnEliminar.Size = new Size(170, 47);
             btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // FormCRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(476, 228);
+            ClientSize = new Size(602, 279);
             Controls.Add(btnEliminar);
             Controls.Add(btnModificar);
             Controls.Add(btnHalcon);

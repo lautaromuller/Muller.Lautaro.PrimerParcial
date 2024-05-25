@@ -44,7 +44,6 @@ namespace Formularios
                 Halcon = new Halcon(nombre, habitat, edad, envergadura, rangoDeCaza);
 
                 this.DialogResult = DialogResult.OK;
-
                 this.Close();
             }
             catch (Exception ex)

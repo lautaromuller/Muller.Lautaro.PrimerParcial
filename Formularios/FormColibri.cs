@@ -44,7 +44,6 @@ namespace Formularios
                 Colibri = new Colibri(nombre, habitat, edad, colorPlumas, velocidadVuelo);
 
                 this.DialogResult = DialogResult.OK;
-
                 this.Close();
             }
             catch (Exception ex)

@@ -44,7 +44,6 @@ namespace Formularios
                 Pinguino = new Pinguino(nombre, habitat, edad, peso, especie);
 
                 this.DialogResult = DialogResult.OK;
-
                 this.Close();
             }
             catch (Exception ex)

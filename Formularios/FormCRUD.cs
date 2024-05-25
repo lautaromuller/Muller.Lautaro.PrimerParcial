@@ -13,9 +13,20 @@ namespace Formularios
 {
     public partial class FormCRUD : Form
     {
+        public List<Ave> aves;
         public FormCRUD()
         {
             InitializeComponent();
+            this.aves = new List<Ave>();
+        }
+
+        private void ActualizarLista()
+        {
+            this.listBox1.Items.Clear();
+            foreach (var item in this.aves)
+            {
+                this.listBox1.Items.Add(item.ToString());
+            }
         }
 
         private void btnPinguino_Click(object sender, EventArgs e)
@@ -23,8 +34,8 @@ namespace Formularios
             FormPinguino form = new FormPinguino();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                Pinguino pinguino = form.Pinguino;
-                this.listBox1.Items.Add(pinguino);
+                this.aves.Add(form.Pinguino);
+                this.ActualizarLista();
             }
         }
 
@@ -33,8 +44,8 @@ namespace Formularios
             FormColibri form = new FormColibri();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                Colibri colibri = form.Colibri;
-                this.listBox1.Items.Add(colibri);
+                this.aves.Add(form.Colibri);
+                this.ActualizarLista();
             }
         }
 
@@ -43,51 +54,53 @@ namespace Formularios
             FormHalcon form = new FormHalcon();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                Halcon halcon = form.Halcon;
-                this.listBox1.Items.Add(halcon);
+                this.aves.Add(form.Halcon);
+                this.ActualizarLista();
             }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (this.listBox1.SelectedItem == null)
-            {
-                MessageBox.Show("Seleccione un ave para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
-            if(this.listBox1.SelectedItem is Pinguino)
+            int indice = this.listBox1.SelectedIndex;
+            if (indice != -1)
             {
-                Pinguino seleccionado = (Pinguino)listBox1.SelectedItem;
-                FormPinguino form = new FormPinguino(seleccionado);
-                if (form.ShowDialog() == DialogResult.OK)
+                if (this.aves[indice] is Pinguino)
                 {
-                    var pinguino = form.Pinguino;
-                    int selectedIndex = listBox1.SelectedIndex;
-                    listBox1.Items[selectedIndex] = pinguino;
+                    FormPinguino form = new FormPinguino((Pinguino)this.aves[indice]);
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        this.aves[indice] = form.Pinguino;
+                    }
                 }
+                else if (this.aves[indice] is Colibri)
+                {
+                    FormColibri form = new FormColibri((Colibri)this.aves[indice]);
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        this.aves[indice] = form.Colibri;
+                    }
+                }
+                else
+                {
+                    FormHalcon form = new FormHalcon((Halcon)this.aves[indice]);
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        this.aves[indice] = form.Halcon;
+                    }
+                }
+
+                this.ActualizarLista();
             }
-            else if(this.listBox1.SelectedItem is Colibri)
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int indice = this.listBox1.SelectedIndex;
+            if (indice != -1)
             {
-                Colibri seleccionado = (Colibri)listBox1.SelectedItem;
-                FormColibri form = new FormColibri(seleccionado);
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    var colibri = form.Colibri;
-                    int selectedIndex = listBox1.SelectedIndex;
-                    listBox1.Items[selectedIndex] = colibri;
-                }
-            }
-            else
-            {
-                Halcon seleccionado = (Halcon)listBox1.SelectedItem;
-                FormHalcon form = new FormHalcon(seleccionado);
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    var halcon = form.Halcon;
-                    int selectedIndex = listBox1.SelectedIndex;
-                    listBox1.Items[selectedIndex] = halcon;
-                }
+                this.aves.RemoveAt(indice);
+                this.ActualizarLista();
             }
         }
     }
