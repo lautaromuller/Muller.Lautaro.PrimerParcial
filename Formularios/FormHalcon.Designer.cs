@@ -37,7 +37,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(40, 195);
+            label4.Location = new Point(17, 108);
             label4.Name = "label4";
             label4.Size = new Size(73, 15);
             label4.TabIndex = 3;
@@ -46,7 +46,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(40, 224);
+            label5.Location = new Point(17, 137);
             label5.Name = "label5";
             label5.Size = new Size(83, 15);
             label5.TabIndex = 4;
@@ -54,29 +54,34 @@
             // 
             // txtEnvergadura
             // 
-            txtEnvergadura.Location = new Point(133, 192);
+            txtEnvergadura.Location = new Point(112, 105);
             txtEnvergadura.Name = "txtEnvergadura";
-            txtEnvergadura.Size = new Size(100, 23);
-            txtEnvergadura.TabIndex = 7;
+            txtEnvergadura.Size = new Size(153, 23);
+            txtEnvergadura.TabIndex = 3;
             // 
             // txtRangoCaza
             // 
-            txtRangoCaza.Location = new Point(133, 221);
+            txtRangoCaza.Location = new Point(112, 134);
             txtRangoCaza.Name = "txtRangoCaza";
-            txtRangoCaza.Size = new Size(100, 23);
-            txtRangoCaza.TabIndex = 8;
+            txtRangoCaza.Size = new Size(153, 23);
+            txtRangoCaza.TabIndex = 4;
             // 
             // FormHalcon
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(581, 376);
+            ClientSize = new Size(284, 221);
             Controls.Add(txtRangoCaza);
             Controls.Add(txtEnvergadura);
             Controls.Add(label5);
             Controls.Add(label4);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormHalcon";
-            Text = "FormHalcon";
+            Text = "Cargar Halcón";
+            Controls.SetChildIndex(txtNombre, 0);
+            Controls.SetChildIndex(txtEdad, 0);
+            Controls.SetChildIndex(cbHabitat, 0);
             Controls.SetChildIndex(label4, 0);
             Controls.SetChildIndex(label5, 0);
             Controls.SetChildIndex(txtEnvergadura, 0);

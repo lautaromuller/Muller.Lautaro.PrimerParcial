@@ -20,7 +20,7 @@ namespace Formularios
         }
 
         public FormPinguino(Pinguino pinguino)
-            :this()
+            : this()
         {
             txtNombre.Text = pinguino.Nombre;
             cbHabitat.SelectedItem = pinguino.Habitat;

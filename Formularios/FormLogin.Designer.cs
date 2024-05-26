@@ -49,6 +49,8 @@
             // 
             txtContrasena.Location = new Point(98, 48);
             txtContrasena.Name = "txtContrasena";
+            txtContrasena.PasswordChar = '*';
+            txtContrasena.PlaceholderText = "Contraseña";
             txtContrasena.Size = new Size(160, 23);
             txtContrasena.TabIndex = 1;
             // 
@@ -56,6 +58,7 @@
             // 
             txtCorreo.Location = new Point(98, 19);
             txtCorreo.Name = "txtCorreo";
+            txtCorreo.PlaceholderText = "Correo";
             txtCorreo.Size = new Size(160, 23);
             txtCorreo.TabIndex = 0;
             // 
@@ -87,7 +90,9 @@
             Controls.Add(txtCorreo);
             Controls.Add(txtContrasena);
             Controls.Add(btnIngresar);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
