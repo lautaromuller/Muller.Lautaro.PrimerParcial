@@ -130,14 +130,14 @@
             // ordNombreAscendente
             // 
             ordNombreAscendente.Name = "ordNombreAscendente";
-            ordNombreAscendente.Size = new Size(180, 22);
+            ordNombreAscendente.Size = new Size(142, 22);
             ordNombreAscendente.Text = "Ascendente";
             ordNombreAscendente.Click += ordNombreAscendente_Click;
             // 
             // ordNombreDescendente
             // 
             ordNombreDescendente.Name = "ordNombreDescendente";
-            ordNombreDescendente.Size = new Size(180, 22);
+            ordNombreDescendente.Size = new Size(142, 22);
             ordNombreDescendente.Text = "Descendente";
             ordNombreDescendente.Click += ordNombreDescendente_Click;
             // 
@@ -153,12 +153,14 @@
             ordEdadAscendente.Name = "ordEdadAscendente";
             ordEdadAscendente.Size = new Size(180, 22);
             ordEdadAscendente.Text = "Ascendente";
+            ordEdadAscendente.Click += ordEdadAscendente_Click;
             // 
             // ordEdadDescendente
             // 
             ordEdadDescendente.Name = "ordEdadDescendente";
             ordEdadDescendente.Size = new Size(180, 22);
             ordEdadDescendente.Text = "Descendente";
+            ordEdadDescendente.Click += ordEdadDescendente_Click;
             // 
             // FormCRUD
             // 

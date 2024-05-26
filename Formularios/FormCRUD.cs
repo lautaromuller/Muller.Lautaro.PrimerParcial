@@ -142,5 +142,17 @@ namespace Formularios
             this.zoologico.OrdenarPorNombre(false);
             this.ActualizarLista();
         }
+
+        private void ordEdadAscendente_Click(object sender, EventArgs e)
+        {
+            this.zoologico.OrdenarPorEdad(true);
+            this.ActualizarLista();
+        }
+
+        private void ordEdadDescendente_Click(object sender, EventArgs e)
+        {
+            this.zoologico.OrdenarPorEdad(false);
+            this.ActualizarLista();
+        }
     }
 }
