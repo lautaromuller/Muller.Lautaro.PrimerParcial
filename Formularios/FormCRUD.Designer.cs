@@ -108,6 +108,7 @@
             Controls.Add(listBox1);
             Name = "FormCRUD";
             Text = "FormCRUD";
+            Load += FormCRUD_Load;
             ResumeLayout(false);
         }
 

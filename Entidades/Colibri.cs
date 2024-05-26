@@ -9,8 +9,10 @@ namespace Entidades
     
     public class Colibri : Ave
     {
-        public double velocidadVuelo;
-        public string colorPlumas;
+        public double VelocidadVuelo { get; set; }
+        public string ColorPlumas { get; set; }
+
+        public Colibri() { }
 
         public Colibri(string nombre, Habitat habitat, int edad) 
             :base(nombre, habitat, edad) 
@@ -21,23 +23,23 @@ namespace Entidades
         public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas) 
             :this(nombre, habitat, edad)
         {
-            this.colorPlumas = colorPlumas;
+            this.ColorPlumas = colorPlumas;
         }
 
         public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas, double velocidadVuelo)
             : this(nombre, habitat, edad, colorPlumas)
         {
-            this.velocidadVuelo = velocidadVuelo;
+            this.VelocidadVuelo = velocidadVuelo;
         }
 
         public override void Volar()
         {
-            Console.WriteLine($"{this.nombre} vuela a {this.velocidadVuelo} km/h.");
+            Console.WriteLine($"{this.Nombre} vuela a {this.VelocidadVuelo} km/h.");
         }
 
         public override string ToString()
         {
-            return $"{base.ToString()} \nVelocidad de Vuelo: {this.velocidadVuelo} \nColor de Plumas: {this.colorPlumas}";
+            return $"{base.ToString()} \nVelocidad de Vuelo: {this.VelocidadVuelo} \nColor de Plumas: {this.ColorPlumas}";
         }
 
         public override bool Equals(object obj)
@@ -45,7 +47,7 @@ namespace Entidades
             if (obj is Colibri)
             {
                 Colibri ave = (Colibri)obj;
-                return base.Equals(ave) && this.nombre == ave.nombre && this.edad == ave.edad && this.habitat == ave.habitat;
+                return base.Equals(ave) && this.Nombre == ave.Nombre && this.Edad == ave.Edad && this.Habitat == ave.Habitat;
             }
             return false;
         }

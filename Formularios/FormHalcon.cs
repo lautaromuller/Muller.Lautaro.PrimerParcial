@@ -11,27 +11,26 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
-    public partial class FormHalcon : Form
+    public partial class FormHalcon : FormAve
     {
         public Halcon Halcon { get; set; }
         public FormHalcon()
         {
             InitializeComponent();
-            this.cbHabitat.DataSource = Enum.GetValues(typeof(Habitat));
         }
 
         public FormHalcon(Halcon halcon)
             :this()
         {
-            txtNombre.Text = halcon.nombre;
-            cbHabitat.SelectedItem = halcon.habitat;
-            txtEdad.Text = halcon.edad.ToString();
-            txtEnvergadura.Text = halcon.envergadura.ToString();
-            txtRangoCaza.Text = halcon.rangoDeCaza;
+            txtNombre.Text = halcon.Nombre;
+            cbHabitat.SelectedItem = halcon.Habitat;
+            txtEdad.Text = halcon.Edad.ToString();
+            txtEnvergadura.Text = halcon.Envergadura.ToString();
+            txtRangoCaza.Text = halcon.RangoDeCaza;
             Halcon = halcon;
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        public override void btnAceptar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -50,12 +49,6 @@ namespace Formularios
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
         }
     }
 }

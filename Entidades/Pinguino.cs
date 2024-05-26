@@ -8,8 +8,13 @@ namespace Entidades
 {
     public class Pinguino : Ave
     {
-        public double peso;
-        public string especie;
+        public double Peso { get; set; }
+        public string Especie { get; set; }
+
+        public Pinguino()
+        {
+
+        }
 
         public Pinguino(string nombre, Habitat habitat, int edad) 
             :base(nombre, habitat, edad)
@@ -20,33 +25,33 @@ namespace Entidades
         public Pinguino(string nombre, Habitat habitat, int edad, double peso)
             :this(nombre, habitat, edad)
         {
-            this.peso = peso;
+            this.Peso = peso;
         }
 
         public Pinguino(string nombre, Habitat habitat, int edad, double peso, string especie)
             :this(nombre, habitat, edad, peso)
         {
-            this.especie = especie;
+            this.Especie = especie;
         }
 
         public override void Volar()
         {
-            Console.WriteLine($"{this.nombre} no puede volar.");
+            Console.WriteLine($"{this.Nombre} no puede volar.");
         }
 
         public void Jugar()
         {
-            Console.WriteLine($"{this.nombre} está jugando.");
+            Console.WriteLine($"{this.Nombre} está jugando.");
         }
 
         public void Jugar(string nombre)
         {
-            Console.WriteLine($"{this.nombre} y {nombre} están jugando.");
+            Console.WriteLine($"{this.Nombre} y {nombre} están jugando.");
         }
 
         public override string ToString()
         {
-            return $"{base.ToString()} \nPeso: {this.peso} \nEspecie: {this.especie}";
+            return $"{base.ToString()} \nPeso: {this.Peso} \nEspecie: {this.Especie}";
         }
 
         public override bool Equals(object obj)
@@ -54,7 +59,7 @@ namespace Entidades
             if (obj is Pinguino)
             {
                 Pinguino ave = (Pinguino)obj;
-                return base.Equals(ave) && this.nombre == ave.nombre && this.edad == ave.edad && this.habitat == ave.habitat;
+                return base.Equals(ave) && this.Nombre == ave.Nombre && this.Edad == ave.Edad && this.Habitat == ave.Habitat;
             }
             return false;
         }

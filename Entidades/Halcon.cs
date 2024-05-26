@@ -8,9 +8,10 @@ namespace Entidades
 {
     public class Halcon : Ave
     {
-        public double envergadura;
-        public string rangoDeCaza;
+        public double Envergadura { get; set; }
+        public string RangoDeCaza { get; set; }
 
+        public Halcon() { }
         public Halcon(string nombre, Habitat habitat, int edad) 
             :base(nombre, habitat, edad)
         {
@@ -20,23 +21,23 @@ namespace Entidades
         public Halcon(string nombre, Habitat habitat, int edad, double envergadura)
             :this(nombre, habitat, edad)
         {
-            this.envergadura = envergadura;
+            this.Envergadura = envergadura;
         }
 
         public Halcon(string nombre, Habitat habitat, int edad, double envergadura, string rangoDeCaza)
             : this(nombre, habitat, edad,envergadura)
         {
-            this.rangoDeCaza = rangoDeCaza;
+            this.RangoDeCaza = rangoDeCaza;
         }
 
         public override void Volar()
         {
-            Console.WriteLine($"{this.nombre} está volando con una envergadura de {this.envergadura} metros.");
+            Console.WriteLine($"{this.Nombre} está volando con una envergadura de {this.Envergadura} metros.");
         }
 
         public override string ToString()
         {
-            return $"{base.ToString()} \nEnvergadura: {this.envergadura} \nRango de Caza: {this.rangoDeCaza}";
+            return $"{base.ToString()} \nEnvergadura: {this.Envergadura} \nRango de Caza: {this.RangoDeCaza}";
         }
 
         public override bool Equals(object obj)
@@ -44,7 +45,7 @@ namespace Entidades
             if (obj is Halcon)
             {
                 Halcon ave = (Halcon)obj;
-                return base.Equals(obj) && this.envergadura == ave.envergadura && this.rangoDeCaza == ave.rangoDeCaza;
+                return base.Equals(obj) && this.Envergadura == ave.Envergadura && this.RangoDeCaza == ave.RangoDeCaza;
             }
             return false;
         }

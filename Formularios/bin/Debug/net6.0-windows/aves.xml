@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Zoologico xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Aves>
+    <Ave xsi:type="Colibri">
+      <Nombre>111111</Nombre>
+      <Edad>222</Edad>
+      <Habitat>Antartida</Habitat>
+      <VelocidadVuelo>222</VelocidadVuelo>
+      <ColorPlumas>222</ColorPlumas>
+    </Ave>
+    <Ave xsi:type="Halcon">
+      <Nombre>Pedrito</Nombre>
+      <Edad>3</Edad>
+      <Habitat>Bosque</Habitat>
+      <Envergadura>3</Envergadura>
+      <RangoDeCaza>todos</RangoDeCaza>
+    </Ave>
+  </Aves>
+</Zoologico>

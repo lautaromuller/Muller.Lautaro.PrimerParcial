@@ -11,27 +11,26 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
-    public partial class FormColibri : Form
+    public partial class FormColibri : FormAve
     {
         public Colibri Colibri { get; set; }
         public FormColibri()
         {
             InitializeComponent();
-            this.cbHabitat.DataSource = Enum.GetValues(typeof(Habitat));
         }
 
         public FormColibri(Colibri colibri)
             : this()
         {
-            txtNombre.Text = colibri.nombre;
-            cbHabitat.SelectedItem = colibri.habitat;
-            txtEdad.Text = colibri.edad.ToString();
-            txtColorPlumas.Text = colibri.colorPlumas.ToString();
-            txtVelocidadVuelo.Text = colibri.velocidadVuelo.ToString();
+            txtNombre.Text = colibri.Nombre;
+            cbHabitat.SelectedItem = colibri.Habitat;
+            txtEdad.Text = colibri.Edad.ToString();
+            txtColorPlumas.Text = colibri.ColorPlumas.ToString();
+            txtVelocidadVuelo.Text = colibri.VelocidadVuelo.ToString();
             Colibri = colibri;
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        public override void btnAceptar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -50,12 +49,6 @@ namespace Formularios
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
         }
     }
 }

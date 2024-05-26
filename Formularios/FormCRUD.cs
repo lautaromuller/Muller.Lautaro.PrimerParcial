@@ -8,25 +8,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace Formularios
 {
     public partial class FormCRUD : Form
     {
-        public List<Ave> aves;
+        private Zoologico zoologico;
+        public string ruta = "aves.xml";
         public FormCRUD()
         {
             InitializeComponent();
-            this.aves = new List<Ave>();
+            zoologico = Zoologico.Deserializar(ruta);
+            ActualizarLista();
+        }
+
+        private void FormCRUD_Load(object sender, EventArgs e)
+        {
+            if (File.Exists(ruta))
+            {
+                if (File.Exists(ruta))
+                {
+                    try
+                    {
+                        zoologico = Zoologico.Deserializar(ruta);
+                        ActualizarLista();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+                    }
+                }
+                else
+                {
+                    zoologico = new Zoologico();
+                }
+            }
+            else
+            {
+                zoologico.Aves = new List<Ave>();
+            }
         }
 
         private void ActualizarLista()
         {
-            this.listBox1.Items.Clear();
-            foreach (var item in this.aves)
-            {
-                this.listBox1.Items.Add(item.ToString());
-            }
+            this.listBox1.DataSource = null;
+            this.listBox1.DataSource = zoologico.Aves;
+            zoologico.Serializar(ruta);
         }
 
         private void btnPinguino_Click(object sender, EventArgs e)
@@ -34,7 +62,7 @@ namespace Formularios
             FormPinguino form = new FormPinguino();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                this.aves.Add(form.Pinguino);
+                zoologico.Aves.Add(form.Pinguino);
                 this.ActualizarLista();
             }
         }
@@ -44,7 +72,7 @@ namespace Formularios
             FormColibri form = new FormColibri();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                this.aves.Add(form.Colibri);
+                zoologico.Aves.Add(form.Colibri);
                 this.ActualizarLista();
             }
         }
@@ -54,39 +82,38 @@ namespace Formularios
             FormHalcon form = new FormHalcon();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                this.aves.Add(form.Halcon);
+                zoologico.Aves.Add(form.Halcon);
                 this.ActualizarLista();
             }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
             int indice = this.listBox1.SelectedIndex;
             if (indice != -1)
             {
-                if (this.aves[indice] is Pinguino)
+                if (this.zoologico.Aves[indice] is Pinguino)
                 {
-                    FormPinguino form = new FormPinguino((Pinguino)this.aves[indice]);
+                    FormPinguino form = new FormPinguino((Pinguino)this.zoologico.Aves[indice]);
                     if (form.ShowDialog() == DialogResult.OK)
                     {
-                        this.aves[indice] = form.Pinguino;
+                        this.zoologico.Aves[indice] = form.Pinguino;
                     }
                 }
-                else if (this.aves[indice] is Colibri)
+                else if (this.zoologico.Aves[indice] is Colibri)
                 {
-                    FormColibri form = new FormColibri((Colibri)this.aves[indice]);
+                    FormColibri form = new FormColibri((Colibri)this.zoologico.Aves[indice]);
                     if (form.ShowDialog() == DialogResult.OK)
                     {
-                        this.aves[indice] = form.Colibri;
+                        this.zoologico.Aves[indice] = form.Colibri;
                     }
                 }
                 else
                 {
-                    FormHalcon form = new FormHalcon((Halcon)this.aves[indice]);
+                    FormHalcon form = new FormHalcon((Halcon)this.zoologico.Aves[indice]);
                     if (form.ShowDialog() == DialogResult.OK)
                     {
-                        this.aves[indice] = form.Halcon;
+                        this.zoologico.Aves[indice] = form.Halcon;
                     }
                 }
 
@@ -99,9 +126,11 @@ namespace Formularios
             int indice = this.listBox1.SelectedIndex;
             if (indice != -1)
             {
-                this.aves.RemoveAt(indice);
+                this.zoologico.Aves.RemoveAt(indice);
                 this.ActualizarLista();
             }
         }
+
+
     }
 }
