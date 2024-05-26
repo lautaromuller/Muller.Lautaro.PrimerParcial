@@ -55,7 +55,7 @@ namespace Entidades
             }
         }
 
-        public void OrdenarPorNombre(bool ascendente)
+        public void OrdenarPorNombre(bool ascendente = true)
         {
             if (ascendente)
             {
@@ -67,7 +67,7 @@ namespace Entidades
             }
         }
 
-        public void OrdenarPorEdad(bool ascendente)
+        public void OrdenarPorEdad(bool ascendente = true)
         {
             if (ascendente)
             {

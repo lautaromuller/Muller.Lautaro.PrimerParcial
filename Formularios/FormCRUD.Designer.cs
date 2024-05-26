@@ -34,20 +34,29 @@
             btnHalcon = new Button();
             btnModificar = new Button();
             btnEliminar = new Button();
+            menuStrip1 = new MenuStrip();
+            ordenarToolStripMenuItem = new ToolStripMenuItem();
+            nombreToolStripMenuItem1 = new ToolStripMenuItem();
+            ordNombreAscendente = new ToolStripMenuItem();
+            ordNombreDescendente = new ToolStripMenuItem();
+            edadToolStripMenuItem = new ToolStripMenuItem();
+            ordEdadAscendente = new ToolStripMenuItem();
+            ordEdadDescendente = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(12, 12);
+            listBox1.Location = new Point(12, 27);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(403, 259);
             listBox1.TabIndex = 0;
             // 
             // btnPinguino
             // 
-            btnPinguino.Location = new Point(421, 12);
+            btnPinguino.Location = new Point(421, 27);
             btnPinguino.Name = "btnPinguino";
             btnPinguino.Size = new Size(170, 47);
             btnPinguino.TabIndex = 1;
@@ -57,7 +66,7 @@
             // 
             // btnColibri
             // 
-            btnColibri.Location = new Point(421, 65);
+            btnColibri.Location = new Point(421, 80);
             btnColibri.Name = "btnColibri";
             btnColibri.Size = new Size(170, 47);
             btnColibri.TabIndex = 2;
@@ -67,7 +76,7 @@
             // 
             // btnHalcon
             // 
-            btnHalcon.Location = new Point(421, 118);
+            btnHalcon.Location = new Point(421, 133);
             btnHalcon.Name = "btnHalcon";
             btnHalcon.Size = new Size(170, 47);
             btnHalcon.TabIndex = 3;
@@ -77,7 +86,7 @@
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(421, 171);
+            btnModificar.Location = new Point(421, 186);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(170, 47);
             btnModificar.TabIndex = 4;
@@ -87,7 +96,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(421, 224);
+            btnEliminar.Location = new Point(421, 239);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(170, 47);
             btnEliminar.TabIndex = 5;
@@ -95,21 +104,82 @@
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { ordenarToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(602, 24);
+            menuStrip1.TabIndex = 6;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // ordenarToolStripMenuItem
+            // 
+            ordenarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nombreToolStripMenuItem1, edadToolStripMenuItem });
+            ordenarToolStripMenuItem.Name = "ordenarToolStripMenuItem";
+            ordenarToolStripMenuItem.Size = new Size(62, 20);
+            ordenarToolStripMenuItem.Text = "Ordenar";
+            // 
+            // nombreToolStripMenuItem1
+            // 
+            nombreToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { ordNombreAscendente, ordNombreDescendente });
+            nombreToolStripMenuItem1.Name = "nombreToolStripMenuItem1";
+            nombreToolStripMenuItem1.Size = new Size(180, 22);
+            nombreToolStripMenuItem1.Text = "Nombre";
+            // 
+            // ordNombreAscendente
+            // 
+            ordNombreAscendente.Name = "ordNombreAscendente";
+            ordNombreAscendente.Size = new Size(180, 22);
+            ordNombreAscendente.Text = "Ascendente";
+            ordNombreAscendente.Click += ordNombreAscendente_Click;
+            // 
+            // ordNombreDescendente
+            // 
+            ordNombreDescendente.Name = "ordNombreDescendente";
+            ordNombreDescendente.Size = new Size(180, 22);
+            ordNombreDescendente.Text = "Descendente";
+            ordNombreDescendente.Click += ordNombreDescendente_Click;
+            // 
+            // edadToolStripMenuItem
+            // 
+            edadToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ordEdadAscendente, ordEdadDescendente });
+            edadToolStripMenuItem.Name = "edadToolStripMenuItem";
+            edadToolStripMenuItem.Size = new Size(180, 22);
+            edadToolStripMenuItem.Text = "Edad";
+            // 
+            // ordEdadAscendente
+            // 
+            ordEdadAscendente.Name = "ordEdadAscendente";
+            ordEdadAscendente.Size = new Size(180, 22);
+            ordEdadAscendente.Text = "Ascendente";
+            // 
+            // ordEdadDescendente
+            // 
+            ordEdadDescendente.Name = "ordEdadDescendente";
+            ordEdadDescendente.Size = new Size(180, 22);
+            ordEdadDescendente.Text = "Descendente";
+            // 
             // FormCRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(602, 279);
+            ClientSize = new Size(602, 297);
             Controls.Add(btnEliminar);
             Controls.Add(btnModificar);
             Controls.Add(btnHalcon);
             Controls.Add(btnColibri);
             Controls.Add(btnPinguino);
             Controls.Add(listBox1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "FormCRUD";
             Text = "FormCRUD";
             Load += FormCRUD_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -120,5 +190,13 @@
         private Button btnHalcon;
         private Button btnModificar;
         private Button btnEliminar;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem ordenarToolStripMenuItem;
+        private ToolStripMenuItem nombreToolStripMenuItem1;
+        private ToolStripMenuItem edadToolStripMenuItem;
+        private ToolStripMenuItem ordEdadAscendente;
+        private ToolStripMenuItem ordEdadDescendente;
+        private ToolStripMenuItem ordNombreAscendente;
+        private ToolStripMenuItem ordNombreDescendente;
     }
 }

@@ -131,6 +131,16 @@ namespace Formularios
             }
         }
 
+        private void ordNombreAscendente_Click(object sender, EventArgs e)
+        {
+            this.zoologico.OrdenarPorNombre(true);
+            this.ActualizarLista();
+        }
 
+        private void ordNombreDescendente_Click(object sender, EventArgs e)
+        {
+            this.zoologico.OrdenarPorNombre(false);
+            this.ActualizarLista();
+        }
     }
 }
