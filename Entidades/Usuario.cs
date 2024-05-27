@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Formularios
 {
+    /// <summary>
+    /// Clase que representa a un usuario
+    /// </summary>
     public class Usuario
     {
         public string apellido { get; set; }

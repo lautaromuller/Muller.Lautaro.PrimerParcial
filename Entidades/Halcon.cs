@@ -30,6 +30,9 @@ namespace Entidades
             this.RangoDeCaza = rangoDeCaza;
         }
 
+        /// <summary>
+        /// Implementación del método abstracto Volar que muestra por consola como vuela el Halcón.
+        /// </summary>
         public override void Volar()
         {
             Console.WriteLine($"{this.Nombre} está volando con una envergadura de {this.Envergadura} metros.");
@@ -50,11 +53,23 @@ namespace Entidades
             return false;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador == para comprobar si dos halcones son iguales.
+        /// </summary>
+        /// <param name="h1">Primer halcón a comparar</param>
+        /// <param name="h2">Segundo halcón a comparar</param>
+        /// <returns>Booleano</returns>
         public static bool operator ==(Halcon h1, Halcon h2)
         {
             return h1.Equals(h2);
         }
 
+        /// <summary>
+        /// Sobrecarga del operador == para comprobar si dos halcones son distintos.
+        /// </summary>
+        /// <param name="h1">Primer halcón a comparar</param>
+        /// <param name="h2">Segundo halcón a comparar</param>
+        /// <returns>Booleano</returns>
         public static bool operator !=(Halcon h1, Halcon h2)
         {
             return !(h1 == h2);

@@ -19,6 +19,10 @@ namespace Formularios
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Maneja el evento click del boton aceptar. Crea una instancia de Halcon con los datos ingresados
+        /// y cierra el formulario.
+        /// </summary>
         public FormHalcon(Halcon halcon)
             :this()
         {

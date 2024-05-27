@@ -9,6 +9,9 @@ namespace Formularios
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Manejador del evento click del boton Ingresar. Comprueba que el usuario esté registrado.
+        /// </summary>
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             string miJson = File.ReadAllText("data.json");

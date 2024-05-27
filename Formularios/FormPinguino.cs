@@ -30,6 +30,10 @@ namespace Formularios
             Pinguino = pinguino;
         }
 
+        /// <summary>
+        /// Maneja el evento click del boton aceptar. Crea una instancia de Pinguino con los datos ingresados
+        /// y cierra el formulario.
+        /// </summary>
         public override void btnAceptar_Click(object sender, EventArgs e)
         {
             try

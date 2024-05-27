@@ -18,6 +18,10 @@ namespace Entidades
             this.Aves = new List<Ave>();
         }
 
+        /// <summary>
+        /// Serializa el código a un archivo XML.
+        /// </summary>
+        /// <param name="ruta">Ruta donde se guardará el archivo</param>
         public void Serializar(string ruta)
         {
             try
@@ -34,6 +38,11 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Deserializa un zoológico desde un archivo XML.
+        /// </summary>
+        /// <param name="ruta">Ruta del archivo desde donde se descargara el zoológico</param>
+        /// <returns>Instancia del zoológico deserializado</returns>
         public static Zoologico Deserializar(string ruta)
         {
             try
@@ -55,6 +64,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Ordena la lista de aves del zoológico por nombre.
+        /// </summary>
+        /// <param name="ascendente">Orden en el que se ordena. Por defecto: true</param>
         public void OrdenarPorNombre(bool ascendente = true)
         {
             if (ascendente)
@@ -67,6 +80,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Ordena la lista de aves del zoológico por edad.
+        /// </summary>
+        /// <param name="ascendente">Orden en el que se ordena. Por defecto: true</param>
         public void OrdenarPorEdad(bool ascendente = true)
         {
             if (ascendente)
@@ -79,11 +96,12 @@ namespace Entidades
             }
         }
 
-        public string MostrarAves()
-        {
-            return string.Join(", ", Aves);
-        }
-
+        /// <summary>
+        /// Sobrecarga del operador + para agregar un ave al zoológico.
+        /// </summary>
+        /// <param name="z">Zoológico al que se va a agregar el ave</param>
+        /// <param name="a">Ave que se va a agregar</param>
+        /// <returns>El zoológico con el ave agregada</returns>
         public static Zoologico operator +(Zoologico z, Ave a)
         {
             if (!(z == a))
@@ -93,6 +111,12 @@ namespace Entidades
             return z;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador - para eliminar un ave al zoológico.
+        /// </summary>
+        /// <param name="z">Zoológico del que se va a eliminar el ave</param>
+        /// <param name="a">Ave que se va a eliminar</param>
+        /// <returns>El zoológico con el ave eliminada</returns>
         public static Zoologico operator -(Zoologico z, Ave a)
         {
             if (z == a)
@@ -102,6 +126,12 @@ namespace Entidades
             return z;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador == para ver si el zoológico contiene un ave especifico.
+        /// </summary>
+        /// <param name="z">Zoológico que se va a revisar</param>
+        /// <param name="a">Ave que se va a buscar</param>
+        /// <returns>booleano</returns>
         public static bool operator ==(Zoologico z, Ave a)
         {
             foreach (var item in z.Aves)
@@ -113,6 +143,13 @@ namespace Entidades
             }
             return false;
         }
+
+        /// <summary>
+        /// Sobrecarga del operador != para ver si el zoológico no contiene un ave especifico.
+        /// </summary>
+        /// <param name="z">Zoológico que se va a revisar</param>
+        /// <param name="a">Ave que se va a buscar</param>
+        /// <returns>booleano</returns>
         public static bool operator !=(Zoologico z, Ave a)
         {
             return !(z == a);

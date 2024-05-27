@@ -37,12 +37,14 @@
             // 
             // btnIngresar
             // 
+            btnIngresar.BackColor = SystemColors.ScrollBar;
+            btnIngresar.FlatStyle = FlatStyle.Flat;
             btnIngresar.Location = new Point(123, 89);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(135, 28);
             btnIngresar.TabIndex = 2;
             btnIngresar.Text = "Ingresar";
-            btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.UseVisualStyleBackColor = false;
             btnIngresar.Click += btnIngresar_Click;
             // 
             // txtContrasena

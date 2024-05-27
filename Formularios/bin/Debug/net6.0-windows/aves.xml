@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Zoologico xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Aves>
-    <Ave xsi:type="Pinguino">
-      <Nombre>Jose</Nombre>
-      <Edad>2</Edad>
-      <Habitat>Bosque</Habitat>
-      <Peso>23</Peso>
-      <Especie>sar</Especie>
-    </Ave>
-  </Aves>
+  <Aves />
 </Zoologico>

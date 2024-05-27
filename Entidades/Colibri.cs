@@ -32,6 +32,9 @@ namespace Entidades
             this.VelocidadVuelo = velocidadVuelo;
         }
 
+        /// <summary>
+        /// Implementación del método abstracto Volar que muestra por consola como vuela el colibrí.
+        /// </summary>
         public override void Volar()
         {
             Console.WriteLine($"{this.Nombre} vuela a {this.VelocidadVuelo} km/h.");
@@ -52,11 +55,23 @@ namespace Entidades
             return false;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador == para comprobar si dos Colibríes son iguales.
+        /// </summary>
+        /// <param name="h1">Primer colibrí a comparar</param>
+        /// <param name="h2">Segundo colibrí a comparar</param>
+        /// <returns>Booleano</returns>
         public static bool operator ==(Colibri c1, Colibri c2)
         {
             return c1.Equals(c2);
         }
 
+        /// <summary>
+        /// Sobrecarga del operador != para comprobar si dos Colibríes son distintos.
+        /// </summary>
+        /// <param name="h1">Primer colibrí a comparar</param>
+        /// <param name="h2">Segundo colibrí a comparar</param>
+        /// <returns>Booleano</returns>
         public static bool operator !=(Colibri c1, Colibri c2)
         {
             return !(c1 == c2);
