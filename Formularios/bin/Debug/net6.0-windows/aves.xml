@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Zoologico xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Aves>
-    <Ave xsi:type="Halcon">
-      <Nombre>as</Nombre>
-      <Edad>12</Edad>
-      <Habitat>Bosque</Habitat>
-      <Envergadura>12</Envergadura>
-      <RangoDeCaza>2</RangoDeCaza>
-    </Ave>
     <Ave xsi:type="Pinguino">
       <Nombre>Jose</Nombre>
-      <Edad>12</Edad>
+      <Edad>2</Edad>
       <Habitat>Bosque</Habitat>
-      <Peso>12</Peso>
-      <Especie>12</Especie>
+      <Peso>23</Peso>
+      <Especie>sar</Especie>
     </Ave>
   </Aves>
 </Zoologico>

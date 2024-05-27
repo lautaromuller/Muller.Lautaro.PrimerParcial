@@ -18,7 +18,7 @@ namespace Formularios
             {
                 if (usuario.correo == txtCorreo.Text && usuario.clave == txtContrasena.Text)
                 {
-                    FormCRUD form = new FormCRUD();
+                    FormCRUD form = new FormCRUD(usuario.nombre);
                     form.Show();
                     return;
                 }

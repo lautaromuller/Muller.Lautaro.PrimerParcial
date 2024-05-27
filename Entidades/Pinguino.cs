@@ -44,14 +44,14 @@ namespace Entidades
             Console.WriteLine($"{this.Nombre} está jugando.");
         }
 
-        public void Jugar(string nombre)
+        public void Jugar(string otroPinguino)
         {
-            Console.WriteLine($"{this.Nombre} y {nombre} están jugando.");
+            Console.WriteLine($"{this.Nombre} y {otroPinguino} están jugando.");
         }
 
         public override string ToString()
         {
-            return $"{base.ToString()} \nPeso: {this.Peso} \nEspecie: {this.Especie}";
+            return $"{base.ToString()} - Peso: {this.Peso} - Especie: {this.Especie}";
         }
 
         public override bool Equals(object obj)
@@ -59,7 +59,7 @@ namespace Entidades
             if (obj is Pinguino)
             {
                 Pinguino ave = (Pinguino)obj;
-                return base.Equals(ave) && this.Nombre == ave.Nombre && this.Edad == ave.Edad && this.Habitat == ave.Habitat;
+                return base.Equals(ave) && this.Peso == ave.Peso && this.Especie == ave.Especie;
             }
             return false;
         }

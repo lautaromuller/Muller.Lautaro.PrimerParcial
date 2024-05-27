@@ -42,7 +42,10 @@
             edadToolStripMenuItem = new ToolStripMenuItem();
             ordEdadAscendente = new ToolStripMenuItem();
             ordEdadDescendente = new ToolStripMenuItem();
+            statusStrip1 = new StatusStrip();
+            lblStatusStrip = new ToolStripStatusLabel();
             menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // listBox1
@@ -189,12 +192,33 @@
             ordEdadDescendente.Text = "Descendente";
             ordEdadDescendente.Click += ordEdadDescendente_Click;
             // 
+            // statusStrip1
+            // 
+            statusStrip1.BackColor = Color.FromArgb(64, 64, 64);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { lblStatusStrip });
+            statusStrip1.Location = new Point(0, 331);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(651, 22);
+            statusStrip1.TabIndex = 7;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatusStrip
+            // 
+            lblStatusStrip.BackColor = Color.FromArgb(64, 64, 64);
+            lblStatusStrip.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblStatusStrip.ForeColor = Color.White;
+            lblStatusStrip.Margin = new Padding(5, 1, 0, 2);
+            lblStatusStrip.Name = "lblStatusStrip";
+            lblStatusStrip.Size = new Size(88, 19);
+            lblStatusStrip.Text = "usuario | fecha";
+            // 
             // FormCRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 34, 34);
-            ClientSize = new Size(651, 334);
+            ClientSize = new Size(651, 353);
+            Controls.Add(statusStrip1);
             Controls.Add(btnEliminar);
             Controls.Add(btnModificar);
             Controls.Add(btnHalcon);
@@ -209,6 +233,8 @@
             Load += FormCRUD_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -229,5 +255,7 @@
         private ToolStripMenuItem ordEdadDescendente;
         private ToolStripMenuItem ordNombreAscendente;
         private ToolStripMenuItem ordNombreDescendente;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel lblStatusStrip;
     }
 }

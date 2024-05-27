@@ -39,7 +39,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{base.ToString()} \nVelocidad de Vuelo: {this.VelocidadVuelo} \nColor de Plumas: {this.ColorPlumas}";
+            return $"{base.ToString()} - Velocidad de Vuelo: {this.VelocidadVuelo} - Color de Plumas: {this.ColorPlumas}";
         }
 
         public override bool Equals(object obj)
@@ -47,7 +47,7 @@ namespace Entidades
             if (obj is Colibri)
             {
                 Colibri ave = (Colibri)obj;
-                return base.Equals(ave) && this.Nombre == ave.Nombre && this.Edad == ave.Edad && this.Habitat == ave.Habitat;
+                return base.Equals(ave);
             }
             return false;
         }

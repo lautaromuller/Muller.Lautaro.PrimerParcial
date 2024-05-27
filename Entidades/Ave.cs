@@ -43,12 +43,12 @@ namespace Entidades
 
         public virtual void Alimentarse(string comida)
         {
-            Console.WriteLine($"{this.Nombre} esta comiendo un {comida}.");
+            Console.WriteLine($"{this.Nombre} esta comiendo un/a {comida}.");
         }
 
         public override string ToString()
         {
-            return $"{this.Nombre} \nEdad: {this.Edad} \nHábitat: {this.Habitat}";
+            return $"Nombre: {this.Nombre} - Hábitat: {this.Habitat} - Edad: {this.Edad}";
         }
 
         public override bool Equals(object obj)

@@ -14,20 +14,23 @@ internal class Program
 
         zoologico += pinguino;
         zoologico += colibri;
+        Console.WriteLine(zoologico.MostrarAves());
+        //zoologico += halcon;
+        Console.WriteLine(zoologico == pinguino);
+        Console.WriteLine(zoologico == halcon);
+        zoologico += pinguino;
         zoologico += halcon;
-
         Console.WriteLine("Aves en el zoológico:");
-        zoologico.MostrarAves();
+        Console.WriteLine(zoologico.MostrarAves());
+
 
         zoologico.OrdenarPorNombre(false);
         Console.WriteLine("-------------------\n");
         Console.WriteLine("Aves ordenadas por nombre (Descendente):");
-        zoologico.MostrarAves();
 
         zoologico.OrdenarPorEdad(true);
         Console.WriteLine("-------------------\n");
         Console.WriteLine("Aves ordenadas por edad:");
-        zoologico.MostrarAves();
 
         pinguino.Alimentarse();
         colibri.Alimentarse();

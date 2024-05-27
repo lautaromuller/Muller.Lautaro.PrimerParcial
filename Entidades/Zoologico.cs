@@ -86,7 +86,7 @@ namespace Entidades
 
         public static Zoologico operator +(Zoologico z, Ave a)
         {
-            if (!z.Aves.Contains(a))
+            if (!(z == a))
             {
                 z.Aves.Add(a);
             }
@@ -95,11 +95,27 @@ namespace Entidades
 
         public static Zoologico operator -(Zoologico z, Ave a)
         {
-            if (z.Aves.Contains(a))
+            if (z == a)
             {
                 z.Aves.Remove(a);
             }
             return z;
+        }
+
+        public static bool operator ==(Zoologico z, Ave a)
+        {
+            foreach (var item in z.Aves)
+            {
+                if(item == a)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public static bool operator !=(Zoologico z, Ave a)
+        {
+            return !(z == a);
         }
     }
 }

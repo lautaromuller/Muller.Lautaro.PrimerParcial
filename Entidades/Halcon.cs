@@ -37,7 +37,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{base.ToString()} \nEnvergadura: {this.Envergadura} \nRango de Caza: {this.RangoDeCaza}";
+            return $"{base.ToString()} - Envergadura: {this.Envergadura} - Rango de Caza: {this.RangoDeCaza}";
         }
 
         public override bool Equals(object obj)
@@ -45,7 +45,7 @@ namespace Entidades
             if (obj is Halcon)
             {
                 Halcon ave = (Halcon)obj;
-                return base.Equals(obj) && this.Envergadura == ave.Envergadura && this.RangoDeCaza == ave.RangoDeCaza;
+                return base.Equals(obj) && this.Envergadura == ave.Envergadura;
             }
             return false;
         }

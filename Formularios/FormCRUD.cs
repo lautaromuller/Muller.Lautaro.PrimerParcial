@@ -14,13 +14,18 @@ namespace Formularios
 {
     public partial class FormCRUD : Form
     {
+        private string nombreUsuario;
         private Zoologico zoologico;
         public string ruta = "aves.xml";
-        public FormCRUD()
+        public FormCRUD(string nombreUsuario)
         {
             InitializeComponent();
             zoologico = Zoologico.Deserializar(ruta);
             ActualizarLista();
+            this.nombreUsuario = nombreUsuario;
+            //this.statusStrip1 = new StatusStrip();
+            this.lblStatusStrip.Text = $"{nombreUsuario} | {DateTime.Now.ToString("d")}";
+
         }
 
         private void FormCRUD_Load(object sender, EventArgs e)
@@ -62,7 +67,7 @@ namespace Formularios
             FormPinguino form = new FormPinguino();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                zoologico.Aves.Add(form.Pinguino);
+                zoologico += form.Pinguino;
                 this.ActualizarLista();
             }
         }
@@ -72,7 +77,7 @@ namespace Formularios
             FormColibri form = new FormColibri();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                zoologico.Aves.Add(form.Colibri);
+                zoologico += form.Colibri;
                 this.ActualizarLista();
             }
         }
@@ -82,7 +87,7 @@ namespace Formularios
             FormHalcon form = new FormHalcon();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                zoologico.Aves.Add(form.Halcon);
+                zoologico += form.Halcon;
                 this.ActualizarLista();
             }
         }
@@ -126,7 +131,7 @@ namespace Formularios
             int indice = this.listBox1.SelectedIndex;
             if (indice != -1)
             {
-                this.zoologico.Aves.RemoveAt(indice);
+                zoologico -= zoologico.Aves[indice];
                 this.ActualizarLista();
             }
         }
