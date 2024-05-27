@@ -34,16 +34,26 @@ namespace Entidades
             this.Especie = especie;
         }
 
+        /// <summary>
+        /// Implementación del método abstracto Volar que muestra por consola como vuela el Pinguino.
+        /// </summary>
         public override void Volar()
         {
             Console.WriteLine($"{this.Nombre} no puede volar.");
         }
 
+        /// <summary>
+        /// Muestra por consola qun mensaje indicando que el pinguino está jugando.
+        /// </summary>
         public void Jugar()
         {
             Console.WriteLine($"{this.Nombre} está jugando.");
         }
 
+        /// <summary>
+        /// Sobrecarga del método Jugar que permite pasar un segundo pinguino como compañero de juego.
+        /// </summary>
+        /// <param name="otroPinguino">Nombre del segundo pinguino</param>
         public void Jugar(string nombre)
         {
             Console.WriteLine($"{this.Nombre} y {nombre} están jugando.");
@@ -51,7 +61,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{base.ToString()} \nPeso: {this.Peso} \nEspecie: {this.Especie}";
+            return $"{base.ToString()} - Peso: {this.Peso} - Especie: {this.Especie}";
         }
 
         public override bool Equals(object obj)
@@ -59,16 +69,28 @@ namespace Entidades
             if (obj is Pinguino)
             {
                 Pinguino ave = (Pinguino)obj;
-                return base.Equals(ave) && this.Nombre == ave.Nombre && this.Edad == ave.Edad && this.Habitat == ave.Habitat;
+                return base.Equals(ave) && this.Peso == ave.Peso && this.Especie == ave.Especie;
             }
             return false;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador == que comprueba si dos pinguinos son iguales.
+        /// </summary>
+        /// <param name="p1">Primer pinguino a comparar</param>
+        /// <param name="p2">Segundo pinguino a comparar</param>
+        /// <returns>Booleano</returns>
         public static bool operator ==(Pinguino p1, Pinguino p2)
         {
             return p1.Equals(p2);
         }
 
+        /// <summary>
+        /// Sobrecarga del operador != para coprobar si dos pinguinos son distintos.
+        /// </summary>
+        /// <param name="p1">Primer pinguino a comparar</param>
+        /// <param name="p2">Segundo pinguino a comparar</param>
+        /// <returns>Booleano</returns>
         public static bool operator !=(Pinguino p1, Pinguino p2)
         {
             return !(p1 == p2);

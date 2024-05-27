@@ -37,7 +37,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(21, 176);
+            label2.Location = new Point(22, 113);
             label2.Name = "label2";
             label2.Size = new Size(32, 15);
             label2.TabIndex = 14;
@@ -46,7 +46,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 205);
+            label3.Location = new Point(22, 142);
             label3.Name = "label3";
             label3.Size = new Size(46, 15);
             label3.TabIndex = 15;
@@ -54,29 +54,32 @@
             // 
             // txtPeso
             // 
-            txtPeso.Location = new Point(89, 173);
+            txtPeso.Location = new Point(76, 110);
             txtPeso.Name = "txtPeso";
-            txtPeso.Size = new Size(113, 23);
-            txtPeso.TabIndex = 16;
+            txtPeso.Size = new Size(207, 23);
+            txtPeso.TabIndex = 3;
             // 
             // txtEspecie
             // 
-            txtEspecie.Location = new Point(89, 202);
+            txtEspecie.Location = new Point(76, 139);
             txtEspecie.Name = "txtEspecie";
-            txtEspecie.Size = new Size(113, 23);
-            txtEspecie.TabIndex = 17;
+            txtEspecie.Size = new Size(207, 23);
+            txtEspecie.TabIndex = 4;
             // 
             // FormPinguino
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(543, 406);
+            ClientSize = new Size(302, 225);
             Controls.Add(txtEspecie);
             Controls.Add(txtPeso);
             Controls.Add(label3);
             Controls.Add(label2);
             Name = "FormPinguino";
             Text = "FormPinguino";
+            Controls.SetChildIndex(txtNombre, 0);
+            Controls.SetChildIndex(txtEdad, 0);
+            Controls.SetChildIndex(cbHabitat, 0);
             Controls.SetChildIndex(label2, 0);
             Controls.SetChildIndex(label3, 0);
             Controls.SetChildIndex(txtPeso, 0);

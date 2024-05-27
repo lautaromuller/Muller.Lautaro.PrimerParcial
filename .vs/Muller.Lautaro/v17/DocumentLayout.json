@@ -1,42 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\",
+  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\Nueva carpeta\\Muller.Lautaro.PrimerParcial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\entidades\\zoologico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\zoologico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\nueva carpeta\\muller.lautaro.primerparcial\\formularios\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\nueva carpeta\\muller.lautaro.primerparcial\\formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial\\formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial\\formularios\\formcrud.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcrud.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\entidades\\ave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\ave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\formularios\\formave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\entidades\\halcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\halcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\entidades\\colibri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\colibri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\formularios\\formpinguino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formpinguino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,114 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormCRUD.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormCRUD.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\FormCRUD.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T08:38:20.745Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormCRUD.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.Designer.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormCRUD.Designer.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.Designer.cs",
-              "RelativeToolTip": "Formularios\\FormCRUD.Designer.cs",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAMwKIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T08:38:09.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Colibri.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Colibri.cs",
-              "RelativeDocumentMoniker": "Entidades\\Colibri.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Colibri.cs",
-              "RelativeToolTip": "Entidades\\Colibri.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T08:05:01.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Ave.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Ave.cs",
-              "RelativeDocumentMoniker": "Entidades\\Ave.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Ave.cs",
-              "RelativeToolTip": "Entidades\\Ave.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T07:48:54.576Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Zoologico.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Zoologico.cs",
-              "RelativeDocumentMoniker": "Entidades\\Zoologico.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Zoologico.cs",
-              "RelativeToolTip": "Entidades\\Zoologico.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAIwEUAAAA5AAAA",
+              "Title": "FormLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Nueva carpeta\\Muller.Lautaro.PrimerParcial\\Formularios\\FormLogin.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Nueva carpeta\\Muller.Lautaro.PrimerParcial\\Formularios\\FormLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\FormLogin.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T05:11:28.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-27T22:17:09.156Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "FormCRUD.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Nueva carpeta\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.cs",
               "RelativeDocumentMoniker": "Formularios\\FormCRUD.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Nueva carpeta\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.cs",
               "RelativeToolTip": "Formularios\\FormCRUD.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAhwI4AAAAjAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T17:17:49.313Z",
+              "WhenOpened": "2024-05-27T21:33:44.974Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Halcon.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Halcon.cs",
-              "RelativeDocumentMoniker": "Entidades\\Halcon.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Halcon.cs",
-              "RelativeToolTip": "Entidades\\Halcon.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T08:05:14.621Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FormPinguino.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormPinguino.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormPinguino.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormPinguino.cs",
-              "RelativeToolTip": "Formularios\\FormPinguino.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowCwAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T18:08:50.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormAve.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormAve.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormAve.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormAve.cs",
-              "RelativeToolTip": "Formularios\\FormAve.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAgwBEAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T18:03:08.099Z"
             }
           ]
         }

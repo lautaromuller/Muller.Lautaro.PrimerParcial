@@ -37,7 +37,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(35, 194);
+            label4.Location = new Point(22, 113);
             label4.Name = "label4";
             label4.Size = new Size(111, 15);
             label4.TabIndex = 2;
@@ -46,7 +46,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(35, 223);
+            label5.Location = new Point(22, 142);
             label5.Name = "label5";
             label5.Size = new Size(106, 15);
             label5.TabIndex = 3;
@@ -54,29 +54,32 @@
             // 
             // txtColorPlumas
             // 
-            txtColorPlumas.Location = new Point(163, 191);
+            txtColorPlumas.Location = new Point(139, 110);
             txtColorPlumas.Name = "txtColorPlumas";
-            txtColorPlumas.Size = new Size(100, 23);
-            txtColorPlumas.TabIndex = 6;
+            txtColorPlumas.Size = new Size(144, 23);
+            txtColorPlumas.TabIndex = 3;
             // 
             // txtVelocidadVuelo
             // 
-            txtVelocidadVuelo.Location = new Point(163, 220);
+            txtVelocidadVuelo.Location = new Point(139, 139);
             txtVelocidadVuelo.Name = "txtVelocidadVuelo";
-            txtVelocidadVuelo.Size = new Size(100, 23);
-            txtVelocidadVuelo.TabIndex = 7;
+            txtVelocidadVuelo.Size = new Size(144, 23);
+            txtVelocidadVuelo.TabIndex = 4;
             // 
             // FormColibri
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(493, 390);
+            ClientSize = new Size(304, 227);
             Controls.Add(txtVelocidadVuelo);
             Controls.Add(txtColorPlumas);
             Controls.Add(label5);
             Controls.Add(label4);
             Name = "FormColibri";
             Text = "FormColibri";
+            Controls.SetChildIndex(txtNombre, 0);
+            Controls.SetChildIndex(txtEdad, 0);
+            Controls.SetChildIndex(cbHabitat, 0);
             Controls.SetChildIndex(label4, 0);
             Controls.SetChildIndex(label5, 0);
             Controls.SetChildIndex(txtColorPlumas, 0);

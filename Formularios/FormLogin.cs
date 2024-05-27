@@ -8,7 +8,10 @@ namespace Formularios
         {
             InitializeComponent();
         }
-
+        
+        /// <summary>
+        /// Manejador del evento click del boton Ingresar. Comprueba que el usuario esté registrado.
+        /// </summary>
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             string miJson = File.ReadAllText("data.json");
@@ -18,7 +21,7 @@ namespace Formularios
             {
                 if (usuario.correo == txtCorreo.Text && usuario.clave == txtContrasena.Text)
                 {
-                    FormCRUD form = new FormCRUD();
+                    FormCRUD form = new FormCRUD(usuario.nombre);
                     form.Show();
                     return;
                 }

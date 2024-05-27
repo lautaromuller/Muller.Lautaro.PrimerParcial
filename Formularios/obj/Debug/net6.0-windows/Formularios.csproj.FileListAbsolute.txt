@@ -49,3 +49,29 @@ C:\Users\USUARIO\Desktop\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6
 C:\Users\USUARIO\Desktop\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.genruntimeconfig.cache
 C:\Users\USUARIO\Desktop\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\ref\Formularios.dll
 C:\Users\USUARIO\Desktop\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.FormAve.resources
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\bin\Debug\net6.0-windows\Formularios.exe
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\bin\Debug\net6.0-windows\Formularios.deps.json
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\bin\Debug\net6.0-windows\Formularios.runtimeconfig.json
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\bin\Debug\net6.0-windows\Formularios.dll
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\bin\Debug\net6.0-windows\Formularios.pdb
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\bin\Debug\net6.0-windows\Entidades.dll
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\bin\Debug\net6.0-windows\Entidades.pdb
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.FormAve.resources
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.FormColibri.resources
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.FormCRUD.resources
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.FormHalcon.resources
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.FormLogin.resources
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.FormPinguino.resources
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.csproj.GenerateResource.cache
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.AssemblyInfo.cs
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.sourcelink.json
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formular.9034CDC0.Up2Date
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.dll
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\refint\Formularios.dll
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.pdb
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\Formularios.genruntimeconfig.cache
+C:\Users\USUARIO\Desktop\Nueva carpeta\Muller.Lautaro.PrimerParcial\Formularios\obj\Debug\net6.0-windows\ref\Formularios.dll

@@ -40,78 +40,86 @@
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(76, 352);
+            btnAceptar.BackColor = Color.FromArgb(51, 122, 183);
+            btnAceptar.FlatStyle = FlatStyle.Flat;
+            btnAceptar.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAceptar.ForeColor = Color.White;
+            btnAceptar.Location = new Point(25, 182);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(75, 23);
-            btnAceptar.TabIndex = 0;
-            btnAceptar.Text = "button1";
-            btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Size = new Size(120, 30);
+            btnAceptar.TabIndex = 5;
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.UseVisualStyleBackColor = false;
             btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(220, 362);
+            btnCancelar.BackColor = Color.FromArgb(51, 122, 183);
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCancelar.ForeColor = Color.White;
+            btnCancelar.Location = new Point(163, 182);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 23);
-            btnCancelar.TabIndex = 1;
-            btnCancelar.Text = "button2";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Size = new Size(120, 30);
+            btnCancelar.TabIndex = 6;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(174, 51);
+            txtNombre.Location = new Point(76, 23);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(100, 23);
-            txtNombre.TabIndex = 2;
+            txtNombre.Size = new Size(207, 23);
+            txtNombre.TabIndex = 0;
             // 
             // txtEdad
             // 
-            txtEdad.Location = new Point(224, 134);
+            txtEdad.Location = new Point(76, 81);
             txtEdad.Name = "txtEdad";
-            txtEdad.Size = new Size(100, 23);
-            txtEdad.TabIndex = 3;
+            txtEdad.Size = new Size(207, 23);
+            txtEdad.TabIndex = 2;
             // 
             // cbHabitat
             // 
             cbHabitat.FormattingEnabled = true;
-            cbHabitat.Location = new Point(201, 89);
+            cbHabitat.Location = new Point(76, 52);
             cbHabitat.Name = "cbHabitat";
-            cbHabitat.Size = new Size(121, 23);
-            cbHabitat.TabIndex = 4;
+            cbHabitat.Size = new Size(207, 23);
+            cbHabitat.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(23, 51);
+            label1.Location = new Point(22, 26);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(51, 15);
             label1.TabIndex = 5;
-            label1.Text = "label1";
+            label1.Text = "Nombre";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(22, 89);
+            label2.Location = new Point(22, 55);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(46, 15);
             label2.TabIndex = 6;
-            label2.Text = "label2";
+            label2.Text = "Hábitat";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 146);
+            label3.Location = new Point(22, 84);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(33, 15);
             label3.TabIndex = 7;
-            label3.Text = "label3";
+            label3.Text = "Edad";
             // 
             // FormAve
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(309, 230);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -120,6 +128,7 @@
             Controls.Add(txtNombre);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormAve";
             Text = "FormAve";
             ResumeLayout(false);

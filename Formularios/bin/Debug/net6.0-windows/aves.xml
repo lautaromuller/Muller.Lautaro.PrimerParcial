@@ -2,13 +2,6 @@
 <Zoologico xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Aves>
     <Ave xsi:type="Halcon">
-      <Nombre>ss</Nombre>
-      <Edad>123</Edad>
-      <Habitat>Bosque</Habitat>
-      <Envergadura>123</Envergadura>
-      <RangoDeCaza>2s</RangoDeCaza>
-    </Ave>
-    <Ave xsi:type="Halcon">
       <Nombre>Pedrito</Nombre>
       <Edad>3</Edad>
       <Habitat>Bosque</Habitat>
@@ -16,11 +9,11 @@
       <RangoDeCaza>todos</RangoDeCaza>
     </Ave>
     <Ave xsi:type="Colibri">
-      <Nombre>111111</Nombre>
-      <Edad>222</Edad>
-      <Habitat>Antartida</Habitat>
-      <VelocidadVuelo>222</VelocidadVuelo>
-      <ColorPlumas>222</ColorPlumas>
+      <Nombre>Jose</Nombre>
+      <Edad>2</Edad>
+      <Habitat>Bosque</Habitat>
+      <VelocidadVuelo>3</VelocidadVuelo>
+      <ColorPlumas>Verde</ColorPlumas>
     </Ave>
   </Aves>
 </Zoologico>

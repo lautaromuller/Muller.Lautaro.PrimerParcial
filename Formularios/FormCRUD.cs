@@ -14,15 +14,22 @@ namespace Formularios
 {
     public partial class FormCRUD : Form
     {
+        private string nombreUsuario;
         private Zoologico zoologico;
         public string ruta = "aves.xml";
-        public FormCRUD()
+        public FormCRUD(string nombreUsuario)
         {
             InitializeComponent();
             zoologico = Zoologico.Deserializar(ruta);
+            this.nombreUsuario = nombreUsuario;
+            this.lblStatusStrip.Text = $"{nombreUsuario} | {DateTime.Now.ToString("d")}";
             ActualizarLista();
         }
 
+        /// <summary>
+        /// Manejador del evento load del formulario. Deserializa el zoológico del archivo de origen
+        /// y inicializa la lista de aves.
+        /// </summary>
         private void FormCRUD_Load(object sender, EventArgs e)
         {
             if (File.Exists(ruta))
@@ -50,6 +57,9 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Actualiza el listBox con la información de la lista de aves y llama a la función que Serializar.
+        /// </summary>
         private void ActualizarLista()
         {
             this.listBox1.DataSource = null;
@@ -57,36 +67,49 @@ namespace Formularios
             zoologico.Serializar(ruta);
         }
 
+        /// <summary>
+        /// Llama a FormPinguino para poder ingresar un nuevo pinguino.
+        /// </summary>
         private void btnPinguino_Click(object sender, EventArgs e)
         {
             FormPinguino form = new FormPinguino();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                zoologico.Aves.Add(form.Pinguino);
+                zoologico += form.Pinguino;
                 this.ActualizarLista();
             }
         }
 
+        /// <summary>
+        /// Llama a FormColibri para poder ingresar un nuevo colibrí.
+        /// </summary>
         private void btnColibri_Click(object sender, EventArgs e)
         {
             FormColibri form = new FormColibri();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                zoologico.Aves.Add(form.Colibri);
+                zoologico += form.Colibri;
                 this.ActualizarLista();
             }
         }
 
+        /// <summary>
+        /// Llama a FormHalcon para poder ingresar un nuevo halcón.
+        /// </summary>
         private void btnHalcon_Click(object sender, EventArgs e)
         {
             FormHalcon form = new FormHalcon();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                zoologico.Aves.Add(form.Halcon);
+                zoologico += form.Halcon;
                 this.ActualizarLista();
             }
         }
 
+        /// <summary>
+        /// Manejador de evento click del boton Modificar. LLama al formulario correspondiente al item seleccionado
+        /// y lo inicializa con los valores actuales para poder modificarlo.
+        /// </summary>
         private void btnModificar_Click(object sender, EventArgs e)
         {
             int indice = this.listBox1.SelectedIndex;
@@ -121,25 +144,52 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Manejador de evento click del boton Eliminar. Elimina el item seleccionado.
+        /// </summary>
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int indice = this.listBox1.SelectedIndex;
             if (indice != -1)
             {
-                this.zoologico.Aves.RemoveAt(indice);
+                this.zoologico -= zoologico.Aves[indice];
                 this.ActualizarLista();
             }
         }
 
+        /// <summary>
+        /// Ordena la lista por nombre de forma ascendente.
+        /// </summary>
         private void ordNombreAscendente_Click(object sender, EventArgs e)
         {
             this.zoologico.OrdenarPorNombre(true);
             this.ActualizarLista();
         }
 
+        /// <summary>
+        /// Ordena la lista por nombre de forma descendente.
+        /// </summary>
         private void ordNombreDescendente_Click(object sender, EventArgs e)
         {
             this.zoologico.OrdenarPorNombre(false);
+            this.ActualizarLista();
+        }
+
+        /// <summary>
+        /// Ordena la lista por edad de forma ascendente.
+        /// </summary>
+        private void ordEdadAscendente_Click(object sender, EventArgs e)
+        {
+            this.zoologico.OrdenarPorEdad(true);
+            this.ActualizarLista();
+        }
+
+        /// <summary>
+        /// Ordena la lista por edad de forma descendente.
+        /// </summary>
+        private void ordEdadDescendente_Click(object sender, EventArgs e)
+        {
+            this.zoologico.OrdenarPorEdad(false);
             this.ActualizarLista();
         }
     }
