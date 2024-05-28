@@ -23,7 +23,6 @@ namespace Formularios
             zoologico = Zoologico.Deserializar(ruta);
             ActualizarLista();
             this.nombreUsuario = nombreUsuario;
-            //this.statusStrip1 = new StatusStrip();
             this.lblStatusStrip.Text = $"{nombreUsuario} | {DateTime.Now.ToString("d")}";
 
         }
@@ -67,7 +66,6 @@ namespace Formularios
         {
             this.listBox1.DataSource = null;
             this.listBox1.DataSource = zoologico.Aves;
-            zoologico.Serializar(ruta);
         }
 
         /// <summary>
@@ -203,6 +201,36 @@ namespace Formularios
             if (rta == DialogResult.No)
             {
                 e.Cancel = true;
+            }
+            zoologico.Serializar(ruta);
+        }
+
+        private void guardar_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Archivos XML (*.xml)|*.xml|Archivos JSON (*.json)|*.json",
+                Title = "Guardar archivo de datos"
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ruta = saveFileDialog.FileName;
+                zoologico.Serializar(ruta);
+            }
+        }
+
+        private void cargar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Archivos XML (*.xml)|*.xml|Archivos JSON (*.json)|*.json",
+                Title = "Cargar archivo de datos"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                zoologico = Zoologico.Deserializar(ruta);
             }
         }
     }

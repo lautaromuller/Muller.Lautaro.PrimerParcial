@@ -42,8 +42,10 @@
             edadToolStripMenuItem = new ToolStripMenuItem();
             ordEdadAscendente = new ToolStripMenuItem();
             ordEdadDescendente = new ToolStripMenuItem();
+            guardar = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             lblStatusStrip = new ToolStripStatusLabel();
+            cargar = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -136,7 +138,7 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = SystemColors.ActiveCaption;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { ordenarToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { ordenarToolStripMenuItem, guardar, cargar });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(651, 24);
@@ -192,6 +194,13 @@
             ordEdadDescendente.Text = "Descendente";
             ordEdadDescendente.Click += ordEdadDescendente_Click;
             // 
+            // guardar
+            // 
+            guardar.Name = "guardar";
+            guardar.Size = new Size(61, 20);
+            guardar.Text = "Guardar";
+            guardar.Click += guardar_Click;
+            // 
             // statusStrip1
             // 
             statusStrip1.BackColor = Color.FromArgb(64, 64, 64);
@@ -211,6 +220,13 @@
             lblStatusStrip.Name = "lblStatusStrip";
             lblStatusStrip.Size = new Size(88, 19);
             lblStatusStrip.Text = "usuario | fecha";
+            // 
+            // cargar
+            // 
+            cargar.Name = "cargar";
+            cargar.Size = new Size(54, 20);
+            cargar.Text = "Cargar";
+            cargar.Click += cargar_Click;
             // 
             // FormCRUD
             // 
@@ -258,5 +274,7 @@
         private ToolStripMenuItem ordNombreDescendente;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel lblStatusStrip;
+        private ToolStripMenuItem guardar;
+        private ToolStripMenuItem cargar;
     }
 }
