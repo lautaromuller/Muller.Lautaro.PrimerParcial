@@ -13,23 +13,22 @@ namespace Entidades
         public string ColorPlumas { get; set; }
 
         public Colibri() { }
-
-        public Colibri(string nombre, Habitat habitat, int edad) 
-            :base(nombre, habitat, edad) 
-        { 
-
-        }
-
-        public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas) 
-            :this(nombre, habitat, edad)
+        public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas, double velocidadVuelo)
+            : base(nombre, habitat, edad)
         {
             this.ColorPlumas = colorPlumas;
+            this.VelocidadVuelo = velocidadVuelo;
+        }
+        public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas)
+            : this(nombre, habitat, edad, colorPlumas, 0.0)
+        {
+            
         }
 
-        public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas, double velocidadVuelo)
-            : this(nombre, habitat, edad, colorPlumas)
+        public Colibri(string nombre, Habitat habitat, int edad)
+            : this(nombre, habitat, edad,"", 0.0)
         {
-            this.VelocidadVuelo = velocidadVuelo;
+
         }
 
         /// <summary>

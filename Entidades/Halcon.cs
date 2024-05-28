@@ -11,23 +11,25 @@ namespace Entidades
         public double Envergadura { get; set; }
         public string RangoDeCaza { get; set; }
 
-        public Halcon() { }
-        public Halcon(string nombre, Habitat habitat, int edad) 
-            :base(nombre, habitat, edad)
-        {
+        public Halcon() {}
 
+        public Halcon(string nombre, Habitat habitat, int edad, double envergadura, string rangoDeCaza)
+            : base(nombre, habitat, edad)
+        {
+            this.Envergadura = envergadura;
+            this.RangoDeCaza = rangoDeCaza;
         }
 
         public Halcon(string nombre, Habitat habitat, int edad, double envergadura)
-            :this(nombre, habitat, edad)
+            : this(nombre, habitat, edad,envergadura,"")
         {
-            this.Envergadura = envergadura;
+            
         }
 
-        public Halcon(string nombre, Habitat habitat, int edad, double envergadura, string rangoDeCaza)
-            : this(nombre, habitat, edad,envergadura)
+        public Halcon(string nombre, Habitat habitat, int edad)
+            : this(nombre, habitat, edad, 0.0, "")
         {
-            this.RangoDeCaza = rangoDeCaza;
+
         }
 
         /// <summary>

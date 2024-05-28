@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,16 +39,40 @@ namespace Formularios
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtNombre.Text))
+                {
+                    throw new ArgumentException("El nombre no puede quedar vacío.");
+                }
+                if (cbHabitat.SelectedItem == null)
+                {
+                    throw new ArgumentException("Debe seleccionar un hábitat.");
+                }
+                if (!int.TryParse(txtEdad.Text, out int edad) || edad < 0)
+                {
+                    throw new ArgumentException("La edad debe ser un número entero mayor o igual a 0.");
+                }
+                if (!double.TryParse(txtPeso.Text, out double peso) || peso <= 0)
+                {
+                    throw new ArgumentException("El peso debe ser un número mayor a 0.");
+                }
+                if (string.IsNullOrWhiteSpace(txtEspecie.Text))
+                {
+                    throw new ArgumentException("La especie no puede quedar vacía.");
+                }
+
+
                 string nombre = this.txtNombre.Text;
                 Habitat habitat = (Habitat)this.cbHabitat.SelectedItem;
-                int edad = int.Parse(this.txtEdad.Text);
-                double peso = double.Parse(this.txtPeso.Text);
                 string especie = this.txtEspecie.Text;
 
                 Pinguino = new Pinguino(nombre, habitat, edad, peso, especie);
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

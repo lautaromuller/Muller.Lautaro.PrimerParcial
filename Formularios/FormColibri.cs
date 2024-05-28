@@ -38,16 +38,40 @@ namespace Formularios
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtNombre.Text))
+                {
+                    throw new ArgumentException("El nombre no puede quedar vacío.");
+                }
+                if (cbHabitat.SelectedItem == null)
+                {
+                    throw new ArgumentException("Debe seleccionar un hábitat.");
+                }
+                if (!int.TryParse(txtEdad.Text, out int edad) || edad < 0)
+                {
+                    throw new ArgumentException("La edad debe ser un número entero mayor o igual a 0.");
+                }
+                if (string.IsNullOrWhiteSpace(txtColorPlumas.Text))
+                {
+                    throw new ArgumentException("El color de las plumas no puede quedar vacío.");
+                }
+                if (!double.TryParse(this.txtVelocidadVuelo.Text, out double velocidadVuelo) || velocidadVuelo <= 0)
+                {
+                    throw new ArgumentException("La velocidad de vuelo debe ser un número mayor a 0.");
+                }
+
+
                 string nombre = this.txtNombre.Text;
                 Habitat habitat = (Habitat)this.cbHabitat.SelectedItem;
-                int edad = int.Parse(this.txtEdad.Text);
                 string colorPlumas = this.txtColorPlumas.Text;
-                double velocidadVuelo = double.Parse(this.txtVelocidadVuelo.Text);
 
                 Colibri = new Colibri(nombre, habitat, edad, colorPlumas, velocidadVuelo);
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

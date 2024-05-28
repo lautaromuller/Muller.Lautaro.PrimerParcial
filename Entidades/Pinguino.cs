@@ -11,27 +11,29 @@ namespace Entidades
         public double Peso { get; set; }
         public string Especie { get; set; }
 
+
         public Pinguino()
         {
 
         }
-
-        public Pinguino(string nombre, Habitat habitat, int edad) 
-            :base(nombre, habitat, edad)
-        {
-
-        }
-
-        public Pinguino(string nombre, Habitat habitat, int edad, double peso)
-            :this(nombre, habitat, edad)
+        
+        public Pinguino(string nombre, Habitat habitat, int edad, double peso, string especie)
+            : base(nombre, habitat, edad)
         {
             this.Peso = peso;
+            this.Especie = especie;
         }
 
-        public Pinguino(string nombre, Habitat habitat, int edad, double peso, string especie)
-            :this(nombre, habitat, edad, peso)
+        
+        public Pinguino(string nombre, Habitat habitat, int edad, double peso)
+            : this(nombre, habitat, edad, peso, "")
         {
-            this.Especie = especie;
+        }
+
+        
+        public Pinguino(string nombre, Habitat habitat, int edad)
+            : this(nombre, habitat, edad, 1.0, "")
+        {
         }
 
         /// <summary>

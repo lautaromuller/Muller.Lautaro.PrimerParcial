@@ -38,16 +38,40 @@ namespace Formularios
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtNombre.Text))
+                {
+                    throw new ArgumentException("El nombre no puede quedar vacío.");
+                }
+                if (cbHabitat.SelectedItem == null)
+                {
+                    throw new ArgumentException("Debe seleccionar un hábitat.");
+                }
+                if (!int.TryParse(txtEdad.Text, out int edad) || edad < 0)
+                {
+                    throw new ArgumentException("La edad debe ser un número entero mayor o igual a 0.");
+                }
+                if (!double.TryParse(this.txtEnvergadura.Text, out double envergadura) || envergadura <= 0)
+                {
+                    throw new ArgumentException("La envergadura debe ser un número mayor a 0.");
+                }
+                if (string.IsNullOrWhiteSpace(txtRangoCaza.Text))
+                {
+                    throw new ArgumentException("El rango de caza no puede quedar vacío.");
+                }
+
+
                 string nombre = this.txtNombre.Text;
                 Habitat habitat = (Habitat)this.cbHabitat.SelectedItem;
-                int edad = int.Parse(this.txtEdad.Text);
-                double envergadura = double.Parse(this.txtEnvergadura.Text);
                 string rangoDeCaza = this.txtRangoCaza.Text;
 
                 Halcon = new Halcon(nombre, habitat, edad, envergadura, rangoDeCaza);
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

@@ -1,4 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Zoologico xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Aves />
+  <Aves>
+    <Ave xsi:type="Pinguino">
+      <Nombre>ss</Nombre>
+      <Edad>2</Edad>
+      <Habitat>Antartida</Habitat>
+      <Peso>2</Peso>
+      <Especie>asd</Especie>
+    </Ave>
+    <Ave xsi:type="Pinguino">
+      <Nombre />
+      <Edad>22</Edad>
+      <Habitat>Bosque</Habitat>
+      <Peso>22</Peso>
+      <Especie>ss</Especie>
+    </Ave>
+    <Ave xsi:type="Pinguino">
+      <Nombre>sd</Nombre>
+      <Edad>12</Edad>
+      <Habitat>Bosque</Habitat>
+      <Peso>12</Peso>
+      <Especie>as</Especie>
+    </Ave>
+    <Ave xsi:type="Pinguino">
+      <Nombre />
+      <Edad>2</Edad>
+      <Habitat>Bosque</Habitat>
+      <Peso>2</Peso>
+      <Especie>asd</Especie>
+    </Ave>
+    <Ave xsi:type="Pinguino">
+      <Nombre>s</Nombre>
+      <Edad>0</Edad>
+      <Habitat>Bosque</Habitat>
+      <Peso>1</Peso>
+      <Especie>2</Especie>
+    </Ave>
+    <Ave xsi:type="Colibri">
+      <Nombre>s</Nombre>
+      <Edad>2</Edad>
+      <Habitat>Montaña</Habitat>
+      <VelocidadVuelo>12</VelocidadVuelo>
+      <ColorPlumas>s</ColorPlumas>
+    </Ave>
+    <Ave xsi:type="Halcon">
+      <Nombre>s</Nombre>
+      <Edad>2</Edad>
+      <Habitat>Bosque</Habitat>
+      <Envergadura>10</Envergadura>
+      <RangoDeCaza>as</RangoDeCaza>
+    </Ave>
+    <Ave xsi:type="Pinguino">
+      <Nombre>Jose</Nombre>
+      <Edad>23</Edad>
+      <Habitat>Bosque</Habitat>
+      <Peso>23</Peso>
+      <Especie>ese</Especie>
+    </Ave>
+  </Aves>
 </Zoologico>
