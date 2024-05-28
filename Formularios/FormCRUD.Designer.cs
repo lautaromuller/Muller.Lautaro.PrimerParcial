@@ -230,6 +230,7 @@
             MainMenuStrip = menuStrip1;
             Name = "FormCRUD";
             Text = "FormCRUD";
+            FormClosing += FormCRUD_FormClosing;
             Load += FormCRUD_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

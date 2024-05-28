@@ -59,6 +59,7 @@ namespace Formularios
             }
         }
 
+
         /// <summary>
         /// Actualiza el listBox con la información de la lista de aves y llama a la función que Serializar.
         /// </summary>
@@ -193,6 +194,16 @@ namespace Formularios
         {
             this.zoologico.OrdenarPorEdad(false);
             this.ActualizarLista();
+        }
+
+        private void FormCRUD_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult rta = MessageBox.Show("¿Está seguro que desea salir?", "Confirmar cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (rta == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
