@@ -17,5 +17,10 @@ namespace Formularios
         public string correo { get; set; }
         public string clave { get; set; }
         public string perfil { get; set; }
+
+        public override string ToString()
+        {
+            return $"Nombre: {this.nombre} {this.apellido} \nLegajo: {this.legajo} \nCorreo: {this.correo} \nClave: {this.clave} \nPerfil: {this.perfil}";
+        }
     }
 }

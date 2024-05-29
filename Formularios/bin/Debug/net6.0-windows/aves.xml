@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Zoologico xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Aves>
-    <Ave xsi:type="Colibri">
-      <Nombre>s</Nombre>
-      <Edad>2</Edad>
-      <Habitat>Montaña</Habitat>
-      <VelocidadVuelo>12</VelocidadVuelo>
-      <ColorPlumas>s</ColorPlumas>
-    </Ave>
     <Ave xsi:type="Halcon">
       <Nombre>s</Nombre>
       <Edad>2</Edad>

@@ -1,3 +1,4 @@
+using Entidades;
 using System.Text.Json;
 
 namespace Formularios
@@ -14,19 +15,20 @@ namespace Formularios
         /// </summary>
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string miJson = File.ReadAllText("data.json");
+            string miJson = File.ReadAllText("data_usuarios.json");
             List<Usuario> usuarios = JsonSerializer.Deserialize<List<Usuario>>(miJson);
 
             foreach (var usuario in usuarios)
             {
-                if (true || usuario.correo == txtCorreo.Text && usuario.clave == txtContrasena.Text)
+                if (usuario.correo == txtCorreo.Text && usuario.clave == txtContrasena.Text)
                 {
+                    string infoUsuario = usuario.ToString();
+                    Logueado.Loguear(infoUsuario);
                     FormCRUD form = new FormCRUD(usuario.nombre);
                     form.Show();
                     return;
                 }
             }
-
             MessageBox.Show("Los datos son incorrectos");
         }
     }
