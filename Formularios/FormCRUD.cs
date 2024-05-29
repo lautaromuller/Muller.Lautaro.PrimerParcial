@@ -210,7 +210,7 @@ namespace Formularios
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
                 Filter = "Archivos XML (*.xml)|*.xml|Archivos JSON (*.json)|*.json",
-                Title = "Guardar archivo de datos"
+                Title = "Guardar archivo"
             };
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -225,13 +225,19 @@ namespace Formularios
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 Filter = "Archivos XML (*.xml)|*.xml|Archivos JSON (*.json)|*.json",
-                Title = "Cargar archivo de datos"
+                Title = "Cargar archivo"
             };
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 zoologico = Zoologico.Deserializar(ruta);
             }
+        }
+
+        private void logins_Click(object sender, EventArgs e)
+        {
+            FormUsuarios form = new FormUsuarios();
+            form.ShowDialog();
         }
     }
 }

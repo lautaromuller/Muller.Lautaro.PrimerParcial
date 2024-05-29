@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
             btnPinguino = new Button();
             btnColibri = new Button();
             btnHalcon = new Button();
@@ -43,22 +42,14 @@
             ordEdadAscendente = new ToolStripMenuItem();
             ordEdadDescendente = new ToolStripMenuItem();
             guardar = new ToolStripMenuItem();
+            cargar = new ToolStripMenuItem();
+            logins = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             lblStatusStrip = new ToolStripStatusLabel();
-            cargar = new ToolStripMenuItem();
+            listBox1 = new ListBox();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // listBox1
-            // 
-            listBox1.BackColor = Color.OldLace;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(34, 50);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(403, 259);
-            listBox1.TabIndex = 5;
             // 
             // btnPinguino
             // 
@@ -138,7 +129,7 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = SystemColors.ActiveCaption;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { ordenarToolStripMenuItem, guardar, cargar });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { ordenarToolStripMenuItem, guardar, cargar, logins });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(651, 24);
@@ -201,6 +192,20 @@
             guardar.Text = "Guardar";
             guardar.Click += guardar_Click;
             // 
+            // cargar
+            // 
+            cargar.Name = "cargar";
+            cargar.Size = new Size(54, 20);
+            cargar.Text = "Cargar";
+            cargar.Click += cargar_Click;
+            // 
+            // logins
+            // 
+            logins.Name = "logins";
+            logins.Size = new Size(114, 20);
+            logins.Text = "Historial de logins";
+            logins.Click += logins_Click;
+            // 
             // statusStrip1
             // 
             statusStrip1.BackColor = Color.FromArgb(64, 64, 64);
@@ -221,12 +226,14 @@
             lblStatusStrip.Size = new Size(88, 19);
             lblStatusStrip.Text = "usuario | fecha";
             // 
-            // cargar
+            // listBox1
             // 
-            cargar.Name = "cargar";
-            cargar.Size = new Size(54, 20);
-            cargar.Text = "Cargar";
-            cargar.Click += cargar_Click;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(26, 50);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(406, 259);
+            listBox1.TabIndex = 8;
             // 
             // FormCRUD
             // 
@@ -234,13 +241,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 34, 34);
             ClientSize = new Size(651, 353);
+            Controls.Add(listBox1);
             Controls.Add(statusStrip1);
             Controls.Add(btnEliminar);
             Controls.Add(btnModificar);
             Controls.Add(btnHalcon);
             Controls.Add(btnColibri);
             Controls.Add(btnPinguino);
-            Controls.Add(listBox1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
@@ -257,8 +264,6 @@
         }
 
         #endregion
-
-        private ListBox listBox1;
         private Button btnPinguino;
         private Button btnColibri;
         private Button btnHalcon;
@@ -276,5 +281,7 @@
         private ToolStripStatusLabel lblStatusStrip;
         private ToolStripMenuItem guardar;
         private ToolStripMenuItem cargar;
+        private ToolStripMenuItem logins;
+        private ListBox listBox1;
     }
 }
