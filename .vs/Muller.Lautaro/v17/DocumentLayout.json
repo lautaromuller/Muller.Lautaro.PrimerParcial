@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial\\entidades\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial\\formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\entidades\\zoologico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\zoologico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\formularios\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\formularios\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial\\formularios\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,65 +31,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClassDiagram1.cd",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\ClassDiagram1.cd",
-              "RelativeDocumentMoniker": "Entidades\\ClassDiagram1.cd",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\ClassDiagram1.cd",
-              "RelativeToolTip": "Entidades\\ClassDiagram1.cd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2024-05-29T02:28:53.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Zoologico.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Zoologico.cs",
-              "RelativeDocumentMoniker": "Entidades\\Zoologico.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Zoologico.cs",
-              "RelativeToolTip": "Entidades\\Zoologico.cs",
-              "ViewState": "AQIAAHoAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T00:37:36.257Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormUsuarios.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormUsuarios.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormUsuarios.cs",
-              "RelativeToolTip": "Formularios\\FormUsuarios.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAvwBgAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T00:21:25.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "FormCRUD.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.cs",
               "RelativeDocumentMoniker": "Formularios\\FormCRUD.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.cs",
               "RelativeToolTip": "Formularios\\FormCRUD.cs",
-              "ViewState": "AQIAAM8AAAAAAAAAAAA2wOMAAAAnAAAA",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAuwJ8AAAB3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T00:18:06.882Z",
+              "WhenOpened": "2024-05-29T04:02:26.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormUsuarios.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormUsuarios.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormUsuarios.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormUsuarios.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\FormUsuarios.cs [Dise\u00F1o]",
+              "DocumentIndex": 1,
+              "Title": "FormLogin.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormLogin.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormLogin.cs",
+              "RelativeToolTip": "Formularios\\FormLogin.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T00:25:38.603Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-29T04:02:07.283Z",
+              "EditorCaption": ""
             }
           ]
         }

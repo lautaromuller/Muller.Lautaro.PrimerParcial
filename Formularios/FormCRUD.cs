@@ -143,6 +143,7 @@ namespace Formularios
 
                 this.ActualizarLista();
             }
+            MessageBox.Show("Seleccione un elemento a modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         /// <summary>
@@ -156,6 +157,7 @@ namespace Formularios
                 zoologico -= zoologico.Aves[indice];
                 this.ActualizarLista();
             }
+            MessageBox.Show("Seleccione un elemento a modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         /// <summary>
