@@ -58,7 +58,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"Nombre: {this.Nombre} - Hábitat: {this.Habitat} - Edad: {this.Edad}";
+            return $"Nombre: {this.Nombre} -- Hábitat: {this.Habitat} -- Edad: {this.Edad}";
         }
 
         public override bool Equals(object obj)

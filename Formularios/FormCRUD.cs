@@ -154,10 +154,19 @@ namespace Formularios
             int indice = this.listBox1.SelectedIndex;
             if (indice != -1)
             {
-                zoologico -= zoologico.Aves[indice];
-                this.ActualizarLista();
+                DialogResult rta = MessageBox.Show("¿Está seguro que eliminar este elemento?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (rta == DialogResult.Yes)
+                {
+                    zoologico.Serializar(ruta);
+                    zoologico -= zoologico.Aves[indice];
+                    this.ActualizarLista();
+                }
             }
-            MessageBox.Show("Seleccione un elemento a modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                MessageBox.Show("Seleccione un elemento para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -200,11 +209,23 @@ namespace Formularios
         {
             DialogResult rta = MessageBox.Show("¿Está seguro que desea salir?", "Confirmar cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (rta == DialogResult.No)
+            if (rta == DialogResult.Yes)
+            {
+                try
+                {
+                    zoologico.Serializar(ruta);
+                    e.Cancel = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al serializar: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
+            else if (rta == DialogResult.No)
             {
                 e.Cancel = true;
             }
-            zoologico.Serializar(ruta);
         }
 
         private void guardar_Click(object sender, EventArgs e)

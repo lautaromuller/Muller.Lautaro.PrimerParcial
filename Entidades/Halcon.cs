@@ -42,7 +42,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{base.ToString()} - Envergadura: {this.Envergadura} - Rango de Caza: {this.RangoDeCaza}";
+            return $"{base.ToString()} -- Envergadura: {this.Envergadura} -- Rango de caza: {this.RangoDeCaza}";
         }
 
         public override bool Equals(object obj)

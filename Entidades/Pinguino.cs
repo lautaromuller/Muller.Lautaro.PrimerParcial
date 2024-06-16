@@ -64,7 +64,7 @@ namespace Entidades
         
         public override string ToString()
         {
-            return $"{base.ToString()} - Peso: {this.Peso} - Especie: {this.Especie}";
+            return $"{base.ToString()} -- Peso: {this.Peso} -- Especie: {this.Especie}";
         }
 
         

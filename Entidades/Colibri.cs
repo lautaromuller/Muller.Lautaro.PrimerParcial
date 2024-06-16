@@ -41,7 +41,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{base.ToString()} - Velocidad de Vuelo: {this.VelocidadVuelo} - Color de Plumas: {this.ColorPlumas}";
+            return $"{base.ToString()} -- Velocidad de vuelo: {this.VelocidadVuelo} -- Color de plumas: {this.ColorPlumas}";
         }
 
         public override bool Equals(object obj)
