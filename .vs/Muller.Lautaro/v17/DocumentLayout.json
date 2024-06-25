@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\formularios\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial\\formularios\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Formularios\\FormLogin.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormLogin.cs",
               "RelativeToolTip": "Formularios\\FormLogin.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAAUAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T04:02:07.283Z",
               "EditorCaption": ""

@@ -26,7 +26,6 @@ namespace Formularios
                     Logueado.Loguear(infoUsuario);
                     FormCRUD form = new FormCRUD(usuario.nombre);
                     form.Show();
-                    this.Hide();
                     return;
                 }
             }
