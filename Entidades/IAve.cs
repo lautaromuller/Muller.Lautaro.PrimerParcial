@@ -12,8 +12,8 @@ namespace Entidades
         Habitat Habitat { get; set; }
         int Edad { get; set; }
 
-        void Volar();
-        void Alimentarse();
-        void Alimentarse(string comida);
+        string Volar();
+        string Alimentarse();
+        string Alimentarse(string comida);
     }
 }

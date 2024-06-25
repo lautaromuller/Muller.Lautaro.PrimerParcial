@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Halcon : Ave, IAccion<string>
+    public class Halcon : Ave, IAccion<string>, ISerializable
     {
         public double Envergadura { get; set; }
         public string RangoDeCaza { get; set; }
@@ -41,9 +41,9 @@ namespace Entidades
         /// <summary>
         /// Implementación del método abstracto Volar que muestra por consola como vuela el Halcón.
         /// </summary>
-        public override void Volar()
+        public override string Volar()
         {
-            Console.WriteLine($"{this.Nombre} está volando con una envergadura de {this.Envergadura} metros.");
+            return $"{this.Nombre} está volando con una envergadura de {this.Envergadura} metros.";
         }
 
         public override string ToString()
@@ -60,9 +60,9 @@ namespace Entidades
             }
             return false;
         }
-        public void RealizarAccion(string accion)
+        public string RealizarAccion(string accion)
         {
-            Console.WriteLine($"El halcón {this.Nombre} esta {accion}");
+            return $"El halcón {this.Nombre} esta {accion}";
         }
 
         #endregion

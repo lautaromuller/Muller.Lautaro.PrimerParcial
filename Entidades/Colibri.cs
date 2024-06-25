@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Entidades
 {
     
-    public class Colibri : Ave, IAccion<string>
+    public class Colibri : Ave, IAccion<string>, ISerializable
     {
         public double VelocidadVuelo { get; set; }
         public string ColorPlumas { get; set; }
@@ -38,9 +38,9 @@ namespace Entidades
         /// <summary>
         /// Implementación del método abstracto Volar que muestra por consola como vuela el colibrí.
         /// </summary>
-        public override void Volar()
+        public override string Volar()
         {
-            Console.WriteLine($"{this.Nombre} vuela a {this.VelocidadVuelo} km/h.");
+            return $"{this.Nombre} vuela a {this.VelocidadVuelo} km/h.";
         }
 
         public override string ToString()
@@ -58,9 +58,9 @@ namespace Entidades
             return false;
         }
 
-        public void RealizarAccion(string accion)
+        public string RealizarAccion(string accion)
         {
-            Console.WriteLine($"El colibrí {this.Nombre} esta {accion}");
+            return $"El colibrí {this.Nombre} esta {accion}";
         }
 
         #endregion

@@ -6,7 +6,7 @@ namespace Entidades
     [XmlInclude(typeof(Pinguino))]
     [XmlInclude(typeof(Halcon))]
     [XmlInclude(typeof(Colibri))]
-    public abstract class Ave : IAve
+    public abstract class Ave : IAve, ISerializable
     {
         public string Nombre { get; set; }
         public int Edad { get; set; }
@@ -38,23 +38,23 @@ namespace Entidades
         /// <summary>
         /// Método abstracto que debera ser implementado por las clases derivadas para indicar el vuelo del ave.
         /// </summary>
-        public abstract void Volar();
+        public abstract string Volar();
 
         /// <summary>
         /// Muestra por consola un mensaje indicando que el ave está comiendo.
         /// </summary>
-        public virtual void Alimentarse()
+        public virtual string Alimentarse()
         {
-            Console.WriteLine($"{this.Nombre} esta comiendo.");
+            return $"{this.Nombre} esta comiendo.";
         }
 
         /// <summary>
         /// Sobrecarga del método Alimertarse que permite pasarle un comida especifica.
         /// </summary>
         /// <param name="comida">Indica la comida del ave</param>
-        public virtual void Alimentarse(string comida)
+        public virtual string Alimentarse(string comida)
         {
-            Console.WriteLine($"{this.Nombre} esta comiendo un/a {comida}.");
+            return $"{this.Nombre} esta comiendo un/a {comida}.";
         }
 
         public override string ToString()
@@ -70,6 +70,16 @@ namespace Entidades
                 return this.Nombre == ave.Nombre && this.Edad == ave.Edad && this.Habitat == ave.Habitat;
             }
             return false;
+        }
+
+        public void Serializar(string ruta)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Deserializar(string ruta)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

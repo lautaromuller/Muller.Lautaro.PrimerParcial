@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Pinguino : Ave, IAccion<string>
+    public class Pinguino : Ave, IAccion<string>, ISerializable
     {
         public double Peso { get; set; }
         public string Especie { get; set; }
@@ -34,9 +34,9 @@ namespace Entidades
         /// <summary>
         /// Implementación del método abstracto Volar que muestra por consola como vuela el Pinguino.
         /// </summary>
-        public override void Volar()
+        public override string Volar()
         {
-            Console.WriteLine($"{this.Nombre} no puede volar.");
+            return $"{this.Nombre} no puede volar.";
         }
 
         /// <summary>
@@ -71,9 +71,9 @@ namespace Entidades
             }
             return false;
         }
-        public void RealizarAccion(string accion)
+        public string RealizarAccion(string accion)
         {
-            Console.WriteLine($"El pinguino {this.Nombre} esta {accion}");
+            return $"El pinguino {this.Nombre} esta {accion}";
         }
 
         #endregion

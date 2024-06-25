@@ -8,6 +8,6 @@ namespace Entidades
 {
     public interface IAccion<T>
     {
-        void RealizarAccion(T accion);
+        string RealizarAccion(T accion);
     }
 }
