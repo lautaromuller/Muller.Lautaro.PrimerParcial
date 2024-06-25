@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 namespace Entidades
 {
     
-    public class Colibri : Ave
+    public class Colibri : Ave, IAccion<string>
     {
         public double VelocidadVuelo { get; set; }
         public string ColorPlumas { get; set; }
+
+        #region Constructores
 
         public Colibri() { }
         public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas, double velocidadVuelo)
@@ -24,13 +26,15 @@ namespace Entidades
         {
             
         }
-
         public Colibri(string nombre, Habitat habitat, int edad)
             : this(nombre, habitat, edad,"", 0.0)
         {
 
         }
 
+        #endregion
+
+        #region Métodos
         /// <summary>
         /// Implementación del método abstracto Volar que muestra por consola como vuela el colibrí.
         /// </summary>
@@ -41,7 +45,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{base.ToString()} -- Velocidad de vuelo: {this.VelocidadVuelo} -- Color de plumas: {this.ColorPlumas}";
+            return $"{base.ToString()}| Velocidad de vuelo: {this.VelocidadVuelo} | Color de plumas: {this.ColorPlumas}";
         }
 
         public override bool Equals(object obj)
@@ -54,6 +58,14 @@ namespace Entidades
             return false;
         }
 
+        public void RealizarAccion(string accion)
+        {
+            Console.WriteLine($"El colibrí {this.Nombre} esta {accion}");
+        }
+
+        #endregion
+
+        #region Operadores
         /// <summary>
         /// Sobrecarga del operador == para comprobar si dos Colibríes son iguales.
         /// </summary>
@@ -75,5 +87,7 @@ namespace Entidades
         {
             return !(c1 == c2);
         }
+
+        #endregion
     }
 }

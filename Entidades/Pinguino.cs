@@ -6,36 +6,31 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Pinguino : Ave
+    public class Pinguino : Ave, IAccion<string>
     {
         public double Peso { get; set; }
         public string Especie { get; set; }
 
-
-        public Pinguino()
-        {
-
-        }
-        
+        #region Constructores
+        public Pinguino() { }
         public Pinguino(string nombre, Habitat habitat, int edad, double peso, string especie)
             : base(nombre, habitat, edad)
         {
             this.Peso = peso;
             this.Especie = especie;
         }
-
-        
         public Pinguino(string nombre, Habitat habitat, int edad, double peso)
             : this(nombre, habitat, edad, peso, "")
         {
         }
-
-        
         public Pinguino(string nombre, Habitat habitat, int edad)
             : this(nombre, habitat, edad, 1.0, "")
         {
         }
 
+        #endregion
+
+        #region Métodos
         /// <summary>
         /// Implementación del método abstracto Volar que muestra por consola como vuela el Pinguino.
         /// </summary>
@@ -60,11 +55,10 @@ namespace Entidades
         {
             Console.WriteLine($"{this.Nombre} y {otroPinguino} están jugando.");
         }
-
         
         public override string ToString()
         {
-            return $"{base.ToString()} -- Peso: {this.Peso} -- Especie: {this.Especie}";
+            return $"{base.ToString()}| Peso: {this.Peso} | Especie: {this.Especie}";
         }
 
         
@@ -77,7 +71,14 @@ namespace Entidades
             }
             return false;
         }
+        public void RealizarAccion(string accion)
+        {
+            Console.WriteLine($"El pinguino {this.Nombre} esta {accion}");
+        }
 
+        #endregion
+
+        #region Operadores
         /// <summary>
         /// Sobrecarga del operador == que comprueba si dos pinguinos son iguales.
         /// </summary>
@@ -99,5 +100,7 @@ namespace Entidades
         {
             return !(p1 == p2);
         }
+
+        #endregion
     }
 }

@@ -15,12 +15,12 @@ namespace Formularios
     public partial class FormCRUD : Form
     {
         private string nombreUsuario;
-        private Zoologico zoologico;
+        private Zoologico<Ave> zoologico;
         public string ruta = "aves.xml";
         public FormCRUD(string nombreUsuario)
         {
             InitializeComponent();
-            zoologico = Zoologico.Deserializar(ruta);
+            zoologico = Zoologico<Ave>.Deserializar(ruta);
             ActualizarLista();
             this.nombreUsuario = nombreUsuario;
             this.lblStatusStrip.Text = $"{nombreUsuario} | {DateTime.Now.ToString("d")}";
@@ -39,7 +39,7 @@ namespace Formularios
                 {
                     try
                     {
-                        zoologico = Zoologico.Deserializar(ruta);
+                        zoologico = Zoologico<Ave>.Deserializar(ruta);
                         ActualizarLista();
                     }
                     catch (Exception ex)
@@ -49,7 +49,7 @@ namespace Formularios
                 }
                 else
                 {
-                    zoologico = new Zoologico();
+                    zoologico = new Zoologico<Ave>();
                 }
             }
             else
@@ -253,7 +253,7 @@ namespace Formularios
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                zoologico = Zoologico.Deserializar(ruta);
+                zoologico = Zoologico<Ave>.Deserializar(ruta);
             }
         }
 

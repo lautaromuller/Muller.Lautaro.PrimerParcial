@@ -9,15 +9,16 @@ using System.Xml.Serialization;
 
 namespace Entidades
 {
-    public class Zoologico
+    public class Zoologico<T> where T : Ave, ISerializable
     {
-        public List<Ave> Aves { get; set; }
+        public List<T> Aves { get; set; }
 
         public Zoologico()
         {
-            this.Aves = new List<Ave>();
+            this.Aves = new List<T>();
         }
 
+        #region Métodos
         /// <summary>
         /// Serializa el código a un archivo XML.
         /// </summary>
@@ -26,7 +27,7 @@ namespace Entidades
         {
             try
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(Zoologico));
+                XmlSerializer serializer = new XmlSerializer(typeof(Zoologico<T>));
                 using (StreamWriter writer = new StreamWriter(ruta))
                 {
                     serializer.Serialize(writer, this);
@@ -43,24 +44,24 @@ namespace Entidades
         /// </summary>
         /// <param name="ruta">Ruta del archivo desde donde se descargara el zoológico</param>
         /// <returns>Instancia del zoológico deserializado</returns>
-        public static Zoologico Deserializar(string ruta)
+        public static Zoologico<T> Deserializar(string ruta)
         {
             try
             {
                 if (File.Exists(ruta))
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(Zoologico));
+                    XmlSerializer serializer = new XmlSerializer(typeof(Zoologico<T>));
                     using (StreamReader reader = new StreamReader(ruta))
                     {
-                        return (Zoologico)serializer.Deserialize(reader);
+                        return (Zoologico<T>)serializer.Deserialize(reader);
                     }
                 }
-                return new Zoologico();
+                return new Zoologico<T>();
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error al leer el archivo: {ex.Message}");
-                return new Zoologico();
+                return new Zoologico<T>();
             }
         }
 
@@ -95,14 +96,16 @@ namespace Entidades
                 Aves = Aves.OrderByDescending(a => a.Edad).ToList();
             }
         }
+        #endregion
 
+        #region Operadores
         /// <summary>
         /// Sobrecarga del operador + para agregar un ave al zoológico.
         /// </summary>
         /// <param name="z">Zoológico al que se va a agregar el ave</param>
         /// <param name="a">Ave que se va a agregar</param>
         /// <returns>El zoológico con el ave agregada</returns>
-        public static Zoologico operator +(Zoologico z, Ave a)
+        public static Zoologico<T> operator +(Zoologico<T> z, T a)
         {
             if (!(z == a))
             {
@@ -117,7 +120,7 @@ namespace Entidades
         /// <param name="z">Zoológico del que se va a eliminar el ave</param>
         /// <param name="a">Ave que se va a eliminar</param>
         /// <returns>El zoológico con el ave eliminada</returns>
-        public static Zoologico operator -(Zoologico z, Ave a)
+        public static Zoologico<T> operator -(Zoologico<T> z, T a)
         {
             if (z == a)
             {
@@ -132,7 +135,7 @@ namespace Entidades
         /// <param name="z">Zoológico que se va a revisar</param>
         /// <param name="a">Ave que se va a buscar</param>
         /// <returns>booleano</returns>
-        public static bool operator ==(Zoologico z, Ave a)
+        public static bool operator ==(Zoologico<T> z, T a)
         {
             foreach (var item in z.Aves)
             {
@@ -150,9 +153,10 @@ namespace Entidades
         /// <param name="z">Zoológico que se va a revisar</param>
         /// <param name="a">Ave que se va a buscar</param>
         /// <returns>booleano</returns>
-        public static bool operator !=(Zoologico z, Ave a)
+        public static bool operator !=(Zoologico<T> z, T a)
         {
             return !(z == a);
         }
+        #endregion
     }
 }

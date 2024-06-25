@@ -6,16 +6,14 @@ namespace Entidades
     [XmlInclude(typeof(Pinguino))]
     [XmlInclude(typeof(Halcon))]
     [XmlInclude(typeof(Colibri))]
-    public abstract class Ave
+    public abstract class Ave : IAve
     {
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public Habitat Habitat { get; set; }
 
-        public Ave()
-        {
-
-        }
+        #region Constructores
+        public Ave(){}
 
         public Ave(string nombre)
         {
@@ -34,6 +32,9 @@ namespace Entidades
             this.Edad = edad;
         }
 
+        #endregion
+
+        #region Métodos
         /// <summary>
         /// Método abstracto que debera ser implementado por las clases derivadas para indicar el vuelo del ave.
         /// </summary>
@@ -58,7 +59,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"Nombre: {this.Nombre} -- Hábitat: {this.Habitat} -- Edad: {this.Edad}";
+            return $"Nombre: {this.Nombre} | Hábitat: {this.Habitat} | Edad: {this.Edad} ";
         }
 
         public override bool Equals(object obj)
@@ -71,6 +72,9 @@ namespace Entidades
             return false;
         }
 
+        #endregion
+
+        #region Operadores
         /// <summary>
         /// Sobrecarga del operador == que comprueba si las aves son iguales.
         /// </summary>
@@ -93,5 +97,6 @@ namespace Entidades
             return !(a1 == a2);
         }
 
+        #endregion
     }
 }
