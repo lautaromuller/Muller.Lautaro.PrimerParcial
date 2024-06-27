@@ -58,7 +58,6 @@ namespace Formularios
             }
         }
 
-
         /// <summary>
         /// Actualiza el listBox con la información de la lista de aves y llama a la función que Serializar.
         /// </summary>
@@ -73,12 +72,17 @@ namespace Formularios
         /// </summary>
         private void btnPinguino_Click(object sender, EventArgs e)
         {
-            FormPinguino form = new FormPinguino();
-            if (form.ShowDialog() == DialogResult.OK)
-            {
-                zoologico += form.Pinguino;
-                this.ActualizarLista();
-            }
+                FormPinguino form = new FormPinguino();
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    zoologico += form.Pinguino;
+                    if (this.rbDaseDatos.Checked)
+                    {
+                        PinguinoDAO pinguinoDAO = new PinguinoDAO();
+                        pinguinoDAO.Guardar(form.Pinguino);
+                    }
+                        this.ActualizarLista();
+                }
         }
 
         /// <summary>
@@ -90,7 +94,12 @@ namespace Formularios
             if (form.ShowDialog() == DialogResult.OK)
             {
                 zoologico += form.Colibri;
-                this.ActualizarLista();
+                if (this.rbDaseDatos.Checked)
+                {
+                    ColibriDAO colibriDAO = new ColibriDAO();
+                    colibriDAO.Guardar(form.Colibri);
+                }
+                    this.ActualizarLista();
             }
         }
 
@@ -103,6 +112,11 @@ namespace Formularios
             if (form.ShowDialog() == DialogResult.OK)
             {
                 zoologico += form.Halcon;
+                if (this.rbDaseDatos.Checked)
+                {
+                    HalconDAO halconDAO = new HalconDAO();
+                    halconDAO.Guardar(form.Halcon);
+                }
                 this.ActualizarLista();
             }
         }

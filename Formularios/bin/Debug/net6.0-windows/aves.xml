@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ZoologicoOfAve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Aves>
-    <Ave xsi:type="Pinguino">
-      <Nombre>Pepe</Nombre>
-      <Edad>2</Edad>
-      <Habitat>Antartida</Habitat>
-      <Peso>8</Peso>
-      <Especie>Emperador</Especie>
-    </Ave>
-  </Aves>
+  <Aves />
 </ZoologicoOfAve>
