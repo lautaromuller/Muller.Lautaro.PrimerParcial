@@ -8,6 +8,7 @@ namespace Entidades
     [XmlInclude(typeof(Colibri))]
     public abstract class Ave : IAve, ISerializable
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public Habitat Habitat { get; set; }

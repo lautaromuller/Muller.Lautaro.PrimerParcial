@@ -17,6 +17,7 @@ namespace Formularios
         private string nombreUsuario;
         private Zoologico<Ave> zoologico;
         public string ruta = "aves.xml";
+        private AveDAO aveDAO;
         public FormCRUD(string nombreUsuario)
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace Formularios
             ActualizarLista();
             this.nombreUsuario = nombreUsuario;
             this.lblStatusStrip.Text = $"{nombreUsuario} | {DateTime.Now.ToString("d")}";
-
+            aveDAO = new AveDAO();
         }
 
         /// <summary>
@@ -58,14 +59,20 @@ namespace Formularios
             }
         }
 
-
         /// <summary>
         /// Actualiza el listBox con la información de la lista de aves y llama a la función que Serializar.
         /// </summary>
         private void ActualizarLista()
         {
             this.listBox1.DataSource = null;
-            this.listBox1.DataSource = zoologico.Aves;
+            if (this.rbDaseDatos.Checked)
+            {
+                this.listBox1.DataSource = aveDAO.Leer();
+            }
+            else
+            {
+                this.listBox1.DataSource = zoologico.Aves;
+            }
         }
 
         /// <summary>
@@ -77,6 +84,10 @@ namespace Formularios
             if (form.ShowDialog() == DialogResult.OK)
             {
                 zoologico += form.Pinguino;
+                if (this.rbDaseDatos.Checked)
+                {
+                    aveDAO.Guardar(form.Pinguino);
+                }
                 this.ActualizarLista();
             }
         }
@@ -90,6 +101,10 @@ namespace Formularios
             if (form.ShowDialog() == DialogResult.OK)
             {
                 zoologico += form.Colibri;
+                if (this.rbDaseDatos.Checked)
+                {
+                    aveDAO.Guardar(form.Colibri);
+                }
                 this.ActualizarLista();
             }
         }
@@ -103,6 +118,10 @@ namespace Formularios
             if (form.ShowDialog() == DialogResult.OK)
             {
                 zoologico += form.Halcon;
+                if (this.rbDaseDatos.Checked)
+                {
+                    aveDAO.Guardar(form.Halcon);
+                }
                 this.ActualizarLista();
             }
         }
@@ -116,34 +135,59 @@ namespace Formularios
             int indice = this.listBox1.SelectedIndex;
             if (indice != -1)
             {
-                if (this.zoologico.Aves[indice] is Pinguino)
+                Ave aveSeleccionada = this.zoologico.Aves[indice];
+                if (aveSeleccionada is Pinguino pinguino)
                 {
-                    FormPinguino form = new FormPinguino((Pinguino)this.zoologico.Aves[indice]);
+                    FormPinguino form = new FormPinguino(pinguino);
                     if (form.ShowDialog() == DialogResult.OK)
                     {
                         this.zoologico.Aves[indice] = form.Pinguino;
+
+                        if (this.rbDaseDatos.Checked)
+                        {
+                            aveDAO.Modificar(aveSeleccionada, form.Pinguino);
+                        }
+
+                        this.ActualizarLista();
                     }
                 }
-                else if (this.zoologico.Aves[indice] is Colibri)
+                else if (aveSeleccionada is Colibri colibri)
                 {
-                    FormColibri form = new FormColibri((Colibri)this.zoologico.Aves[indice]);
+                    FormColibri form = new FormColibri(colibri);
                     if (form.ShowDialog() == DialogResult.OK)
                     {
                         this.zoologico.Aves[indice] = form.Colibri;
+
+                        if (this.rbDaseDatos.Checked)
+                        {
+                            aveDAO.Modificar(aveSeleccionada, form.Colibri);
+                        }
+
+                        this.ActualizarLista();
                     }
                 }
-                else
+                else if (aveSeleccionada is Halcon halcon)
                 {
-                    FormHalcon form = new FormHalcon((Halcon)this.zoologico.Aves[indice]);
+                    FormHalcon form = new FormHalcon(halcon);
                     if (form.ShowDialog() == DialogResult.OK)
                     {
                         this.zoologico.Aves[indice] = form.Halcon;
+
+                        if (this.rbDaseDatos.Checked)
+                        {
+                            aveDAO.Modificar(aveSeleccionada, form.Halcon);
+                        }
+
+                        this.ActualizarLista();
                     }
                 }
 
                 this.ActualizarLista();
             }
-            MessageBox.Show("Seleccione un elemento a modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                MessageBox.Show("Seleccione un elemento a modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -154,12 +198,18 @@ namespace Formularios
             int indice = this.listBox1.SelectedIndex;
             if (indice != -1)
             {
-                DialogResult rta = MessageBox.Show("¿Está seguro que eliminar este elemento?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult rta = MessageBox.Show("¿Está seguro que desea eliminar este elemento?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (rta == DialogResult.Yes)
                 {
+                    Ave aveSeleccionada = this.zoologico.Aves[indice];
+
+                    if (this.rbDaseDatos.Checked)
+                    {
+                        aveDAO.Eliminar(aveSeleccionada);
+                    }
                     zoologico.Serializar(ruta);
-                    zoologico -= zoologico.Aves[indice];
+                    zoologico -= aveSeleccionada;
                     this.ActualizarLista();
                 }
             }
@@ -205,6 +255,9 @@ namespace Formularios
             this.ActualizarLista();
         }
 
+        /// <summary>
+        /// Confirmar cierre de la aplicación
+        /// </summary>
         private void FormCRUD_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult rta = MessageBox.Show("¿Está seguro que desea salir?", "Confirmar cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -228,6 +281,9 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Guardar archivo en una ubicación elegida por el usuario
+        /// </summary>
         private void guardar_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog
@@ -243,7 +299,19 @@ namespace Formularios
             }
         }
 
-        private void cargar_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Abre formulario con el historial de usuarios que utilizaron la aplicación
+        /// </summary>
+        private void logins_Click(object sender, EventArgs e)
+        {
+            FormUsuarios form = new FormUsuarios();
+            form.ShowDialog();
+        }
+
+        /// <summary>
+        /// Cargar un archivo xml con aves guardado en la computadora
+        /// </summary>
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
@@ -255,12 +323,22 @@ namespace Formularios
             {
                 zoologico = Zoologico<Ave>.Deserializar(ruta);
             }
+            this.ActualizarLista();
         }
 
-        private void logins_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Cargar información de la base de datos
+        /// </summary>
+        private void baseDeDatos_Click(object sender, EventArgs e)
         {
-            FormUsuarios form = new FormUsuarios();
-            form.ShowDialog();
+            try
+            {
+                this.listBox1.DataSource = aveDAO.Leer();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar datos desde la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

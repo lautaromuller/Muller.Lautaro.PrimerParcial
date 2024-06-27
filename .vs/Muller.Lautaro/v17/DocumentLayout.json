@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial\\entidades\\zoologico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\zoologico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial\\formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial\\entidades\\avedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\avedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Zoologico.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Zoologico.cs",
-              "RelativeDocumentMoniker": "Entidades\\Zoologico.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Zoologico.cs",
-              "RelativeToolTip": "Entidades\\Zoologico.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAAAKEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T19:52:08.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "FormCRUD.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.cs",
               "RelativeDocumentMoniker": "Formularios\\FormCRUD.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\FormCRUD.cs",
               "RelativeToolTip": "Formularios\\FormCRUD.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAABAAAAAlAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAFgBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T18:51:19.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AveDAO.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\AveDAO.cs",
+              "RelativeDocumentMoniker": "Entidades\\AveDAO.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\AveDAO.cs",
+              "RelativeToolTip": "Entidades\\AveDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKoAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T17:06:05.04Z",
               "EditorCaption": ""
             }
           ]

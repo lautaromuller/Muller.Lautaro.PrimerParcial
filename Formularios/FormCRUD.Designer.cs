@@ -43,10 +43,14 @@
             ordEdadDescendente = new ToolStripMenuItem();
             guardar = new ToolStripMenuItem();
             cargar = new ToolStripMenuItem();
+            archivo = new ToolStripMenuItem();
+            baseDeDatos = new ToolStripMenuItem();
             logins = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             lblStatusStrip = new ToolStripStatusLabel();
             listBox1 = new ListBox();
+            rbArchivos = new RadioButton();
+            rbDaseDatos = new RadioButton();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -194,10 +198,24 @@
             // 
             // cargar
             // 
+            cargar.DropDownItems.AddRange(new ToolStripItem[] { archivo, baseDeDatos });
             cargar.Name = "cargar";
             cargar.Size = new Size(54, 20);
             cargar.Text = "Cargar";
-            cargar.Click += cargar_Click;
+            // 
+            // archivo
+            // 
+            archivo.Name = "archivo";
+            archivo.Size = new Size(180, 22);
+            archivo.Text = "Archivo";
+            archivo.Click += archivoToolStripMenuItem_Click;
+            // 
+            // baseDeDatos
+            // 
+            baseDeDatos.Name = "baseDeDatos";
+            baseDeDatos.Size = new Size(180, 22);
+            baseDeDatos.Text = "Base de datos";
+            baseDeDatos.Click += baseDeDatos_Click;
             // 
             // logins
             // 
@@ -210,7 +228,7 @@
             // 
             statusStrip1.BackColor = Color.FromArgb(64, 64, 64);
             statusStrip1.Items.AddRange(new ToolStripItem[] { lblStatusStrip });
-            statusStrip1.Location = new Point(0, 328);
+            statusStrip1.Location = new Point(0, 431);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(784, 22);
             statusStrip1.TabIndex = 7;
@@ -235,12 +253,36 @@
             listBox1.Size = new Size(560, 259);
             listBox1.TabIndex = 8;
             // 
+            // rbArchivos
+            // 
+            rbArchivos.AutoSize = true;
+            rbArchivos.Checked = true;
+            rbArchivos.Location = new Point(497, 382);
+            rbArchivos.Name = "rbArchivos";
+            rbArchivos.Size = new Size(71, 19);
+            rbArchivos.TabIndex = 9;
+            rbArchivos.TabStop = true;
+            rbArchivos.Text = "Archivos";
+            rbArchivos.UseVisualStyleBackColor = true;
+            // 
+            // rbDaseDatos
+            // 
+            rbDaseDatos.AutoSize = true;
+            rbDaseDatos.Location = new Point(602, 382);
+            rbDaseDatos.Name = "rbDaseDatos";
+            rbDaseDatos.Size = new Size(97, 19);
+            rbDaseDatos.TabIndex = 10;
+            rbDaseDatos.Text = "Base de datos";
+            rbDaseDatos.UseVisualStyleBackColor = true;
+            // 
             // FormCRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 34, 34);
-            ClientSize = new Size(784, 350);
+            ClientSize = new Size(784, 453);
+            Controls.Add(rbDaseDatos);
+            Controls.Add(rbArchivos);
             Controls.Add(listBox1);
             Controls.Add(statusStrip1);
             Controls.Add(btnEliminar);
@@ -283,5 +325,9 @@
         private ToolStripMenuItem cargar;
         private ToolStripMenuItem logins;
         private ListBox listBox1;
+        private RadioButton rbArchivos;
+        private RadioButton rbDaseDatos;
+        private ToolStripMenuItem archivo;
+        private ToolStripMenuItem baseDeDatos;
     }
 }

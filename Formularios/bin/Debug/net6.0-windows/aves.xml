@@ -2,11 +2,20 @@
 <ZoologicoOfAve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Aves>
     <Ave xsi:type="Pinguino">
-      <Nombre>Pepe</Nombre>
+      <Id>26</Id>
+      <Nombre>rere</Nombre>
       <Edad>2</Edad>
-      <Habitat>Antartida</Habitat>
-      <Peso>8</Peso>
-      <Especie>Emperador</Especie>
+      <Habitat>Bosque</Habitat>
+      <Peso>2</Peso>
+      <Especie>rere</Especie>
+    </Ave>
+    <Ave xsi:type="Pinguino">
+      <Id>0</Id>
+      <Nombre>utut</Nombre>
+      <Edad>9</Edad>
+      <Habitat>Bosque</Habitat>
+      <Peso>9</Peso>
+      <Especie>utut</Especie>
     </Ave>
   </Aves>
 </ZoologicoOfAve>
