@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ZoologicoOfAve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<<<<<<< HEAD
   <Aves>
     <Ave xsi:type="Pinguino">
       <Id>26</Id>
@@ -18,4 +19,7 @@
       <Especie>utut</Especie>
     </Ave>
   </Aves>
+=======
+  <Aves />
+>>>>>>> 8862d8e67ce8142737b9a35b05033380d5c9b30b
 </ZoologicoOfAve>

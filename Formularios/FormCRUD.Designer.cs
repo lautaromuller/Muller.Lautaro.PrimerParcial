@@ -327,7 +327,10 @@
         private ListBox listBox1;
         private RadioButton rbArchivos;
         private RadioButton rbDaseDatos;
+<<<<<<< HEAD
         private ToolStripMenuItem archivo;
         private ToolStripMenuItem baseDeDatos;
+=======
+>>>>>>> 8862d8e67ce8142737b9a35b05033380d5c9b30b
     }
 }
