@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "leYDqX1z/JU6uFmIGRvAMj3eOTtdtmeMHyZQQZ5cRjyqnLI1eaI9ZoLWHTf3yZjRpW6KS2WNnObtiR6fm1kY0A==",
+  "dgSpecHash": "9iUv77Dstvi8thOR2AhhQDDyZunz6UX194U0wETjsEIfoJuJ4GD43b5ovM+14b4/M0IWAMiJkaUUVkjQ5+97eA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Formularios\\Formularios.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2 - copia\\Formularios\\Formularios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",

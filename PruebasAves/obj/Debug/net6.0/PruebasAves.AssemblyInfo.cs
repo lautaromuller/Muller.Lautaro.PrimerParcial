@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PruebasAves")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af18bccd41b9046845d390dbba6d6046fc76dbd1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab753cf13510f0981de10cb93db95c6d45eee519")]
 [assembly: System.Reflection.AssemblyProductAttribute("PruebasAves")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PruebasAves")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
