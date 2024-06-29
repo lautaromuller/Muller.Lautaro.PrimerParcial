@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W7zqLDI0MNDH4Vx1T0iGo1Nno2T4qBWT91xfH5Dh4Jqi0hiR9SHbd5DyqwE5zSJ2AkkBVenQeYuDm5VdVDTvug==",
+  "dgSpecHash": "feNW7bLUCyGHg/dSXlDpfAEuDl4vO4o5fn6vDOvxU5u3VNl1j1Ci1UIc5dyS484+BQElfOUvwfg41Kqba+CNwA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2 - copia\\PruebasAves\\PruebasAves.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\PruebasAves\\PruebasAves.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,8 @@ namespace Entidades
         private static string connectionString;
         private SqlConnection connection;
         private SqlCommand command;
+
+        public delegate Task<int> EjecutarCommandAsync(SqlCommand command);
 
         static AveDAO()
         {
@@ -26,11 +29,11 @@ namespace Entidades
             command.Connection = connection;
         }
 
-        public void Guardar(Ave ave)
+        public async Task GuardarAsync(Ave ave, EjecutarCommandAsync ejecutarCommandAsync)
         {
             try
             {
-                connection.Open();
+                await connection.OpenAsync();
 
                 string query = "INSERT INTO Aves (nombre, habitat, edad, peso, especie, envergadura, rangoCaza, velocidadVuelo, colorPlumas) VALUES (@nombre, @habitat, @edad, @peso, @especie, @envergadura, @rangoCaza, @velocidadVuelo, @colorPlumas); SELECT SCOPE_IDENTITY();";
                 command.CommandText = query;
@@ -68,7 +71,7 @@ namespace Entidades
                     command.Parameters.AddWithValue("velocidadVuelo", colibri.VelocidadVuelo);
                 }
 
-                ave.Id = Convert.ToInt32(command.ExecuteScalar());
+                ave.Id = await ejecutarCommandAsync(command);
             }
             catch (Exception)
             {
@@ -83,13 +86,13 @@ namespace Entidades
             }
         }
 
-        public void Modificar(Ave aveSeleccionada, Ave nuevaAve)
+        public async Task ModificarAsync(Ave aveSeleccionada, Ave nuevaAve, EjecutarCommandAsync ejecutarCommandAsync)
         {
             try
             {
-                string query = "UPDATE Aves SET nombre = @nombre, habitat = @habitat, edad = @edad, peso = @peso, especie = @especie, envergadura = @envergadura, rangoCaza = @rangoCaza, velocidadVuelo = @velocidadVuelo, colorPlumas = @colorPlumas WHERE Id = @id";
+                await connection.OpenAsync();
 
-                connection.Open();
+                string query = "UPDATE Aves SET nombre = @nombre, habitat = @habitat, edad = @edad, peso = @peso, especie = @especie, envergadura = @envergadura, rangoCaza = @rangoCaza, velocidadVuelo = @velocidadVuelo, colorPlumas = @colorPlumas WHERE Id = @id";
                 command.CommandText = query;
 
                 command.Parameters.Clear();
@@ -126,7 +129,7 @@ namespace Entidades
                     command.Parameters.AddWithValue("colorPlumas", colibri.ColorPlumas);
                 }
 
-                command.ExecuteNonQuery();
+                await ejecutarCommandAsync(command);
             }
             catch (Exception)
             {
@@ -141,19 +144,19 @@ namespace Entidades
             }
         }
 
-        public void Eliminar(Ave ave)
+        public async Task EliminarAsync(Ave ave, EjecutarCommandAsync ejecutarCommandAsync)
         {
             try
             {
-                string query = "DELETE FROM Aves WHERE id = @id";
+                await connection.OpenAsync();
 
-                connection.Open();
+                string query = "DELETE FROM Aves WHERE id = @id";
                 command.CommandText = query;
 
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("id", ave.Id);
 
-                command.ExecuteNonQuery();
+                await ejecutarCommandAsync(command);
             }
             catch (Exception ex)
             {
