@@ -49,8 +49,6 @@
             statusStrip1 = new StatusStrip();
             lblStatusStrip = new ToolStripStatusLabel();
             listBox1 = new ListBox();
-            rbArchivos = new RadioButton();
-            rbDaseDatos = new RadioButton();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -151,20 +149,20 @@
             // 
             nombreToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { ordNombreAscendente, ordNombreDescendente });
             nombreToolStripMenuItem1.Name = "nombreToolStripMenuItem1";
-            nombreToolStripMenuItem1.Size = new Size(118, 22);
-            nombreToolStripMenuItem1.Text = "Nombre";
+            nombreToolStripMenuItem1.Size = new Size(180, 22);
+            nombreToolStripMenuItem1.Text = "Por nombre";
             // 
             // ordNombreAscendente
             // 
             ordNombreAscendente.Name = "ordNombreAscendente";
-            ordNombreAscendente.Size = new Size(142, 22);
+            ordNombreAscendente.Size = new Size(180, 22);
             ordNombreAscendente.Text = "Ascendente";
             ordNombreAscendente.Click += ordNombreAscendente_Click;
             // 
             // ordNombreDescendente
             // 
             ordNombreDescendente.Name = "ordNombreDescendente";
-            ordNombreDescendente.Size = new Size(142, 22);
+            ordNombreDescendente.Size = new Size(180, 22);
             ordNombreDescendente.Text = "Descendente";
             ordNombreDescendente.Click += ordNombreDescendente_Click;
             // 
@@ -172,36 +170,36 @@
             // 
             edadToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ordEdadAscendente, ordEdadDescendente });
             edadToolStripMenuItem.Name = "edadToolStripMenuItem";
-            edadToolStripMenuItem.Size = new Size(118, 22);
-            edadToolStripMenuItem.Text = "Edad";
+            edadToolStripMenuItem.Size = new Size(180, 22);
+            edadToolStripMenuItem.Text = "Por edad";
             // 
             // ordEdadAscendente
             // 
             ordEdadAscendente.Name = "ordEdadAscendente";
-            ordEdadAscendente.Size = new Size(142, 22);
+            ordEdadAscendente.Size = new Size(180, 22);
             ordEdadAscendente.Text = "Ascendente";
             ordEdadAscendente.Click += ordEdadAscendente_Click;
             // 
             // ordEdadDescendente
             // 
             ordEdadDescendente.Name = "ordEdadDescendente";
-            ordEdadDescendente.Size = new Size(142, 22);
+            ordEdadDescendente.Size = new Size(180, 22);
             ordEdadDescendente.Text = "Descendente";
             ordEdadDescendente.Click += ordEdadDescendente_Click;
             // 
             // guardar
             // 
             guardar.Name = "guardar";
-            guardar.Size = new Size(61, 20);
-            guardar.Text = "Guardar";
+            guardar.Size = new Size(104, 20);
+            guardar.Text = "Guardar como...";
             guardar.Click += guardar_Click;
             // 
             // cargar
             // 
             cargar.DropDownItems.AddRange(new ToolStripItem[] { archivo, baseDeDatos });
             cargar.Name = "cargar";
-            cargar.Size = new Size(54, 20);
-            cargar.Text = "Cargar";
+            cargar.Size = new Size(97, 20);
+            cargar.Text = "Cargar desde...";
             // 
             // archivo
             // 
@@ -220,15 +218,15 @@
             // logins
             // 
             logins.Name = "logins";
-            logins.Size = new Size(114, 20);
-            logins.Text = "Historial de logins";
+            logins.Size = new Size(126, 20);
+            logins.Text = "Historial de usuarios";
             logins.Click += logins_Click;
             // 
             // statusStrip1
             // 
             statusStrip1.BackColor = Color.FromArgb(64, 64, 64);
             statusStrip1.Items.AddRange(new ToolStripItem[] { lblStatusStrip });
-            statusStrip1.Location = new Point(0, 431);
+            statusStrip1.Location = new Point(0, 331);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(784, 22);
             statusStrip1.TabIndex = 7;
@@ -253,36 +251,12 @@
             listBox1.Size = new Size(560, 259);
             listBox1.TabIndex = 8;
             // 
-            // rbArchivos
-            // 
-            rbArchivos.AutoSize = true;
-            rbArchivos.Checked = true;
-            rbArchivos.Location = new Point(497, 382);
-            rbArchivos.Name = "rbArchivos";
-            rbArchivos.Size = new Size(71, 19);
-            rbArchivos.TabIndex = 9;
-            rbArchivos.TabStop = true;
-            rbArchivos.Text = "Archivos";
-            rbArchivos.UseVisualStyleBackColor = true;
-            // 
-            // rbDaseDatos
-            // 
-            rbDaseDatos.AutoSize = true;
-            rbDaseDatos.Location = new Point(602, 382);
-            rbDaseDatos.Name = "rbDaseDatos";
-            rbDaseDatos.Size = new Size(97, 19);
-            rbDaseDatos.TabIndex = 10;
-            rbDaseDatos.Text = "Base de datos";
-            rbDaseDatos.UseVisualStyleBackColor = true;
-            // 
             // FormCRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 34, 34);
-            ClientSize = new Size(784, 453);
-            Controls.Add(rbDaseDatos);
-            Controls.Add(rbArchivos);
+            ClientSize = new Size(784, 353);
             Controls.Add(listBox1);
             Controls.Add(statusStrip1);
             Controls.Add(btnEliminar);
@@ -325,8 +299,6 @@
         private ToolStripMenuItem cargar;
         private ToolStripMenuItem logins;
         private ListBox listBox1;
-        private RadioButton rbArchivos;
-        private RadioButton rbDaseDatos;
         private ToolStripMenuItem archivo;
         private ToolStripMenuItem baseDeDatos;
     }

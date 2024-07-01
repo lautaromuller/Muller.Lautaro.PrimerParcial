@@ -19,6 +19,8 @@ namespace Entidades
         }
 
         #region Métodos
+
+
         /// <summary>
         /// Serializa el código a un archivo XML.
         /// </summary>
@@ -96,9 +98,13 @@ namespace Entidades
                 Aves = Aves.OrderByDescending(a => a.Edad).ToList();
             }
         }
+        
+        
         #endregion
 
         #region Operadores
+
+
         /// <summary>
         /// Sobrecarga del operador + para agregar un ave al zoológico.
         /// </summary>
@@ -157,6 +163,8 @@ namespace Entidades
         {
             return !(z == a);
         }
+        
+        
         #endregion
     }
 }

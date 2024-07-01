@@ -2,20 +2,36 @@
 <ZoologicoOfAve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Aves>
     <Ave xsi:type="Pinguino">
-      <Id>0</Id>
-      <Nombre>22</Nombre>
-      <Edad>22</Edad>
-      <Habitat>Bosque</Habitat>
-      <Peso>22</Peso>
-      <Especie>22</Especie>
+      <Id>46</Id>
+      <Nombre>CHARLY</Nombre>
+      <Edad>4</Edad>
+      <Habitat>Montaña</Habitat>
+      <Peso>5</Peso>
+      <Especie>tre</Especie>
     </Ave>
-    <Ave xsi:type="Colibri">
-      <Id>0</Id>
-      <Nombre>333</Nombre>
-      <Edad>33</Edad>
+    <Ave xsi:type="Pinguino">
+      <Id>44</Id>
+      <Nombre>FITO</Nombre>
+      <Edad>4</Edad>
+      <Habitat>Montaña</Habitat>
+      <Peso>5</Peso>
+      <Especie>tre</Especie>
+    </Ave>
+    <Ave xsi:type="Halcon">
+      <Id>45</Id>
+      <Nombre>pablo</Nombre>
+      <Edad>4</Edad>
       <Habitat>Bosque</Habitat>
-      <VelocidadVuelo>33</VelocidadVuelo>
-      <ColorPlumas>33</ColorPlumas>
+      <Envergadura>4</Envergadura>
+      <RangoDeCaza>bastante</RangoDeCaza>
+    </Ave>
+    <Ave xsi:type="Pinguino">
+      <Id>43</Id>
+      <Nombre>ramiro</Nombre>
+      <Edad>2</Edad>
+      <Habitat>Bosque</Habitat>
+      <Peso>2</Peso>
+      <Especie>ramiroide</Especie>
     </Ave>
   </Aves>
 </ZoologicoOfAve>

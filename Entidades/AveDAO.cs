@@ -14,7 +14,7 @@ namespace Entidades
         private SqlConnection connection;
         private SqlCommand command;
 
-        public delegate Task<int> EjecutarCommandAsync(SqlCommand command);
+        public delegate Task<int> EjecutarCommandAsync(SqlCommand comando);
 
         static AveDAO()
         {
@@ -29,13 +29,13 @@ namespace Entidades
             command.Connection = connection;
         }
 
-        public async Task GuardarAsync(Ave ave, EjecutarCommandAsync ejecutarCommandAsync)
+        public async Task GuardarAsync(Ave ave, EjecutarCommandAsync commandAsync)
         {
             try
             {
                 await connection.OpenAsync();
 
-                string query = "INSERT INTO Aves (nombre, habitat, edad, peso, especie, envergadura, rangoCaza, velocidadVuelo, colorPlumas) VALUES (@nombre, @habitat, @edad, @peso, @especie, @envergadura, @rangoCaza, @velocidadVuelo, @colorPlumas); SELECT SCOPE_IDENTITY();";
+                string query = "INSERT INTO Aves (nombre, habitat, edad, peso, especie, envergadura, rangoCaza, velocidadVuelo, colorPlumas) VALUES (@nombre, @habitat, @edad, @peso, @especie, @envergadura, @rangoCaza, @velocidadVuelo, @colorPlumas);";
                 command.CommandText = query;
 
                 command.Parameters.Clear();
@@ -71,7 +71,7 @@ namespace Entidades
                     command.Parameters.AddWithValue("velocidadVuelo", colibri.VelocidadVuelo);
                 }
 
-                ave.Id = await ejecutarCommandAsync(command);
+                await commandAsync(command);
             }
             catch (Exception)
             {
@@ -86,7 +86,7 @@ namespace Entidades
             }
         }
 
-        public async Task ModificarAsync(Ave aveSeleccionada, Ave nuevaAve, EjecutarCommandAsync ejecutarCommandAsync)
+        public async Task ModificarAsync(Ave aveSeleccionada, Ave nuevaAve, EjecutarCommandAsync commandAsync)
         {
             try
             {
@@ -129,7 +129,7 @@ namespace Entidades
                     command.Parameters.AddWithValue("colorPlumas", colibri.ColorPlumas);
                 }
 
-                await ejecutarCommandAsync(command);
+                await commandAsync(command);
             }
             catch (Exception)
             {
@@ -144,7 +144,7 @@ namespace Entidades
             }
         }
 
-        public async Task EliminarAsync(Ave ave, EjecutarCommandAsync ejecutarCommandAsync)
+        public async Task EliminarAsync(int id, EjecutarCommandAsync commandAsync)
         {
             try
             {
@@ -154,9 +154,9 @@ namespace Entidades
                 command.CommandText = query;
 
                 command.Parameters.Clear();
-                command.Parameters.AddWithValue("id", ave.Id);
+                command.Parameters.AddWithValue("id", id);
 
-                await ejecutarCommandAsync(command);
+                await commandAsync(command);
             }
             catch (Exception ex)
             {
@@ -185,6 +185,7 @@ namespace Entidades
 
                 while (dataReader.Read())
                 {
+                    int id = dataReader.GetInt32(0);
                     string nombre = dataReader.GetString(1);
                     int habitatIndice = int.Parse(dataReader.GetString(2));
                     Habitat habitat = (Habitat)habitatIndice;
@@ -213,6 +214,7 @@ namespace Entidades
 
                     if (ave != null)
                     {
+                        ave.Id = id;
                         lista.Add(ave);
                     }
                 }
