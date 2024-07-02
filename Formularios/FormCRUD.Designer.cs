@@ -61,7 +61,7 @@
             btnPinguino.FlatStyle = FlatStyle.Flat;
             btnPinguino.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnPinguino.ForeColor = Color.White;
-            btnPinguino.Location = new Point(602, 53);
+            btnPinguino.Location = new Point(628, 52);
             btnPinguino.Name = "btnPinguino";
             btnPinguino.Size = new Size(170, 47);
             btnPinguino.TabIndex = 0;
@@ -76,7 +76,7 @@
             btnColibri.FlatStyle = FlatStyle.Flat;
             btnColibri.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnColibri.ForeColor = Color.White;
-            btnColibri.Location = new Point(602, 106);
+            btnColibri.Location = new Point(628, 105);
             btnColibri.Name = "btnColibri";
             btnColibri.Size = new Size(170, 47);
             btnColibri.TabIndex = 1;
@@ -91,7 +91,7 @@
             btnHalcon.FlatStyle = FlatStyle.Flat;
             btnHalcon.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnHalcon.ForeColor = Color.White;
-            btnHalcon.Location = new Point(602, 159);
+            btnHalcon.Location = new Point(628, 158);
             btnHalcon.Name = "btnHalcon";
             btnHalcon.Size = new Size(170, 47);
             btnHalcon.TabIndex = 2;
@@ -106,7 +106,7 @@
             btnModificar.FlatStyle = FlatStyle.Flat;
             btnModificar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnModificar.ForeColor = Color.White;
-            btnModificar.Location = new Point(602, 212);
+            btnModificar.Location = new Point(628, 211);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(170, 47);
             btnModificar.TabIndex = 3;
@@ -121,7 +121,7 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(602, 265);
+            btnEliminar.Location = new Point(628, 264);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(170, 47);
             btnEliminar.TabIndex = 4;
@@ -135,7 +135,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { ordenarToolStripMenuItem, guardar, cargar, logins });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(784, 24);
+            menuStrip1.Size = new Size(819, 24);
             menuStrip1.TabIndex = 6;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -226,10 +226,11 @@
             // statusStrip1
             // 
             statusStrip1.BackColor = Color.FromArgb(64, 64, 64);
+            statusStrip1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             statusStrip1.Items.AddRange(new ToolStripItem[] { lblStatusStrip });
-            statusStrip1.Location = new Point(0, 339);
+            statusStrip1.Location = new Point(0, 329);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(784, 22);
+            statusStrip1.Size = new Size(819, 22);
             statusStrip1.TabIndex = 7;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -245,11 +246,12 @@
             // 
             // listBox1
             // 
+            listBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(21, 53);
+            listBox1.Location = new Point(21, 52);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(560, 259);
+            listBox1.Size = new Size(586, 259);
             listBox1.TabIndex = 8;
             // 
             // lblOrden
@@ -267,7 +269,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 34, 34);
-            ClientSize = new Size(784, 361);
+            ClientSize = new Size(819, 351);
             Controls.Add(lblOrden);
             Controls.Add(listBox1);
             Controls.Add(statusStrip1);

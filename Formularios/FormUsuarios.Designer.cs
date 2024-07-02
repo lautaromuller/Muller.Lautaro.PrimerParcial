@@ -33,9 +33,13 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(12, 12);
+            richTextBox1.BulletIndent = 100;
+            richTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            richTextBox1.Location = new Point(12, 19);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(623, 371);
+            richTextBox1.ReadOnly = true;
+            richTextBox1.ShowSelectionMargin = true;
+            richTextBox1.Size = new Size(360, 330);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "";
             // 
@@ -43,10 +47,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(648, 395);
+            ClientSize = new Size(384, 361);
             Controls.Add(richTextBox1);
             Name = "FormUsuarios";
-            Text = "Usuarios logueados";
+            Text = "Historial de usuarios logueados";
             Load += FormUsuarios_Load;
             ResumeLayout(false);
         }

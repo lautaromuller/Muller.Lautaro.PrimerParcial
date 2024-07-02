@@ -8,10 +8,16 @@ namespace Entidades
     [XmlInclude(typeof(Colibri))]
     public abstract class Ave : IAve, ISerializable
     {
+
+        #region Propiedades
+
         public int Id { get; set; }
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public Habitat Habitat { get; set; }
+
+
+        #endregion
 
         #region Constructores
         public Ave(){}
@@ -60,7 +66,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"Nombre: {this.Nombre} | Hábitat: {this.Habitat} | Edad: {this.Edad} ";
+            return $"{this.Nombre} - Edad: {this.Edad} años - Hábitat: {this.Habitat}";
         }
 
         public override bool Equals(object obj)

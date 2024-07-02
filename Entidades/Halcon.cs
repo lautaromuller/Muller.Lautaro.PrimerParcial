@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Halcon : Ave, IAccion<string>, ISerializable
+    public class Halcon : Ave, IAccion<string>
     {
+
+        #region Propiedades
+
         public double Envergadura { get; set; }
         public string RangoDeCaza { get; set; }
+
+        #endregion
 
         #region Constructores
 
@@ -48,7 +53,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{base.ToString()}| Envergadura: {this.Envergadura} | Rango de caza: {this.RangoDeCaza}";
+            return $"(Halcón) {base.ToString()} - Envergadura: {this.Envergadura} METROS - Rango de caza: {this.RangoDeCaza}";
         }
 
         public override bool Equals(object obj)

@@ -17,6 +17,7 @@ namespace Formularios
     {
         #region Atributos
 
+        private Usuario usuario;
         public string ruta = "aves.xml";
         private AveDAO aveDAO;
         private Zoologico<Ave> zoologico;
@@ -27,30 +28,74 @@ namespace Formularios
         public delegate void OrdenamientoHandler(OrdenamientoArgs e);
         public event OrdenamientoHandler Ordenado;
 
+
         #region Constructor
 
 
-        public FormCRUD(string nombreUsuario)
+        public FormCRUD(Usuario nuevoUsuario)
         {
             InitializeComponent();
-
+            this.usuario = nuevoUsuario;
             aveDAO = new AveDAO();
             aveDAO.OperacionCompleta += OperacionCompleta;
 
             if (!File.Exists(ruta)) { zoologico = new Zoologico<Ave>(); }
             zoologico = Zoologico<Ave>.Deserializar(ruta);
-            this.lblStatusStrip.Text = $"{nombreUsuario} | {DateTime.Now.ToString("d")}";
+            this.lblStatusStrip.Text = $"{this.usuario.nombre} {this.usuario.apellido} | {DateTime.Now.ToString("d")}";
 
             Ordenado += Ordenamiento;
+            ConfigurarPermisos(this.usuario.perfil);
 
             ActualizarLista();
         }
+
 
         #endregion
 
 
 
         #region Métodos
+
+        private void ConfigurarPermisos(string perfil)
+        {
+            if (perfil == "administrador")
+            {
+                HabilitarPermisos(true, true, true);
+            }
+            else if (perfil == "supervisor")
+            {
+                HabilitarPermisos(true, true, false);
+            }
+            else if (perfil == "vendedor")
+            {
+                HabilitarPermisos(false, false, false);
+            }
+        }
+
+        private void HabilitarPermisos(bool create, bool update, bool delete)
+        {
+            this.btnPinguino.Enabled = create;
+            this.btnHalcon.Enabled = create;
+            this.btnColibri.Enabled = create;
+            this.btnModificar.Enabled = update;
+            this.btnEliminar.Enabled = delete;
+
+            if (create == false)
+            {
+                this.btnPinguino.Text = "NO TIENE PERMISOS";
+                this.btnColibri.Text = "NO TIENE PERMISOS";
+                this.btnHalcon.Text = "NO TIENE PERMISOS";
+            }
+            if (update == false)
+            {
+                this.btnModificar.Text = "NO TIENE PERMISOS";
+            }
+            if (delete == false)
+            {
+                this.btnEliminar.Text = "NO TIENE PERMISOS";
+            }
+
+        }
 
 
 
@@ -83,7 +128,6 @@ namespace Formularios
             this.listBox1.DataSource = zoologico.Aves;
             zoologico.Serializar(ruta);
         }
-
 
 
 
@@ -261,7 +305,7 @@ namespace Formularios
                             MessageBox.Show($"Error al eliminar el ave: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     });
-                    
+
                 }
             }
             else

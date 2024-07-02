@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Pinguino : Ave, IAccion<string>, ISerializable
+    public class Pinguino : Ave, IAccion<string>
     {
+
+        #region Propiedades
+
+
         public double Peso { get; set; }
         public string Especie { get; set; }
+
+        #endregion
 
         #region Constructores
         public Pinguino() { }
@@ -58,7 +64,7 @@ namespace Entidades
         
         public override string ToString()
         {
-            return $"{base.ToString()}| Peso: {this.Peso} | Especie: {this.Especie}";
+            return $"(Pinguino) {base.ToString()} - Peso: {this.Peso} KILOS - Especie: {this.Especie}";
         }
 
         

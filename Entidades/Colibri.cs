@@ -7,25 +7,32 @@ using System.Threading.Tasks;
 namespace Entidades
 {
     
-    public class Colibri : Ave, IAccion<string>, ISerializable
+    public class Colibri : Ave, IAccion<string>
     {
         public double VelocidadVuelo { get; set; }
         public string ColorPlumas { get; set; }
 
         #region Constructores
 
+
         public Colibri() { }
+
+
         public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas, double velocidadVuelo)
             : base(nombre, habitat, edad)
         {
             this.ColorPlumas = colorPlumas;
             this.VelocidadVuelo = velocidadVuelo;
         }
+
+
         public Colibri(string nombre, Habitat habitat, int edad, string colorPlumas)
             : this(nombre, habitat, edad, colorPlumas, 0.0)
         {
             
         }
+
+
         public Colibri(string nombre, Habitat habitat, int edad)
             : this(nombre, habitat, edad,"", 0.0)
         {
@@ -45,7 +52,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{base.ToString()}| Velocidad de vuelo: {this.VelocidadVuelo} | Color de plumas: {this.ColorPlumas}";
+            return $"(Colibrí) {base.ToString()} - Velocidad de vuelo: {this.VelocidadVuelo} KM/H - Color de plumas: {this.ColorPlumas}";
         }
 
         public override bool Equals(object obj)
