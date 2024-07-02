@@ -16,7 +16,7 @@ Aplicación desarrollada en C# utilizando Windows Forms, Herencia de clases, Ser
 La aplicación empieza con un formulario de login donde el usuario ingresa un correo y una contraseña, estos datos son comparados con los del archivo ___data_usuarios.json___. Si los datos son válidos se ingresa a un formulario CRUD (Crear, Leer, Actualizar, Eliminar) que permite al usuario, según su nivel de permisos (administrador, supervisor o empleado), agregar, modificar y eliminar distintas aves con sus respectivas características. Al cerrar el formulario las aves cargadas se guardan en un archivo XML y en una DB asociada al proyecto, para que, en un posterior ingreso, recuperar los datos.
 
 
-
+****
 
 #### Funcionalidades del menú:
 * __Ordenar:__ Ordena la lista de aves por nombre o edad y de forma ascendente o descendente. Al hacer esto también se invoca un evento que escribe el criterio elegido en pantalla para ayudar al usuario.    
@@ -24,14 +24,14 @@ La aplicación empieza con un formulario de login donde el usuario ingresa un co
 * __Cargar:__ Permite traer la información desde un archivo XML de nuestra computadora o desde la base de datos.     
 * __Historial de usuarios:__ Abre un formulario donde podemos visualizar los usuarios que iniciaron sesión últimamente, con la hora en la que lo hicieron.     
 
-
+****
 
 #### Permisos según perfil del usuario:
 * __Administrador:__ CRUD. Tiene permiso de hacer todas las operaciones que ofrece la aplicación: AGREGAR, LEER, MODIFICAR y ELIMINAR.     
 * __Supervisor:__ CRU. Puede hacer todas las operaciones menos la de ELIMINAR.     
 * __Vendedor:__ R. Solo puede leer los datos de la DB.     
 
-
+****
 
 ## Diagrama de clases
 ![Diagrama de Clases](ClassDiagram1.png)
