@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,26 +15,44 @@ namespace Formularios
 {
     public partial class FormCRUD : Form
     {
+        #region Atributos
+
         public string ruta = "aves.xml";
         private AveDAO aveDAO;
         private Zoologico<Ave> zoologico;
 
+        #endregion
+
+
         public delegate void OrdenamientoHandler(OrdenamientoArgs e);
         public event OrdenamientoHandler Ordenado;
+
+        #region Constructor
+
 
         public FormCRUD(string nombreUsuario)
         {
             InitializeComponent();
+
             aveDAO = new AveDAO();
-            if (!File.Exists(ruta))
-            {
-                zoologico = new Zoologico<Ave>();
-            }
+            aveDAO.OperacionCompleta += OperacionCompleta;
+
+            if (!File.Exists(ruta)) { zoologico = new Zoologico<Ave>(); }
             zoologico = Zoologico<Ave>.Deserializar(ruta);
-            ActualizarLista();
             this.lblStatusStrip.Text = $"{nombreUsuario} | {DateTime.Now.ToString("d")}";
+
             Ordenado += Ordenamiento;
+
+            ActualizarLista();
         }
+
+        #endregion
+
+
+
+        #region Métodos
+
+
 
         /// <summary>
         /// Manejador del evento load del formulario. Deserializa el zoológico del archivo de origen
@@ -67,51 +86,76 @@ namespace Formularios
 
 
 
+
         /// <summary>
         /// Llama a FormPinguino para poder ingresar un nuevo pinguino.
         /// </summary>
-        private async void btnPinguino_Click(object sender, EventArgs e)
+        private void btnPinguino_Click(object sender, EventArgs e)
         {
             FormPinguino form = new FormPinguino();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 zoologico += form.Pinguino;
-
-                await aveDAO.GuardarAsync(form.Pinguino, async (command) => { await command.ExecuteNonQueryAsync(); return 1; });
-
-                this.ActualizarLista();
+                Task.Run(() =>
+                {
+                    try
+                    {
+                        aveDAO.Guardar(form.Pinguino);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al guardar pinguino: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                });
             }
         }
 
         /// <summary>
         /// Llama a FormColibri para poder ingresar un nuevo colibrí.
         /// </summary>
-        private async void btnColibri_Click(object sender, EventArgs e)
+        private void btnColibri_Click(object sender, EventArgs e)
         {
             FormColibri form = new FormColibri();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 zoologico += form.Colibri;
-                await aveDAO.GuardarAsync(form.Colibri, async (command) => { await command.ExecuteNonQueryAsync(); return 1; });
-                
-                this.ActualizarLista();
+                Task.Run(() =>
+                {
+                    try
+                    {
+                        aveDAO.Guardar(form.Colibri);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al guardar colibrí: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                });
             }
         }
 
         /// <summary>
         /// Llama a FormHalcon para poder ingresar un nuevo halcón.
         /// </summary>
-        private async void btnHalcon_Click(object sender, EventArgs e)
+        private void btnHalcon_Click(object sender, EventArgs e)
         {
             FormHalcon form = new FormHalcon();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 zoologico += form.Halcon;
-                await aveDAO.GuardarAsync(form.Halcon, async (command) => { await command.ExecuteNonQueryAsync(); return 1; });
-                
-                this.ActualizarLista();
+                Task.Run(() =>
+                {
+                    try
+                    {
+                        aveDAO.Guardar(form.Halcon);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al guardar halcon: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                });
             }
         }
+
 
 
 
@@ -119,7 +163,7 @@ namespace Formularios
         /// Manejador de evento click del boton Modificar. LLama al formulario correspondiente al item seleccionado
         /// y lo inicializa con los valores actuales para poder modificarlo.
         /// </summary>
-        private async void btnModificar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
             int indice = this.listBox1.SelectedIndex;
             if (indice >= 0 && indice < this.zoologico.Aves.Count)
@@ -131,10 +175,18 @@ namespace Formularios
                     if (form.ShowDialog() == DialogResult.OK)
                     {
                         this.zoologico.Aves[indice] = form.Pinguino;
+                        Task.Run(() =>
+                        {
+                            try
+                            {
+                                aveDAO.Modificar(aveSeleccionada, form.Pinguino);
 
-                        await aveDAO.ModificarAsync(aveSeleccionada, form.Pinguino, async (command) => { await command.ExecuteNonQueryAsync(); return 1; });
-                        
-                        this.ActualizarLista();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"Error al modificar ave: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        });
                     }
                 }
                 else if (aveSeleccionada is Colibri colibri)
@@ -143,10 +195,18 @@ namespace Formularios
                     if (form.ShowDialog() == DialogResult.OK)
                     {
                         this.zoologico.Aves[indice] = form.Colibri;
+                        Task.Run(() =>
+                        {
+                            try
+                            {
+                                aveDAO.Modificar(aveSeleccionada, form.Colibri);
 
-                        await aveDAO.ModificarAsync(aveSeleccionada, form.Colibri, async (command) => { await command.ExecuteNonQueryAsync(); return 1; });
-                        
-                        this.ActualizarLista();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"Error al modificar ave: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        });
                     }
                 }
                 else if (aveSeleccionada is Halcon halcon)
@@ -155,14 +215,20 @@ namespace Formularios
                     if (form.ShowDialog() == DialogResult.OK)
                     {
                         this.zoologico.Aves[indice] = form.Halcon;
+                        Task.Run(() =>
+                        {
+                            try
+                            {
+                                aveDAO.Modificar(aveSeleccionada, form.Halcon);
 
-                        await aveDAO.ModificarAsync(aveSeleccionada, form.Halcon, async (command) => { await command.ExecuteNonQueryAsync(); return 1; });
-                        
-                        this.ActualizarLista();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"Error al modificar ave: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        });
                     }
                 }
-
-                this.ActualizarLista();
             }
             else
             {
@@ -173,20 +239,29 @@ namespace Formularios
         /// <summary>
         /// Manejador de evento click del boton Eliminar. Elimina el item seleccionado.
         /// </summary>
-        private async void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             int indice = this.listBox1.SelectedIndex;
             if (indice >= 0 && indice < this.zoologico.Aves.Count)
             {
                 DialogResult rta = MessageBox.Show("¿Está seguro que desea eliminar este elemento?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                
+
                 Ave aveSeleccionada = this.zoologico.Aves[indice];
                 if (rta == DialogResult.Yes)
                 {
-                    await aveDAO.EliminarAsync(aveSeleccionada.Id, async(command) => { await command.ExecuteNonQueryAsync(); return 1; });
                     zoologico -= aveSeleccionada;
+                    Task.Run(() =>
+                    {
+                        try
+                        {
+                            aveDAO.Eliminar(aveSeleccionada.Id);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error al eliminar el ave: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    });
                     
-                    this.ActualizarLista();
                 }
             }
             else
@@ -198,6 +273,7 @@ namespace Formularios
 
 
 
+
         /// <summary>
         /// Ordena la lista por nombre de forma ascendente.
         /// </summary>
@@ -205,7 +281,7 @@ namespace Formularios
         {
             this.zoologico.OrdenarPorNombre(true);
             this.ActualizarLista();
-            OnOrdenado("nombre en orden ascendente");
+            OnOrdenado("Nombre (ascendente)");
         }
 
         /// <summary>
@@ -215,7 +291,7 @@ namespace Formularios
         {
             this.zoologico.OrdenarPorNombre(false);
             this.ActualizarLista();
-            OnOrdenado("nombre en orden descendente");
+            OnOrdenado("Nombre (descendente)");
         }
 
         /// <summary>
@@ -225,7 +301,7 @@ namespace Formularios
         {
             this.zoologico.OrdenarPorEdad(true);
             this.ActualizarLista();
-            OnOrdenado("edad en orden ascendente");
+            OnOrdenado("Edad (ascendente)");
         }
 
         /// <summary>
@@ -235,8 +311,9 @@ namespace Formularios
         {
             this.zoologico.OrdenarPorEdad(false);
             this.ActualizarLista();
-            OnOrdenado("nombre en orden descendente");
+            OnOrdenado("Edad (descendente)");
         }
+
 
 
 
@@ -298,8 +375,6 @@ namespace Formularios
             }
         }
 
-
-
         /// <summary>
         /// Cargar un archivo xml con aves guardado en la computadora
         /// </summary>
@@ -315,6 +390,7 @@ namespace Formularios
             {
                 zoologico = Zoologico<Ave>.Deserializar(ruta);
             }
+
             this.ActualizarLista();
         }
 
@@ -334,11 +410,15 @@ namespace Formularios
             this.ActualizarLista();
         }
 
+
+
+
+
         /// <summary>
-        /// Escucha del evento de ordenamiento del listbox. Invoca a la función del evento
+        /// Escucha del evento de ordenamiento del listbox. Invoca a la función del evento ordenado
         /// </summary>
         /// <param name="criterio">Criterio de ordenamiento</param>
-        protected virtual void OnOrdenado(string criterio)
+        private void OnOrdenado(string criterio)
         {
             Ordenado?.Invoke(new OrdenamientoArgs(criterio));
         }
@@ -349,7 +429,21 @@ namespace Formularios
         /// <param name="e">Clase que contiene el criterio de ordenamiento</param>
         private void Ordenamiento(OrdenamientoArgs e)
         {
-            MessageBox.Show($"Lista ordenada por {e.Criterio}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.lblOrden.Text = "Orden: " + e.Criterio;
         }
+
+        /// <summary>
+        /// Función del evento OperacionCompleta. Invoca a la función ActualizarLista
+        /// </summary>
+        private void OperacionCompleta(object sender, EventArgs e)
+        {
+            this.Invoke(() => ActualizarLista());
+        }
+
+
+
+        #endregion
+
+
     }
 }

@@ -18,6 +18,22 @@
       <Especie>tre</Especie>
     </Ave>
     <Ave xsi:type="Halcon">
+      <Id>50</Id>
+      <Nombre>gregorio</Nombre>
+      <Edad>4</Edad>
+      <Habitat>Bosque</Habitat>
+      <Envergadura>4</Envergadura>
+      <RangoDeCaza>tres</RangoDeCaza>
+    </Ave>
+    <Ave xsi:type="Pinguino">
+      <Id>47</Id>
+      <Nombre>mateo</Nombre>
+      <Edad>4</Edad>
+      <Habitat>Bosque</Habitat>
+      <Peso>4</Peso>
+      <Especie>mmm</Especie>
+    </Ave>
+    <Ave xsi:type="Halcon">
       <Id>45</Id>
       <Nombre>pablo</Nombre>
       <Edad>4</Edad>
@@ -26,12 +42,12 @@
       <RangoDeCaza>bastante</RangoDeCaza>
     </Ave>
     <Ave xsi:type="Pinguino">
-      <Id>43</Id>
-      <Nombre>ramiro</Nombre>
-      <Edad>2</Edad>
+      <Id>48</Id>
+      <Nombre>mendoza</Nombre>
+      <Edad>1</Edad>
       <Habitat>Bosque</Habitat>
-      <Peso>2</Peso>
-      <Especie>ramiroide</Especie>
+      <Peso>1</Peso>
+      <Especie>lll</Especie>
     </Ave>
   </Aves>
 </ZoologicoOfAve>

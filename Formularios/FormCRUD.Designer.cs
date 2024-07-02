@@ -49,6 +49,7 @@
             statusStrip1 = new StatusStrip();
             lblStatusStrip = new ToolStripStatusLabel();
             listBox1 = new ListBox();
+            lblOrden = new Label();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -60,7 +61,7 @@
             btnPinguino.FlatStyle = FlatStyle.Flat;
             btnPinguino.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnPinguino.ForeColor = Color.White;
-            btnPinguino.Location = new Point(602, 50);
+            btnPinguino.Location = new Point(602, 53);
             btnPinguino.Name = "btnPinguino";
             btnPinguino.Size = new Size(170, 47);
             btnPinguino.TabIndex = 0;
@@ -75,7 +76,7 @@
             btnColibri.FlatStyle = FlatStyle.Flat;
             btnColibri.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnColibri.ForeColor = Color.White;
-            btnColibri.Location = new Point(602, 103);
+            btnColibri.Location = new Point(602, 106);
             btnColibri.Name = "btnColibri";
             btnColibri.Size = new Size(170, 47);
             btnColibri.TabIndex = 1;
@@ -90,7 +91,7 @@
             btnHalcon.FlatStyle = FlatStyle.Flat;
             btnHalcon.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnHalcon.ForeColor = Color.White;
-            btnHalcon.Location = new Point(602, 156);
+            btnHalcon.Location = new Point(602, 159);
             btnHalcon.Name = "btnHalcon";
             btnHalcon.Size = new Size(170, 47);
             btnHalcon.TabIndex = 2;
@@ -105,7 +106,7 @@
             btnModificar.FlatStyle = FlatStyle.Flat;
             btnModificar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnModificar.ForeColor = Color.White;
-            btnModificar.Location = new Point(602, 209);
+            btnModificar.Location = new Point(602, 212);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(170, 47);
             btnModificar.TabIndex = 3;
@@ -120,7 +121,7 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(602, 262);
+            btnEliminar.Location = new Point(602, 265);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(170, 47);
             btnEliminar.TabIndex = 4;
@@ -149,20 +150,20 @@
             // 
             nombreToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { ordNombreAscendente, ordNombreDescendente });
             nombreToolStripMenuItem1.Name = "nombreToolStripMenuItem1";
-            nombreToolStripMenuItem1.Size = new Size(180, 22);
+            nombreToolStripMenuItem1.Size = new Size(137, 22);
             nombreToolStripMenuItem1.Text = "Por nombre";
             // 
             // ordNombreAscendente
             // 
             ordNombreAscendente.Name = "ordNombreAscendente";
-            ordNombreAscendente.Size = new Size(180, 22);
+            ordNombreAscendente.Size = new Size(142, 22);
             ordNombreAscendente.Text = "Ascendente";
             ordNombreAscendente.Click += ordNombreAscendente_Click;
             // 
             // ordNombreDescendente
             // 
             ordNombreDescendente.Name = "ordNombreDescendente";
-            ordNombreDescendente.Size = new Size(180, 22);
+            ordNombreDescendente.Size = new Size(142, 22);
             ordNombreDescendente.Text = "Descendente";
             ordNombreDescendente.Click += ordNombreDescendente_Click;
             // 
@@ -170,48 +171,48 @@
             // 
             edadToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ordEdadAscendente, ordEdadDescendente });
             edadToolStripMenuItem.Name = "edadToolStripMenuItem";
-            edadToolStripMenuItem.Size = new Size(180, 22);
+            edadToolStripMenuItem.Size = new Size(137, 22);
             edadToolStripMenuItem.Text = "Por edad";
             // 
             // ordEdadAscendente
             // 
             ordEdadAscendente.Name = "ordEdadAscendente";
-            ordEdadAscendente.Size = new Size(180, 22);
+            ordEdadAscendente.Size = new Size(142, 22);
             ordEdadAscendente.Text = "Ascendente";
             ordEdadAscendente.Click += ordEdadAscendente_Click;
             // 
             // ordEdadDescendente
             // 
             ordEdadDescendente.Name = "ordEdadDescendente";
-            ordEdadDescendente.Size = new Size(180, 22);
+            ordEdadDescendente.Size = new Size(142, 22);
             ordEdadDescendente.Text = "Descendente";
             ordEdadDescendente.Click += ordEdadDescendente_Click;
             // 
             // guardar
             // 
             guardar.Name = "guardar";
-            guardar.Size = new Size(104, 20);
-            guardar.Text = "Guardar como...";
+            guardar.Size = new Size(95, 20);
+            guardar.Text = "Guardar como";
             guardar.Click += guardar_Click;
             // 
             // cargar
             // 
             cargar.DropDownItems.AddRange(new ToolStripItem[] { archivo, baseDeDatos });
             cargar.Name = "cargar";
-            cargar.Size = new Size(97, 20);
-            cargar.Text = "Cargar desde...";
+            cargar.Size = new Size(54, 20);
+            cargar.Text = "Cargar";
             // 
             // archivo
             // 
             archivo.Name = "archivo";
-            archivo.Size = new Size(180, 22);
+            archivo.Size = new Size(146, 22);
             archivo.Text = "Archivo";
             archivo.Click += archivoToolStripMenuItem_Click;
             // 
             // baseDeDatos
             // 
             baseDeDatos.Name = "baseDeDatos";
-            baseDeDatos.Size = new Size(180, 22);
+            baseDeDatos.Size = new Size(146, 22);
             baseDeDatos.Text = "Base de datos";
             baseDeDatos.Click += baseDeDatos_Click;
             // 
@@ -226,7 +227,7 @@
             // 
             statusStrip1.BackColor = Color.FromArgb(64, 64, 64);
             statusStrip1.Items.AddRange(new ToolStripItem[] { lblStatusStrip });
-            statusStrip1.Location = new Point(0, 331);
+            statusStrip1.Location = new Point(0, 339);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(784, 22);
             statusStrip1.TabIndex = 7;
@@ -246,17 +247,28 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(21, 50);
+            listBox1.Location = new Point(21, 53);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(560, 259);
             listBox1.TabIndex = 8;
+            // 
+            // lblOrden
+            // 
+            lblOrden.AutoSize = true;
+            lblOrden.ForeColor = Color.White;
+            lblOrden.Location = new Point(21, 31);
+            lblOrden.Name = "lblOrden";
+            lblOrden.Size = new Size(40, 15);
+            lblOrden.TabIndex = 9;
+            lblOrden.Text = "Orden";
             // 
             // FormCRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 34, 34);
-            ClientSize = new Size(784, 353);
+            ClientSize = new Size(784, 361);
+            Controls.Add(lblOrden);
             Controls.Add(listBox1);
             Controls.Add(statusStrip1);
             Controls.Add(btnEliminar);
@@ -301,5 +313,6 @@
         private ListBox listBox1;
         private ToolStripMenuItem archivo;
         private ToolStripMenuItem baseDeDatos;
+        private Label lblOrden;
     }
 }

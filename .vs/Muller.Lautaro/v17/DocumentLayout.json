@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial2\\formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2632183-82F9-4D31-A6DB-D5E66213A1C3}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\muller.lautaro.primerparcial2\\entidades\\zoologico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\zoologico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\entidades\\avedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD3B88AD-7DEF-456B-8632-FF337C32A538}|Entidades\\Entidades.csproj|solutionrelative:entidades\\avedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,26 +38,51 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCRUD.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Formularios\\FormCRUD.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormCRUD.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Formularios\\FormCRUD.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\FormCRUD.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T06:55:33.103Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Zoologico.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Entidades\\Zoologico.cs",
+              "RelativeDocumentMoniker": "Entidades\\Zoologico.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Entidades\\Zoologico.cs",
+              "RelativeToolTip": "Entidades\\Zoologico.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T06:43:58.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "FormCRUD.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Formularios\\FormCRUD.cs",
               "RelativeDocumentMoniker": "Formularios\\FormCRUD.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Formularios\\FormCRUD.cs",
               "RelativeToolTip": "Formularios\\FormCRUD.cs",
-              "ViewState": "AQIAAPEAAAAAAAAAAAAAACMAAAAJAAAA",
+              "ViewState": "AQIAAGcBAAAAAAAAAAAAAK8BAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T18:51:19.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AveDAO.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Entidades\\AveDAO.cs",
               "RelativeDocumentMoniker": "Entidades\\AveDAO.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Entidades\\AveDAO.cs",
               "RelativeToolTip": "Entidades\\AveDAO.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAAB8AAABSAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-27T17:06:05.04Z",
               "EditorCaption": ""

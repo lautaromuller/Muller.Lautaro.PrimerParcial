@@ -10,11 +10,20 @@ namespace Entidades
 {
     public class AveDAO
     {
+        #region Atributos
+
         private static string connectionString;
         private SqlConnection connection;
         private SqlCommand command;
 
-        public delegate Task<int> EjecutarCommandAsync(SqlCommand comando);
+        #endregion
+
+        public delegate void OperacionCompletaHandler(object sender, EventArgs e);
+        public event OperacionCompletaHandler OperacionCompleta;
+
+
+
+        #region Constructores
 
         static AveDAO()
         {
@@ -29,11 +38,31 @@ namespace Entidades
             command.Connection = connection;
         }
 
-        public async Task GuardarAsync(Ave ave, EjecutarCommandAsync commandAsync)
+        #endregion
+
+
+
+        #region Métodos
+
+
+
+        /// <summary>
+        /// Escucha del evento que avisa cuando la operación termina
+        /// </summary>
+        private void OnOperacionCompleta()
+        {
+            OperacionCompleta?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// Método para guardar elemento en base de datos
+        /// </summary>
+        /// <param name="ave">Ave a guardar</param>
+        public void Guardar(Ave ave)
         {
             try
             {
-                await connection.OpenAsync();
+                connection.Open();
 
                 string query = "INSERT INTO Aves (nombre, habitat, edad, peso, especie, envergadura, rangoCaza, velocidadVuelo, colorPlumas) VALUES (@nombre, @habitat, @edad, @peso, @especie, @envergadura, @rangoCaza, @velocidadVuelo, @colorPlumas);";
                 command.CommandText = query;
@@ -71,11 +100,12 @@ namespace Entidades
                     command.Parameters.AddWithValue("velocidadVuelo", colibri.VelocidadVuelo);
                 }
 
-                await commandAsync(command);
+                command.ExecuteNonQuery();
+                OnOperacionCompleta();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception($"Error al guardar ave: {ex.Message}", ex);
             }
             finally
             {
@@ -86,11 +116,16 @@ namespace Entidades
             }
         }
 
-        public async Task ModificarAsync(Ave aveSeleccionada, Ave nuevaAve, EjecutarCommandAsync commandAsync)
+        /// <summary>
+        /// Método que modifica un elemento de la base de datos
+        /// </summary>
+        /// <param name="aveSeleccionada">Ave a modificar</param>
+        /// <param name="nuevaAve">Ave de reemplazo</param>
+        public void Modificar(Ave aveSeleccionada, Ave nuevaAve)
         {
             try
             {
-                await connection.OpenAsync();
+                connection.Open();
 
                 string query = "UPDATE Aves SET nombre = @nombre, habitat = @habitat, edad = @edad, peso = @peso, especie = @especie, envergadura = @envergadura, rangoCaza = @rangoCaza, velocidadVuelo = @velocidadVuelo, colorPlumas = @colorPlumas WHERE Id = @id";
                 command.CommandText = query;
@@ -129,11 +164,12 @@ namespace Entidades
                     command.Parameters.AddWithValue("colorPlumas", colibri.ColorPlumas);
                 }
 
-                await commandAsync(command);
+                command.ExecuteNonQuery();
+                OnOperacionCompleta();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception($"Error al modificar ave: {ex.Message}", ex);
             }
             finally
             {
@@ -144,11 +180,15 @@ namespace Entidades
             }
         }
 
-        public async Task EliminarAsync(int id, EjecutarCommandAsync commandAsync)
+        /// <summary>
+        /// Método para eliminar un elemento de la base de datos
+        /// </summary>
+        /// <param name="id">ID del elemento a eliminar</param>
+        public void Eliminar(int id)
         {
             try
             {
-                await connection.OpenAsync();
+                connection.Open();
 
                 string query = "DELETE FROM Aves WHERE id = @id";
                 command.CommandText = query;
@@ -156,11 +196,12 @@ namespace Entidades
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("id", id);
 
-                await commandAsync(command);
+                command.ExecuteNonQuery();
+                OnOperacionCompleta();
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error al eliminar el ave: {ex.Message}", ex);
+                throw new Exception($"Error al eliminar ave: {ex.Message}", ex);
             }
             finally
             {
@@ -171,6 +212,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Método para leer información de una base de datos.
+        /// </summary>
+        /// <returns>Retorna una lista con los valores obtenidos</returns>
         public List<Ave> Leer()
         {
             List<Ave> lista = new List<Ave>();
@@ -223,7 +268,7 @@ namespace Entidades
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error al leer datos de la base de datos: {ex.Message} ---- {ex.StackTrace}", ex);
+                throw new Exception($"Error al leer datos de la base de datos: {ex.Message}", ex);
             }
             finally
             {
@@ -233,5 +278,10 @@ namespace Entidades
                 }
             }
         }
+
+
+        #endregion
+
+
     }
 }
