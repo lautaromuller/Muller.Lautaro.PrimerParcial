@@ -2,52 +2,36 @@
 <ZoologicoOfAve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Aves>
     <Ave xsi:type="Pinguino">
-      <Id>46</Id>
-      <Nombre>CHARLY</Nombre>
-      <Edad>4</Edad>
-      <Habitat>Montaña</Habitat>
-      <Peso>5</Peso>
-      <Especie>tre</Especie>
-    </Ave>
-    <Ave xsi:type="Pinguino">
-      <Id>44</Id>
-      <Nombre>FITO</Nombre>
-      <Edad>4</Edad>
-      <Habitat>Montaña</Habitat>
-      <Peso>5</Peso>
-      <Especie>tre</Especie>
-    </Ave>
-    <Ave xsi:type="Halcon">
-      <Id>50</Id>
-      <Nombre>gregorio</Nombre>
-      <Edad>4</Edad>
-      <Habitat>Bosque</Habitat>
-      <Envergadura>4</Envergadura>
-      <RangoDeCaza>tres</RangoDeCaza>
-    </Ave>
-    <Ave xsi:type="Pinguino">
-      <Id>47</Id>
-      <Nombre>mateo</Nombre>
-      <Edad>4</Edad>
-      <Habitat>Bosque</Habitat>
+      <Id>58</Id>
+      <Nombre>Fito</Nombre>
+      <Edad>3</Edad>
+      <Habitat>Antartida</Habitat>
       <Peso>4</Peso>
-      <Especie>mmm</Especie>
+      <Especie>Magallanes</Especie>
     </Ave>
     <Ave xsi:type="Halcon">
-      <Id>45</Id>
-      <Nombre>pablo</Nombre>
+      <Id>57</Id>
+      <Nombre>Jose</Nombre>
       <Edad>4</Edad>
-      <Habitat>Bosque</Habitat>
-      <Envergadura>4</Envergadura>
-      <RangoDeCaza>bastante</RangoDeCaza>
+      <Habitat>Montaña</Habitat>
+      <Envergadura>2</Envergadura>
+      <RangoDeCaza>Amplio</RangoDeCaza>
+    </Ave>
+    <Ave xsi:type="Colibri">
+      <Id>56</Id>
+      <Nombre>Martin</Nombre>
+      <Edad>1</Edad>
+      <Habitat>Ciudad</Habitat>
+      <VelocidadVuelo>30</VelocidadVuelo>
+      <ColorPlumas>Verde</ColorPlumas>
     </Ave>
     <Ave xsi:type="Pinguino">
-      <Id>48</Id>
-      <Nombre>mendoza</Nombre>
-      <Edad>1</Edad>
-      <Habitat>Bosque</Habitat>
-      <Peso>1</Peso>
-      <Especie>lll</Especie>
+      <Id>55</Id>
+      <Nombre>Pablo</Nombre>
+      <Edad>4</Edad>
+      <Habitat>Antartida</Habitat>
+      <Peso>2</Peso>
+      <Especie>Emperador</Especie>
     </Ave>
   </Aves>
 </ZoologicoOfAve>

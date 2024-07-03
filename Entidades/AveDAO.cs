@@ -65,8 +65,7 @@ namespace Entidades
                 connection.Open();
 
                 string query = "INSERT INTO Aves (nombre, habitat, edad, peso, especie, envergadura, rangoCaza, velocidadVuelo, colorPlumas) VALUES (@nombre, @habitat, @edad, @peso, @especie, @envergadura, @rangoCaza, @velocidadVuelo, @colorPlumas);";
-                command.CommandText = query;
-
+                
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("nombre", ave.Nombre);
                 command.Parameters.AddWithValue("habitat", ave.Habitat);
@@ -74,31 +73,24 @@ namespace Entidades
 
                 if (ave is Pinguino pinguino)
                 {
+                    query = " peso, especie) VALUES (@nombre, @habitat, @edad, @peso, @especie);";
+
                     command.Parameters.AddWithValue("peso", pinguino.Peso);
                     command.Parameters.AddWithValue("especie", pinguino.Especie);
-                    command.Parameters.AddWithValue("envergadura", DBNull.Value);
-                    command.Parameters.AddWithValue("rangoCaza", DBNull.Value);
-                    command.Parameters.AddWithValue("colorPlumas", DBNull.Value);
-                    command.Parameters.AddWithValue("velocidadVuelo", DBNull.Value);
                 }
                 else if (ave is Halcon halcon)
                 {
-                    command.Parameters.AddWithValue("peso", DBNull.Value);
-                    command.Parameters.AddWithValue("especie", DBNull.Value);
+                    query = " envergadura, rangoCaza) VALUES (@nombre, @habitat, @edad, @envergadura, @rangoCaza);";
                     command.Parameters.AddWithValue("envergadura", halcon.Envergadura);
                     command.Parameters.AddWithValue("rangoCaza", halcon.RangoDeCaza);
-                    command.Parameters.AddWithValue("colorPlumas", DBNull.Value);
-                    command.Parameters.AddWithValue("velocidadVuelo", DBNull.Value);
                 }
                 else if (ave is Colibri colibri)
                 {
-                    command.Parameters.AddWithValue("peso", DBNull.Value);
-                    command.Parameters.AddWithValue("especie", DBNull.Value);
-                    command.Parameters.AddWithValue("envergadura", DBNull.Value);
-                    command.Parameters.AddWithValue("rangoCaza", DBNull.Value);
+                    query = " velocidadVuelo, colorPlumas) VALUES (@nombre, @habitat, @edad, @velocidadVuelo, @colorPlumas);";
                     command.Parameters.AddWithValue("colorPlumas", colibri.ColorPlumas);
                     command.Parameters.AddWithValue("velocidadVuelo", colibri.VelocidadVuelo);
                 }
+                command.CommandText = query;
 
                 command.ExecuteNonQuery();
                 OnOperacionCompleta();
@@ -127,9 +119,8 @@ namespace Entidades
             {
                 connection.Open();
 
-                string query = "UPDATE Aves SET nombre = @nombre, habitat = @habitat, edad = @edad, peso = @peso, especie = @especie, envergadura = @envergadura, rangoCaza = @rangoCaza, velocidadVuelo = @velocidadVuelo, colorPlumas = @colorPlumas WHERE Id = @id";
-                command.CommandText = query;
-
+                string query = "UPDATE Aves SET nombre = @nombre, habitat = @habitat, edad = @edad, ";
+                
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("nombre", nuevaAve.Nombre);
                 command.Parameters.AddWithValue("habitat", nuevaAve.Habitat);
@@ -138,31 +129,23 @@ namespace Entidades
 
                 if (nuevaAve is Pinguino pinguino)
                 {
+                    query = "peso = @peso, especie = @especie WHERE Id = @id";
                     command.Parameters.AddWithValue("peso", pinguino.Peso);
                     command.Parameters.AddWithValue("especie", pinguino.Especie);
-                    command.Parameters.AddWithValue("envergadura", DBNull.Value);
-                    command.Parameters.AddWithValue("rangoCaza", DBNull.Value);
-                    command.Parameters.AddWithValue("velocidadVuelo", DBNull.Value);
-                    command.Parameters.AddWithValue("colorPlumas", DBNull.Value);
                 }
                 else if (nuevaAve is Halcon halcon)
                 {
-                    command.Parameters.AddWithValue("peso", DBNull.Value);
-                    command.Parameters.AddWithValue("especie", DBNull.Value);
+                    query = "envergadura = @envergadura, rangoCaza = @rangoCaza WHERE Id = @id";
                     command.Parameters.AddWithValue("envergadura", halcon.Envergadura);
                     command.Parameters.AddWithValue("rangoCaza", halcon.RangoDeCaza);
-                    command.Parameters.AddWithValue("velocidadVuelo", DBNull.Value);
-                    command.Parameters.AddWithValue("colorPlumas", DBNull.Value);
                 }
                 else if (nuevaAve is Colibri colibri)
                 {
-                    command.Parameters.AddWithValue("peso", DBNull.Value);
-                    command.Parameters.AddWithValue("especie", DBNull.Value);
-                    command.Parameters.AddWithValue("envergadura", DBNull.Value);
-                    command.Parameters.AddWithValue("rangoCaza", DBNull.Value);
+                    query = "velocidadVuelo = @velocidadVuelo, colorPlumas = @colorPlumas WHERE Id = @id";
                     command.Parameters.AddWithValue("velocidadVuelo", colibri.VelocidadVuelo);
                     command.Parameters.AddWithValue("colorPlumas", colibri.ColorPlumas);
                 }
+                command.CommandText = query;
 
                 command.ExecuteNonQuery();
                 OnOperacionCompleta();
@@ -235,10 +218,13 @@ namespace Entidades
                     int habitatIndice = int.Parse(dataReader.GetString(2));
                     Habitat habitat = (Habitat)habitatIndice;
                     int edad = int.Parse(dataReader.GetString(3));
+
                     double peso = dataReader.IsDBNull(4) ? 0 : double.Parse(dataReader.GetString(4));
                     string especie = dataReader.IsDBNull(5) ? string.Empty : dataReader.GetString(5);
+
                     double velocidadVuelo = dataReader.IsDBNull(6) ? 0 : double.Parse(dataReader.GetString(6));
                     string colorPlumas = dataReader.IsDBNull(7) ? string.Empty : dataReader.GetString(7);
+
                     double envergadura = dataReader.IsDBNull(8) ? 0 : double.Parse(dataReader.GetString(8));
                     string rangoCaza = dataReader.IsDBNull(9) ? string.Empty : dataReader.GetString(9);
 

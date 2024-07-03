@@ -30,7 +30,7 @@ namespace Formularios
         #region Constructor
 
 
-        public FormCRUD(string nombreUsuario)
+        public FormCRUD(Usuario usuario)
         {
             InitializeComponent();
 
@@ -39,9 +39,10 @@ namespace Formularios
 
             if (!File.Exists(ruta)) { zoologico = new Zoologico<Ave>(); }
             zoologico = Zoologico<Ave>.Deserializar(ruta);
-            this.lblStatusStrip.Text = $"{nombreUsuario} | {DateTime.Now.ToString("d")}";
+            this.lblStatusStrip.Text = $"{usuario.nombre} {usuario.apellido} | {DateTime.Now.ToString("d")}";
 
             Ordenado += Ordenamiento;
+            ConfigurarPermisos(usuario);
 
             ActualizarLista();
         }
@@ -52,7 +53,44 @@ namespace Formularios
 
         #region Métodos
 
+        private void ConfigurarPermisos(Usuario usuario)
+        {
+            if (usuario.perfil == "administrador")
+            {
+                HabilitarPermisos(true,true,true);
+            }
+            else if (usuario.perfil == "supervisor")
+            {
+                HabilitarPermisos(true,true,false);
+            }
+            else if (usuario.perfil == "vendedor")
+            {
+                HabilitarPermisos(false,false,false);
+            }
+        }
 
+        private void HabilitarPermisos(bool create, bool update, bool delete)
+        {
+            if (!create)
+            {
+                this.btnPinguino.Text = "NO TIENE PERMISOS";
+                this.btnColibri.Text = "NO TIENE PERMISOS";
+                this.btnHalcon.Text = "NO TIENE PERMISOS";
+            }
+            if (!update)
+            {
+                this.btnModificar.Text = "NO TIENE PERMISOS";
+            }
+            if (!delete)
+            {
+                this.btnEliminar.Text = "NO TIENE PERMISOS";
+            }
+            this.btnPinguino.Enabled = create;
+            this.btnColibri.Enabled = create;
+            this.btnHalcon.Enabled = create;
+            this.btnModificar.Enabled = update;
+            this.btnEliminar.Enabled = delete;
+        }
 
         /// <summary>
         /// Manejador del evento load del formulario. Deserializa el zoológico del archivo de origen

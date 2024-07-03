@@ -1898,11 +1898,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Entidades\\Entidades.csproj",
+      "projectPath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\Entidades.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Entidades\\obj\\",
+      "outputPath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -22,11 +22,11 @@ namespace Formularios
             {
                 if (usuario.correo == txtCorreo.Text && usuario.clave == txtContrasena.Text)
                 {
-                    string infoUsuario = usuario.ToString();
-                    Logueado.Loguear(infoUsuario);
-                    FormCRUD form = new FormCRUD(usuario.nombre);
-                    form.Show();
-                    return;
+                    this.Hide();
+                    Logueado.Loguear(usuario.ToString());
+                    FormCRUD form = new FormCRUD(usuario);
+                    form.ShowDialog();
+                    this.Close();
                 }
             }
             MessageBox.Show("Los datos son incorrectos");
