@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qlcTha5edwlYYuX42VNgPdNwcsP9RvXGwReUbi/KTysL0Bhee2orPch9izpXi/vzDF7UmXdeq6BIlnsnv0lAvQ==",
+  "dgSpecHash": "+qH9Iz3Zsxp3zE4Lf7CvloUXM4P7eZam8nSAWJMUSzcEeHImkMnZQXRM2Rfg9sg+QgVR4x5FvAb0GcLRoEH3Cw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\Muller.Lautaro.PrimerParcial2\\Entidades\\Entidades.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\2\\Entidades\\Entidades.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",

@@ -1,74 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="Entidades.Halcon">
-    <Position X="12.75" Y="5.5" Width="5.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQAAAEgABAAAQAAAAAAAAQAAAAAAAAAiA=</HashCode>
-      <FileName>Halcon.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Entidades.Colibri">
-    <Position X="6.5" Y="5.5" Width="5.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAEgABAAAAAAABAAAAQAAAAAAAAAiA=</HashCode>
-      <FileName>Colibri.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Entidades.Pinguino">
-    <Position X="0.5" Y="5.25" Width="5" />
-    <TypeIdentifier>
-      <HashCode>AACAAAAAAABAAAAEgAFAAAAAAAAAAAAQAAAAAAAAAiA=</HashCode>
-      <FileName>Pinguino.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="Entidades.Ave">
-    <Position X="7.75" Y="0.5" Width="3.25" />
+    <Position X="6.25" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AQACAAAAAAAAACAEgARAgAAAAAAAAgAAQAAAAAAAAiA=</HashCode>
       <FileName>Ave.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Entidades.Zoologico&lt;T&gt;">
-    <Position X="3.25" Y="0.5" Width="3.5" />
+  <Class Name="Entidades.AveDAO">
+    <Position X="15.5" Y="0.5" Width="3.75" />
+    <NestedTypes>
+      <Delegate Name="Entidades.AveDAO.OperacionCompletaHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AveDAO.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAACAAQAEAAAAAAAAABAAAQAAAAAAEAiA=</HashCode>
-      <FileName>Zoologico.cs</FileName>
+      <HashCode>AAAIAAAAAAQAAAgACAABAAAAAAQAAAAAIAAABAAAAAA=</HashCode>
+      <FileName>AveDAO.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Entidades.Colibri">
+    <Position X="0.5" Y="6.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAEgABAAAAAAABAAAAQAAAAAAAAAiA=</HashCode>
+      <FileName>Colibri.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entidades.Halcon">
+    <Position X="12.25" Y="6.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAEgABAAAQAAAAAAAAQAAAAAAAAAiA=</HashCode>
+      <FileName>Halcon.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entidades.Logueado">
+    <Position X="19.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Logueado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.OrdenamientoArgs">
+    <Position X="19.75" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OrdenamientoArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Pinguino">
+    <Position X="6.75" Y="6.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAABAAAAEgAFAAAAAAAAAAAAQAAAAAAAAAiA=</HashCode>
+      <FileName>Pinguino.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Class Name="Formularios.Usuario">
-    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Position X="19.75" Y="4.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQBAACEAAAAAAAAAAQAAACAAAAQAAAAAAA=</HashCode>
       <FileName>Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Entidades.Zoologico&lt;T&gt;">
+    <Position X="10.5" Y="1" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAACAAQAEAAAAAAAAABAAAQAAAAAAEAiA=</HashCode>
+      <FileName>Zoologico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Entidades.IAccion&lt;T&gt;">
+    <Position X="0.5" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>IAccion.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Interface Name="Entidades.IAve">
-    <Position X="11.5" Y="2.25" Width="2.5" />
+    <Position X="0.5" Y="0.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAARAgAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>IAve.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Entidades.ISerializable">
-    <Position X="11.5" Y="0.5" Width="2.25" />
+    <Position X="0.75" Y="4.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>ISerializable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Entidades.IAccion&lt;T&gt;">
-    <Position X="14.5" Y="0.5" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
-      <FileName>IAccion.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Enum Name="Entidades.Habitat">
-    <Position X="14.75" Y="2.25" Width="1.5" />
+    <Position X="4" Y="0.75" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAQAAAAAAAgAAAAAAAAACAACAAAAAAA=</HashCode>
       <FileName>Enumerados.cs</FileName>

@@ -41,6 +41,7 @@ namespace Formularios
 
             if (!File.Exists(ruta)) { zoologico = new Zoologico<Ave>(); }
             zoologico = Zoologico<Ave>.Deserializar(ruta);
+
             this.lblStatusStrip.Text = $"{this.usuario.nombre} {this.usuario.apellido} | {DateTime.Now.ToString("d")}";
 
             Ordenado += Ordenamiento;

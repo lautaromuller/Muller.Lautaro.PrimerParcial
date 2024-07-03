@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ZoologicoOfAve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Aves>
+    <Ave xsi:type="Halcon">
+      <Id>0</Id>
+      <Nombre>Tomas</Nombre>
+      <Edad>4</Edad>
+      <Habitat>Montaña</Habitat>
+      <Envergadura>3</Envergadura>
+      <RangoDeCaza>Amplio</RangoDeCaza>
+    </Ave>
     <Ave xsi:type="Pinguino">
       <Id>0</Id>
-      <Nombre>Pablo</Nombre>
-      <Edad>4</Edad>
-      <Habitat>Antartida</Habitat>
+      <Nombre>rey</Nombre>
+      <Edad>2</Edad>
+      <Habitat>Bosque</Habitat>
       <Peso>4</Peso>
       <Especie>Emperador</Especie>
     </Ave>
     <Ave xsi:type="Colibri">
-      <Id>0</Id>
+      <Id>56</Id>
       <Nombre>Martin</Nombre>
       <Edad>1</Edad>
       <Habitat>Ciudad</Habitat>
@@ -20,13 +28,21 @@
     <Ave xsi:type="Halcon">
       <Id>0</Id>
       <Nombre>Jose</Nombre>
-      <Edad>5</Edad>
+      <Edad>4</Edad>
       <Habitat>Montaña</Habitat>
-      <Envergadura>8</Envergadura>
+      <Envergadura>2</Envergadura>
       <RangoDeCaza>Amplio</RangoDeCaza>
     </Ave>
-    <Ave xsi:type="Pinguino">
+    <Ave xsi:type="Colibri">
       <Id>0</Id>
+      <Nombre>Horacio</Nombre>
+      <Edad>2</Edad>
+      <Habitat>Bosque</Habitat>
+      <VelocidadVuelo>23</VelocidadVuelo>
+      <ColorPlumas>Rojo</ColorPlumas>
+    </Ave>
+    <Ave xsi:type="Pinguino">
+      <Id>58</Id>
       <Nombre>Fito</Nombre>
       <Edad>3</Edad>
       <Habitat>Antartida</Habitat>
