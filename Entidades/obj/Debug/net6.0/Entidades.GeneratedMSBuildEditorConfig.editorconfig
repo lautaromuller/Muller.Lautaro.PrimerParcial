@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Entidades
+<<<<<<< Updated upstream
 build_property.ProjectDir = C:\Users\USUARIO\Desktop\Muller.Lautaro.PrimerParcial2\Entidades\
+=======
+build_property.ProjectDir = C:\Users\USUARIO\Desktop\2\Entidades\
+>>>>>>> Stashed changes
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
