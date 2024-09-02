@@ -1,5 +1,3 @@
-(Para ver una version más avanzada de proyecto cambiarse a la rama **segundo_parcial**)
-
 # CRUD - AVES
 
 
