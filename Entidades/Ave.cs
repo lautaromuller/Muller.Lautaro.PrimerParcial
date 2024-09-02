@@ -6,16 +6,21 @@ namespace Entidades
     [XmlInclude(typeof(Pinguino))]
     [XmlInclude(typeof(Halcon))]
     [XmlInclude(typeof(Colibri))]
-    public abstract class Ave
+    public abstract class Ave : IAve, ISerializable
     {
+
+        #region Propiedades
+
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public Habitat Habitat { get; set; }
 
-        public Ave()
-        {
 
-        }
+        #endregion
+
+        #region Constructores
+        public Ave(){}
 
         public Ave(string nombre)
         {
@@ -34,31 +39,34 @@ namespace Entidades
             this.Edad = edad;
         }
 
+        #endregion
+
+        #region Métodos
         /// <summary>
         /// Método abstracto que debera ser implementado por las clases derivadas para indicar el vuelo del ave.
         /// </summary>
-        public abstract void Volar();
+        public abstract string Volar();
 
         /// <summary>
         /// Muestra por consola un mensaje indicando que el ave está comiendo.
         /// </summary>
-        public virtual void Alimentarse()
+        public virtual string Alimentarse()
         {
-            Console.WriteLine($"{this.Nombre} esta comiendo.");
+            return $"{this.Nombre} esta comiendo.";
         }
 
         /// <summary>
         /// Sobrecarga del método Alimertarse que permite pasarle un comida especifica.
         /// </summary>
         /// <param name="comida">Indica la comida del ave</param>
-        public virtual void Alimentarse(string comida)
+        public virtual string Alimentarse(string comida)
         {
-            Console.WriteLine($"{this.Nombre} esta comiendo un/a {comida}.");
+            return $"{this.Nombre} esta comiendo un/a {comida}.";
         }
 
         public override string ToString()
         {
-            return $"Nombre: {this.Nombre} - Hábitat: {this.Habitat} - Edad: {this.Edad}";
+            return $"{this.Nombre} - Edad: {this.Edad} años - Hábitat: {this.Habitat}";
         }
 
         public override bool Equals(object obj)
@@ -71,6 +79,19 @@ namespace Entidades
             return false;
         }
 
+        public void Serializar(string ruta)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Deserializar(string ruta)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region Operadores
         /// <summary>
         /// Sobrecarga del operador == que comprueba si las aves son iguales.
         /// </summary>
@@ -93,5 +114,6 @@ namespace Entidades
             return !(a1 == a2);
         }
 
+        #endregion
     }
 }

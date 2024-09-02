@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Halcon : Ave
+    public class Halcon : Ave, IAccion<string>
     {
+
+        #region Propiedades
+
         public double Envergadura { get; set; }
         public string RangoDeCaza { get; set; }
+
+        #endregion
+
+        #region Constructores
 
         public Halcon() {}
 
@@ -32,17 +39,21 @@ namespace Entidades
 
         }
 
+        #endregion
+
+        #region Métodos
+
         /// <summary>
         /// Implementación del método abstracto Volar que muestra por consola como vuela el Halcón.
         /// </summary>
-        public override void Volar()
+        public override string Volar()
         {
-            Console.WriteLine($"{this.Nombre} está volando con una envergadura de {this.Envergadura} metros.");
+            return $"{this.Nombre} está volando con una envergadura de {this.Envergadura} metros.";
         }
 
         public override string ToString()
         {
-            return $"{base.ToString()} - Envergadura: {this.Envergadura} - Rango de Caza: {this.RangoDeCaza}";
+            return $"(Halcón) {base.ToString()} - Envergadura: {this.Envergadura} METROS - Rango de caza: {this.RangoDeCaza}";
         }
 
         public override bool Equals(object obj)
@@ -54,6 +65,14 @@ namespace Entidades
             }
             return false;
         }
+        public string RealizarAccion(string accion)
+        {
+            return $"El halcón {this.Nombre} esta {accion}";
+        }
+
+        #endregion
+
+        #region Operadores
 
         /// <summary>
         /// Sobrecarga del operador == para comprobar si dos halcones son iguales.
@@ -76,5 +95,7 @@ namespace Entidades
         {
             return !(h1 == h2);
         }
+
+        #endregion
     }
 }

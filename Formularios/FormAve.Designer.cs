@@ -82,6 +82,7 @@
             // 
             // cbHabitat
             // 
+            cbHabitat.DropDownStyle = ComboBoxStyle.DropDownList;
             cbHabitat.FormattingEnabled = true;
             cbHabitat.Location = new Point(76, 47);
             cbHabitat.Name = "cbHabitat";
